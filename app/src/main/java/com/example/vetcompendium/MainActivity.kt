@@ -10,7 +10,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -37,7 +36,13 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    VetCompendiumApp(medicationViewModel)
+                    VetCompendiumApp(
+                        viewModel = medicationViewModel,
+                        onRecreateActivity = {
+                            recreate() // Recreate the activity to apply language changes
+                            medicationViewModel.onActivityRecreated()
+                        }
+                    )
                 }
             }
         }
@@ -57,16 +62,27 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 private fun VetCompendiumApp(
-    viewModel: MedicationViewModel
+    viewModel: MedicationViewModel,
+    onRecreateActivity: () -> Unit
 ) {
     val navController = rememberNavController()
-    val medications by viewModel.medications.collectAsStateWithLifecycle()
-    val searchQuery by viewModel.searchQuery.collectAsStateWithLifecycle()
-    val isLoading by viewModel.isLoading.collectAsStateWithLifecycle()
-    val refreshMessage by viewModel.refreshMessage.collectAsStateWithLifecycle()
-    val currentLanguage by viewModel.currentLanguage.collectAsStateWithLifecycle()
+
+    // Collect states
+    val medications by viewModel.medications.collectAsState()
+    val searchQuery by viewModel.searchQuery.collectAsState()
+    val isLoading by viewModel.isLoading.collectAsState()
+    val refreshMessage by viewModel.refreshMessage.collectAsState()
+    val currentLanguage by viewModel.currentLanguage.collectAsState()
+    val shouldRecreateActivity by viewModel.shouldRecreateActivity.collectAsState()
 
     var selectedMedication by remember { mutableStateOf<Medication?>(null) }
+
+    // Listen for activity recreation requests
+    LaunchedEffect(shouldRecreateActivity) {
+        if (shouldRecreateActivity) {
+            onRecreateActivity()
+        }
+    }
 
     NavHost(
         navController = navController,

@@ -13,7 +13,7 @@ import com.example.vetcompendium.utils.NotesManager
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
-@OptIn(kotlinx.coroutines.ExperimentalCoroutinesApi::class) // Add this annotation
+@OptIn(kotlinx.coroutines.ExperimentalCoroutinesApi::class)
 class MedicationViewModel(application: Application) : AndroidViewModel(application) {
     private val repository: MedicationRepository
     private val notesRepository: NotesRepository
@@ -29,11 +29,13 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
     private val _searchQuery = MutableStateFlow("")
     private val _refreshMessage = MutableStateFlow<String?>(null)
     private val _currentLanguage = MutableStateFlow("fr")
+    private val _shouldRecreateActivity = MutableStateFlow(false) // Add this
 
     val isLoading: StateFlow<Boolean> = _isLoading.asStateFlow()
     val searchQuery: StateFlow<String> = _searchQuery.asStateFlow()
     val refreshMessage: StateFlow<String?> = _refreshMessage.asStateFlow()
     val currentLanguage: StateFlow<String> = _currentLanguage.asStateFlow()
+    val shouldRecreateActivity: StateFlow<Boolean> = _shouldRecreateActivity.asStateFlow() // Add this
 
     // Combined medications flow based on search query
     val medications: StateFlow<List<Medication>> = _searchQuery
@@ -50,7 +52,6 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
             initialValue = emptyList()
         )
 
-    // Rest of your code stays the same...
     init {
         // Initialize database and managers
         val database = MedicationDatabase.getDatabase(application)
@@ -138,22 +139,35 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
                         onSuccess = { message ->
                             languageManager.setLanguage(language)
                             _currentLanguage.value = language
+
+                            // Show success message briefly
                             _refreshMessage.value = message
                             Log.d(TAG, "Language switched to $language: $message")
+
+                            // Clear message immediately before recreation
+                            kotlinx.coroutines.delay(1000) // Show for 1 second only
+                            _refreshMessage.value = null
+
+                            // Signal that activity should be recreated for UI language change
+                            _shouldRecreateActivity.value = true
                         },
                         onFailure = { exception ->
                             _refreshMessage.value = "Language switch failed: ${exception.message}"
                             Log.e(TAG, "Language switch failed", exception)
+
+                            // Clear error message after longer delay
+                            kotlinx.coroutines.delay(3000)
+                            _refreshMessage.value = null
                         }
                     )
-
-                    // Clear message after delay
-                    kotlinx.coroutines.delay(3000)
-                    _refreshMessage.value = null
 
                 } catch (e: Exception) {
                     _refreshMessage.value = "Language switch failed: ${e.message}"
                     Log.e(TAG, "Error during language switch", e)
+
+                    // Clear error message after delay
+                    kotlinx.coroutines.delay(3000)
+                    _refreshMessage.value = null
                 } finally {
                     _isLoading.value = false
                 }
@@ -161,6 +175,12 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
         }
     }
 
+
+    fun onActivityRecreated() {
+        _shouldRecreateActivity.value = false
+    }
+
+    // Rest of your existing methods...
     fun exportNotes() {
         viewModelScope.launch {
             try {

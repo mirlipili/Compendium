@@ -36,3 +36,5 @@ captures/
 # Other
 /vendor/
 /gen/
+
+.directory

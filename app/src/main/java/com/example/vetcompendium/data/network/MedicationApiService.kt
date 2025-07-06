@@ -28,7 +28,6 @@ interface MedicationApiService {
     suspend fun getMedicationsNl(): Response<List<Medication>>
 
     companion object {
-        // Replace with your actual base URL
         private const val BASE_URL = "https://medicament.derichs.vet/"
 
         fun create(): MedicationApiService {
