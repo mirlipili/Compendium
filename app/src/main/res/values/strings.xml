@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vet Compendium</string>
+
+    <!-- Search -->
+    <string name="search_medications">Rechercher des médicaments…</string>
+    <string name="no_medications_found">Aucun médicament trouvé</string>
+    <string name="try_refresh">Essayez l\'option actualiser dans le menu</string>
+    <string name="no_results_for">Aucun médicament trouvé pour "%1$s"</string>
+    <string name="loading_medications">Chargement des médicaments…</string>
+
+    <!-- Menu -->
+    <string name="refresh_data">Actualiser les données</string>
+    <string name="menu">Menu</string>
+
+    <!-- Detail Labels -->
+    <string name="usage_information">Information d\'utilisation</string>
+    <string name="administration_route">Voie d\'administration</string>
+    <string name="posology">Posologie</string>
+    <string name="withdrawal_period">Délai d\'attente</string>
+    <string name="packaging">Packaging</string>
+    <string name="prescription">Prescription</string>
+    <string name="rcp_link">Lien RCP</string>
+    <string name="notes">Notes</string>
+    <string name="add_notes_hint">Ajoutez vos notes personnelles sur ce médicament…</string>
+
+    <!-- Notes -->
+    <string name="import_notes">Importer les notes</string>
+    <string name="export_notes">Exporter les notes</string>
+    <string name="notes_exported">Notes exportées avec succès</string>
+    <string name="notes_imported">Notes importées avec succès</string>
+    <string name="export_failed">Échec de l\'exportation des notes</string>
+    <string name="import_failed">Échec de l\'importation des notes</string>
+</resources>

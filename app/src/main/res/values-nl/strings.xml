@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vet Compendium</string>
+
+    <!-- Search -->
+    <string name="search_medications">Zoek geneesmiddelen…</string>
+    <string name="no_medications_found">Geen geneesmiddelen gevonden</string>
+    <string name="try_refresh">Probeer de ververs optie in het menu</string>
+    <string name="no_results_for">Geen geneesmiddelen gevonden voor "%1$s"</string>
+    <string name="loading_medications">Geneesmiddelen laden…</string>
+
+    <!-- Menu -->
+    <string name="refresh_data">Data Verversen</string>
+    <string name="menu">Menu</string>
+
+    <!-- Detail Labels -->
+    <string name="usage_information">Gebruiksinformatie</string>
+    <string name="administration_route">Toedieningsweg</string>
+    <string name="posology">Posologie</string>
+    <string name="withdrawal_period">Wachttijd</string>
+    <string name="packaging">Verpakking</string>
+    <string name="prescription">Voorschrift</string>
+    <string name="rcp_link">RCP Link</string>
+    <string name="notes">Notities</string>
+    <string name="add_notes_hint">Voeg uw persoonlijke notities over dit geneesmiddel toe…</string>
+
+    <!-- Notes -->
+    <string name="import_notes">Notities Importeren</string>
+    <string name="export_notes">Notities Exporteren</string>
+    <string name="notes_exported">Notities succesvol geëxporteerd</string>
+    <string name="notes_imported">Notities succesvol geïmporteerd</string>
+    <string name="export_failed">Exporteren van notities mislukt</string>
+    <string name="import_failed">Importeren van notities mislukt</string>
+</resources>
