@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.vetcompendium"
+    namespace = "vet.derichs.compendium"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.vetcompendium"
+        applicationId = "vet.derichs.compendium"
         minSdk = 28
         targetSdk = 35
         versionCode = 1

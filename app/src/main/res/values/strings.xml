@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Vet Compendium</string>
+    <string name="app_name">Compendium</string>
 
     <!-- Search -->
     <string name="search_medications">Rechercher des médicaments…</string>
