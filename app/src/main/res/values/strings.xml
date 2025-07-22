@@ -31,4 +31,6 @@
     <string name="notes_imported">Notes importées avec succès</string>
     <string name="export_failed">Échec de l\'exportation des notes</string>
     <string name="import_failed">Échec de l\'importation des notes</string>
+    <string name="general_notes">Notes</string>
+    <string name="view_or_edit_notes">Cliquez pour voir ou éditer vos notes</string>
 </resources>

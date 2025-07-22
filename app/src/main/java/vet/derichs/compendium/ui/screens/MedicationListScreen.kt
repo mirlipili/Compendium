@@ -34,6 +34,7 @@ fun MedicationListScreen(
     onLanguageClick: (String) -> Unit = {},
     getLanguageDisplayName: (String) -> String = { it },
     getOtherLanguageShortName: () -> String = { "NL" },
+    navigateToGeneralNotes: () -> Unit,
     onExportNotes: () -> Unit = {}
 ) {
     Column(
@@ -167,6 +168,35 @@ fun MedicationListScreen(
                 LazyColumn(
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
+                    // --- START: ADDED FOR GENERAL NOTES ---
+                    item {
+                        // This item uses the exact same Card style as MedicationItem
+                        // but with hardcoded text and its own click handler.
+                        Card(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clickable { navigateToGeneralNotes() }, // Use the specific callback
+                            elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+                        ) {
+                            Column(
+                                modifier = Modifier.padding(16.dp)
+                            ) {
+                                Text(
+                                    text = stringResource(R.string.general_notes),
+                                    style = MaterialTheme.typography.titleMedium,
+                                    fontWeight = FontWeight.Medium
+                                )
+                                Text(
+                                    text = stringResource(R.string.view_or_edit_notes),
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    modifier = Modifier.padding(top = 4.dp)
+                                )
+                            }
+                        }
+                    }
+                    // --- END: ADDED FOR GENERAL NOTES ---
+
                     items(medications) { medication ->
                         MedicationItem(
                             medication = medication,
@@ -178,6 +208,8 @@ fun MedicationListScreen(
         }
     }
 }
+
+// ... (MedicationMenu and MedicationItem composables remain unchanged) ...
 
 @Composable
 private fun MedicationMenu(
@@ -242,7 +274,7 @@ private fun MedicationMenu(
                 }
             )
 
-            Divider()
+            HorizontalDivider()
 
             // Export notes
             DropdownMenuItem(

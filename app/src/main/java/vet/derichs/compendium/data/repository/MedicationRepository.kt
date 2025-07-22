@@ -3,7 +3,9 @@ package vet.derichs.compendium.data.repository
 import android.content.Context
 import android.util.Log
 import vet.derichs.compendium.data.database.MedicationDao
+import vet.derichs.compendium.data.database.GeneralNoteDao
 import vet.derichs.compendium.data.model.Medication
+import vet.derichs.compendium.data.model.GeneralNote
 import vet.derichs.compendium.data.network.MedicationApiService
 import vet.derichs.compendium.utils.LanguageManager
 import kotlinx.coroutines.Dispatchers
@@ -12,7 +14,8 @@ import kotlinx.coroutines.withContext
 
 class MedicationRepository(
     private val medicationDao: MedicationDao,
-    private val context: Context
+    private val context: Context,
+    private val generalNoteDao: GeneralNoteDao
 ) {
     private val apiService: MedicationApiService = MedicationApiService.create()
     private val languageManager = LanguageManager(context)
@@ -20,7 +23,11 @@ class MedicationRepository(
     companion object {
         private const val TAG = "MedicationRepository"
     }
+    val generalNote: Flow<GeneralNote?> = generalNoteDao.getGeneralNote()
 
+    suspend fun saveGeneralNote(content: String) {
+        generalNoteDao.upsert(GeneralNote(content = content))
+    }
     suspend fun initializeData() {
         withContext(Dispatchers.IO) {
             try {
@@ -124,4 +131,5 @@ class MedicationRepository(
 
     fun searchMedications(query: String): Flow<List<Medication>> =
         medicationDao.searchMedications("%$query%")
+
 }

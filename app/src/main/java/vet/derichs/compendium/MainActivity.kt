@@ -18,6 +18,7 @@ import vet.derichs.compendium.ui.MedicationViewModel
 import vet.derichs.compendium.ui.screens.MedicationDetailScreen
 import vet.derichs.compendium.ui.screens.MedicationListScreen
 import vet.derichs.compendium.ui.theme.VetCompendiumTheme
+import vet.derichs.compendium.ui.notes.GeneralNotesScreen
 import vet.derichs.compendium.utils.LanguageManager
 
 class MainActivity : ComponentActivity() {
@@ -112,9 +113,19 @@ private fun VetCompendiumApp(
                 getOtherLanguageShortName = viewModel::getOtherLanguageShortName,
                 onExportNotes = {
                     viewModel.exportNotes()
+                },
+                navigateToGeneralNotes = {
+                    navController.navigate("generalNotes") // Navigate to our new route
                 }
             )
         }
+        composable(route = "generalNotes") {
+            GeneralNotesScreen(
+                viewModel = viewModel,
+                onNavigateBack = { navController.popBackStack() }
+            )
+        }
+
 
         composable("medication_detail") {
             MedicationDetailScreen(

@@ -6,16 +6,18 @@ import vet.derichs.compendium.data.model.Medication
 import vet.derichs.compendium.data.model.MedicationNote
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
+import vet.derichs.compendium.data.model.GeneralNote
 
 
 @Database(
-    entities = [Medication::class, MedicationNote::class],
-    version = 2, // Increment version
+    entities = [Medication::class, MedicationNote::class,  GeneralNote::class],
+    version = 3, // Increment version
     exportSchema = false
 )
 abstract class MedicationDatabase : RoomDatabase() {
     abstract fun medicationDao(): MedicationDao
     abstract fun medicationNoteDao(): MedicationNoteDao
+    abstract fun generalNoteDao(): GeneralNoteDao
 
     companion object {
         @Volatile
