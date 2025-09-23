@@ -11,7 +11,7 @@ object JsonLoader {
 
     fun loadMedicationsFromAssets(context: Context, language: String = "fr"): List<Medication>? {
         return try {
-            val filename = "medications_$language.json"
+            val filename = "vet_medications_$language.json"
             Log.d(TAG, "Loading medications from assets: $filename")
 
             val jsonString = context.assets.open(filename).bufferedReader().use { it.readText() }

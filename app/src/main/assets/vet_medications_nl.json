@@ -1,5 +1,203 @@
 [
   {
+    "id": "6390",
+    "name": "VETORYL 20 mg caps",
+    "firm": "Dechra",
+    "registration_number": "BE-V663814",
+    "target_species": "hond",
+    "composition": "trilostane: 20 mg",
+    "pharmaceutical_form": "capsule",
+    "administration_route": "po",
+    "posology": "Ca (LG > 3 kg): startdosis: 1 x 2 mg/kg pd met het voervervolgens dosis aanpassen volgens respons",
+    "packaging": "caps 30",
+    "prescription": "R/",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/6792373a528fae481047dbf7"
+  },
+  {
+    "id": "6388",
+    "name": "CEPEDOL Vet 20 mg",
+    "firm": "CP-Pharma",
+    "registration_number": "BE-V662494",
+    "target_species": "hond",
+    "composition": "tramadolhydrochloride: 20 mg",
+    "pharmaceutical_form": "breekbare kauwtablet",
+    "administration_route": "po",
+    "posology": "Ca: 2-4 mg/kg per 6-8 h (max 16 mg/kg pd)",
+    "packaging": "tablet 100",
+    "prescription": "R/",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/66262e36a302366d3b4e4564"
+  },
+  {
+    "id": "6387",
+    "name": "CEPEDOL Vet 80 mg",
+    "firm": "CP-Pharma",
+    "registration_number": "BE-V662496",
+    "target_species": "hond",
+    "composition": "tramadolhydrochloride: 80 mg",
+    "pharmaceutical_form": "breekbare kauwtablet",
+    "administration_route": "po",
+    "posology": "Ca: 2-4 mg/kg per 6-8 h (max 16 mg/kg pd)",
+    "packaging": "tablet 100",
+    "prescription": "R/",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/66264d5ba302366d3b4e481e"
+  },
+  {
+    "id": "6386",
+    "name": "CEPEDOL Vet 120 mg",
+    "firm": "CP-Pharma",
+    "registration_number": "BE-V662497",
+    "target_species": "hond",
+    "composition": "tramadolhydrochloride: 120 mg",
+    "pharmaceutical_form": "breekbare kauwtablet",
+    "administration_route": "po",
+    "posology": "Ca: 2-4 mg/kg per 6-8 h (max 16 mg/kg pd)",
+    "packaging": "tablet 100",
+    "prescription": "R/",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/66264ff2a302366d3b4e48a4"
+  },
+  {
+    "id": "6385",
+    "name": "NUMELVI 21,6 mg",
+    "firm": "Intervet Int",
+    "registration_number": "EU/2/25/351/005, EU/2/25/351/006",
+    "target_species": "hond",
+    "composition": "atinvicitinib: 21,6 mg",
+    "pharmaceutical_form": "breekbare tablet",
+    "administration_route": "po",
+    "posology": "Ca: 0,8-1,2 mg/kg pd (rond of tijdens het voederen)",
+    "packaging": "tablet 30, 90",
+    "prescription": "R/",
+    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/94333545-c2a7-4bb4-9283-5db040ec8e4d"
+  },
+  {
+    "id": "6384",
+    "name": "NUMELVI 31,6 mg",
+    "firm": "Intervet Int",
+    "registration_number": "EU/2/25/351/007, EU/2/25/351/008",
+    "target_species": "hond",
+    "composition": "atinvicitinib: 31,6 mg",
+    "pharmaceutical_form": "breekbare tablet",
+    "administration_route": "po",
+    "posology": "Ca: 0,8-1,2 mg/kg pd (rond of tijdens het voederen)",
+    "packaging": "tablet 30, 90",
+    "prescription": "R/",
+    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/94333545-c2a7-4bb4-9283-5db040ec8e4d"
+  },
+  {
+    "id": "6383",
+    "name": "NUMELVI 7,2 mg",
+    "firm": "Intervet Int",
+    "registration_number": "EU/2/25/351/003, EU/2/25/351/004",
+    "target_species": "hond",
+    "composition": "atinvicitinib: 7,2 mg",
+    "pharmaceutical_form": "breekbare tablet",
+    "administration_route": "po",
+    "posology": "Ca: 0,8-1,2 mg/kg pd (rond of tijdens het voederen)",
+    "packaging": "tablet 30, 90",
+    "prescription": "R/",
+    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/94333545-c2a7-4bb4-9283-5db040ec8e4d"
+  },
+  {
+    "id": "6382",
+    "name": "NUMELVI  4,8 mg",
+    "firm": "Intervet Int",
+    "registration_number": "EU/2/25/351/001, EU/2/25/351/002",
+    "target_species": "hond",
+    "composition": "atinvicitinib: 4,8 mg",
+    "pharmaceutical_form": "breekbare tablet",
+    "administration_route": "po",
+    "posology": "Ca: 0,8-1,2 mg/kg pd (rond of tijdens het voederen)",
+    "packaging": "tablet 30, 90",
+    "prescription": "R/",
+    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/94333545-c2a7-4bb4-9283-5db040ec8e4d"
+  },
+  {
+    "id": "6381",
+    "name": "ELMARO 10 mg/kg opl.",
+    "firm": "Elanco",
+    "registration_number": "EU/2/25/337/001",
+    "target_species": "hond, kat",
+    "composition": "maropitant: 10 mg/ml",
+    "pharmaceutical_form": "oplossing voor injectie",
+    "administration_route": "sc, iv (bolus)",
+    "posology": "Ca, Fe: 1 x 1 mg/kg pd (max 5 dagen)",
+    "packaging": "injectieflacon 20 ml",
+    "prescription": "R/",
+    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/8d0e1547-8f46-4290-8aba-f9aca133fc34"
+  },
+  {
+    "id": "6379",
+    "name": "TRILOTAB 60 mg",
+    "firm": "CP-Pharma",
+    "registration_number": "BE-V661796",
+    "target_species": "hond",
+    "composition": "trilostaan: 60 mg",
+    "pharmaceutical_form": "kauwtablet",
+    "administration_route": "po",
+    "posology": "Ca (LG > 7,5 kg):startdosering: 1 x 2 mg/kg pd bij de maaltijdvervolgens dosis aanpassen volgens respons",
+    "packaging": "tabl 30",
+    "prescription": "R/",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/6512a25fe2770d0c7a85bacf"
+  },
+  {
+    "id": "6378",
+    "name": "TRILOTAB 30 mg",
+    "firm": "CP-Pharma",
+    "registration_number": "BE-V661795",
+    "target_species": "hond",
+    "composition": "trilostaan: 30 mg",
+    "pharmaceutical_form": "kauwtablet",
+    "administration_route": "po",
+    "posology": "Ca (LG > 3,75 kg):startdosering: 1 x 2 mg/kg pd bij de maaltijdvervolgens dosis aanpassen volgens respons",
+    "packaging": "tabl 30",
+    "prescription": "R/",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/65129face2770d0c7a85ba3d"
+  },
+  {
+    "id": "6377",
+    "name": "TRILOTAB 10 mg",
+    "firm": "CP-Pharma",
+    "registration_number": "BE-V661794",
+    "target_species": "hond",
+    "composition": "trilostaan: 10 mg",
+    "pharmaceutical_form": "kauwtablet",
+    "administration_route": "po",
+    "posology": "Ca (LG > 1,25 kg):startdosering: 1 x 2 mg/kg pd bij de maaltijdvervolgens dosis aanpassen volgens respons",
+    "packaging": "tabl 30",
+    "prescription": "R/",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/65129d25e2770d0c7a85b90b"
+  },
+  {
+    "id": "6372",
+    "name": "VETMEDIN 1,5 mg/ml po opl",
+    "firm": "Boehringer Ingelheim",
+    "registration_number": "BE-V664358",
+    "target_species": "hond",
+    "composition": "pimobendan: 1,5 mg/ml",
+    "pharmaceutical_form": "oplossing",
+    "administration_route": "po",
+    "posology": "Ca: 2 x 0,25 mg/kg pd op een lege maag",
+    "packaging": "fles 50 ml + doseerspuit",
+    "prescription": "R/",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/68232a101d57d84a81c769f2"
+  },
+  {
+    "id": "6370",
+    "name": "NOBILIS MULTRIVA REOm",
+    "firm": "Intervet Int",
+    "registration_number": "EU/2/24/333/001",
+    "target_species": "kip",
+    "composition": "per dosis (0,3 ml):geïnact aviaire reovirus:-stam ARV-1: ≥ 11,5 U-stam ARV-4: ≥ 11,4 UAdjuv: licht vloeibare paraffine",
+    "pharmaceutical_form": "vaccin voor injectie",
+    "administration_route": "im",
+    "posology": "kip:-Basisvac (lft > 7 w): 1 dosis/dier (of met een levend vaccin)-Boostervac (lft > 8 w): 1 dosis/dier max 3 w voor het begin van de legperiode en min 4 w na basisvac",
+    "ooi_doi": "OOI: 4 w na boostervac (1 d lft bij nakomelingen)DOI: 80 w na boostervac (3 w lft bij nakomelingen)",
+    "withdrawal_period": "Wachttijd: 0 d",
+    "packaging": "fles 1000 doses",
+    "prescription": "R/",
+    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/95288d03-2949-4d9f-abed-8dbc08f0a04b"
+  },
+  {
     "id": "6367",
     "name": "LABIMYCIN LA 300 mg/ml",
     "firm": "Labiana Life Sciences",
@@ -535,7 +733,7 @@
   },
   {
     "id": "6284",
-    "name": "FRONTCONTROL WORMER XL compr chiens",
+    "name": "FRONTCONTROL WORMER XL tabl hond",
     "firm": "Chanelle",
     "registration_number": "BE-V428443",
     "target_species": "hond",
@@ -650,7 +848,7 @@
     "pharmaceutical_form": "tablet",
     "administration_route": "po",
     "posology": "Fe (lft > 6 w, LG > 1,25 kg):- Post-operat pijn en ontsteking:24 h na aanvangsbehandeling per injectie:0,05 mg/kg pd (max 4 d) po- Ac locomot aandoening:1edag: 1 x 0,2 mg/kgna 24 h: 0,05 mg/kg pd- Chron locomot aandoening:1edag: 1 x 0,1 mg/kgna 24 h: 0,05 mg/kg pdStop behandeling indien na 14 d geen verbetering opgetreden is",
-    "packaging": "tabl 10, 90",
+    "packaging": "tabl 90",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/665efde51748d141bc9ee4ec"
   },
@@ -1043,6 +1241,22 @@
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/66cda24a9aa2b45a6f08ffee"
   },
   {
+    "id": "6209",
+    "name": "CEVAC SALMUNE ETI K",
+    "firm": "Ceva-Phylaxia",
+    "registration_number": "EU/2/24/320/002",
+    "target_species": "kip",
+    "composition": "per dosis (0,5 ml):Salmonella enterica, subsp.enterica, serovar Enteritidis, stam 038-90, geïnactiveerd: min 122 ELISA eenhedenSalmonella enterica, subsp.enterica, serovar Typhimurium, stam 076-94, geïnactiveerd: min 212 ELISA eenhedenSalmonella enterica, subsp.enterica, serovar Infantis, stam SM-595, geïnactiveerd: min 157 ELISA eenhedenAdjuv: aluminiumhydroxidegel",
+    "pharmaceutical_form": "vaccin voor injectie",
+    "administration_route": "im",
+    "posology": "kip (lft: min 10 w): 2 doses met 4 w interval2de dosis max 4 w voor het begin van de leg",
+    "ooi_doi": "OOI: 4 w na 2de vacDOI: S. Enteridis: 69 w na 2de vac, S. Tiphimurium: 71 w na 2de vac, S. Infantis: 44 w na 2de vac",
+    "withdrawal_period": "Wachttijd: 0 d",
+    "packaging": "fles 5 x 1000 doses",
+    "prescription": "R/",
+    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/f4dae2ec-1f7e-4172-ac3a-4e73e104989e"
+  },
+  {
     "id": "6202",
     "name": "LODISURE 1 mg",
     "firm": "Dechra",
@@ -1183,12 +1397,12 @@
     "name": "SYVAZUL BTV-3",
     "firm": "Laboratorios Syva",
     "registration_number": "EU/2/24/332/001-002",
-    "target_species": "schaap melkprod",
-    "composition": "blauwtongvirus, serotype 3 (BTV-3), stam BTV-3/NET2023, geïnactiveerd: ≥ 10exp6,9 CCID50/mlAdjuv: aluminium hydroxide, Quil A",
+    "target_species": "rund melkprod, schaap melkprod",
+    "composition": "blauwtongvirus, serotype 3 (BTV-3), stam BTV-3/NET2023, geïnactiveerd: ≥ 10exp7,2 CCID50/mlAdjuv: aluminium hydroxide, Quil A",
     "pharmaceutical_form": "vaccin",
-    "administration_route": "sc",
-    "posology": "Ov (lft > 3 m):- primovac: 1 x 2 ml (sc)- hervac: niet vastgesteld",
-    "ooi_doi": "OOI: 4 w na basisvacDOI: niet vastgesteld",
+    "administration_route": "im, sc",
+    "posology": "Bo (lft > 2 m bij naïeve dieren, > 3 m bij mat imm):- primovac: 2 x 2 ml (im)- hervac: niet vastgesteldOv (lft > 3 m):- primovac: 1 x 2 ml (sc)- hervac: niet vastgesteld",
+    "ooi_doi": "OOI: Bo: 3 w na basisvac, Ov: 4 w na basisvacDOI: niet vastgesteld",
     "withdrawal_period": "Wachttijd: 0 d",
     "packaging": "fles 80 ml",
     "prescription": "R/Autorisation de mise sur le marché en raison de circonstances exceptionnelles.Vergunning voor het in de handel brengen onder uitzonderlijke omstandigheden.",
@@ -1248,7 +1462,7 @@
     "composition": "butafosfaan: 100 mg/mlcyanocobalamine: 0,05 mg/ml",
     "pharmaceutical_form": "oplossing voor injectie",
     "administration_route": "iv, im, sc",
-    "posology": "Eq, Bo: 5-10 mg butafosfan + 2,5-5 µg cyanocobalamine/kg ivBo:-preventie van ketose: 3 j (binnen de 10 d voor het afkalven)-behandeling van ketose: 3 jCa: 10-15 mg butafosfan + 5-7,5 µg cyanocobalamine/kg iv, im, sc",
+    "posology": "Eq, Bo: 5-10 mg butafosfan + 2,5-5 µg cyanocobalamine/kg ivBo:-preventie van ketose: 3 d (binnen de 10 d voor het afkalven)-behandeling van ketose: 3 dCa: 10-15 mg butafosfan + 5-7,5 µg cyanocobalamine/kg iv, im, sc",
     "withdrawal_period": "Vlees en slachtafval: Eq, Bo: 0 dMelk: Eq, Bo: 0 h",
     "packaging": "fles 100 ml, 250 ml",
     "prescription": "R/",
@@ -1322,8 +1536,8 @@
     "composition": "flunixine meglumine: 50 mg/ml",
     "pharmaceutical_form": "oplossing voor injectie",
     "administration_route": "iv (Eq, Bo), im (Bo, Su)",
-    "posology": "Eq:-aandoeningen van het bewegingsapparaat: 1 mg/kg pd iv (1-5 d)-koliek: 1 mg/kg iv, kan 1 of 2 x herhaald wordenBo: 2 mg/kg pd iv, im (1-3 d)Su:-MMA: 2 mg/kg pd im (1-3 d)-luchtwegaandoeningen: 1 x 2 mg/kg im",
-    "withdrawal_period": "Vlees en slachtafval: Eq: 10 d, Bo: 10 d (iv), 31 d (im), Su: 20 dMelk: Bo: 24 h (iv), 36 h (im)Niet goedgekeurd voor gebruik bij merries die melk voor humane consumptie produceren.",
+    "posology": "Eq:- aandoening skelet, koorts: 1,1 mg/kg pd iv (max 5 d)- koliek: 1,1 mg/kg iv, behandeling kan 1 of 2 x herhaald worden- aanvullende therapie: 0,25 mg/kg elke 6-8 h of 1,1 mg/kg pd iv (max 5 d)Bo:- aanvullende therapie, aandoening skelet: 2,2 mg/kg iv, im met 24 h interval (max 3 d) (im: max 8 ml op één plaats)- postop pijn (onthoornen) (lft < 9 w): 1 x 2,2 ml iv, 15-20 min voor onthoornenSu:- aanvullende therapie, aandoening skelet: 2,2 mg/kg pd im (max 3 d) (max 4 ml op één plaats)- postop pijn (castratie, couperen van de staart) (zuigende biggen): 1 x 2,2 mg/kg, 15-30 min voor ingreep",
+    "withdrawal_period": "Vlees en slachtafval: Eq: 5 d, Bo: 4 d (iv), 31 d (im), Su: 24 dMelk: Bo: 24 h (iv), 36 h (im)Niet gebruiken bij paarden die melk produceren voor humane consumptie.",
     "packaging": "fles 100 ml, 250 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc4c061e5c015ab3a98773"
@@ -1807,20 +2021,6 @@
     "packaging": "fles 15 ml + spuit",
     "prescription": "R/",
     "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/e9121ccd-213a-408a-a088-53ca3f222d57"
-  },
-  {
-    "id": "6082",
-    "name": "CHANISUR oordr, susp",
-    "firm": "Chanelle",
-    "registration_number": "BE-V661144",
-    "target_species": "hond, kat",
-    "composition": "miconazolnitraat: 23 mgprednisolonacetaat: 5 mgpolymyxine B-sulfaat: 5500 IE",
-    "pharmaceutical_form": "suspensie",
-    "administration_route": "voor cutaan gebruik, voor gebruik in het oor",
-    "posology": "Ca, Fe:-otitis externa: 2 x 5 gtts/oor pd (7-10 d, max 14 d)-huidinf: enkele druppels 2 x pd (max 14 d)-aanhoudende inf: behandeling mag gedurende 2-3 w voortgezet worden",
-    "packaging": "fles 15 ml, 30 ml",
-    "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/63e4f3b14c43ee0acb7bb567"
   },
   {
     "id": "6081",
@@ -2541,6 +2741,21 @@
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc4f431e5c015ab3ac6e2a"
   },
   {
+    "id": "5960",
+    "name": "RENUTEND",
+    "firm": "Boehringer Ingelheim",
+    "registration_number": "EU/2/22/282/001",
+    "target_species": "paard niet-voedselprod, paard melkprod",
+    "composition": "tenogeen geïnduceerde equine allogene mesenchymale stamcellen uit perifeer bloed (tpMSCs): 2,0 – 3,5 x 106/ml",
+    "pharmaceutical_form": "suspensie voor injectie",
+    "administration_route": "intra-lesionaal",
+    "posology": "Eq: 1 dosis/dier",
+    "withdrawal_period": "Wachttijd: 0 d",
+    "packaging": "fles 1 ml",
+    "prescription": "R/",
+    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/5f8905f9-d8a0-4acc-97de-9e984c17fbfc"
+  },
+  {
     "id": "5958",
     "name": "METROCLOS 500 mg",
     "firm": "Vet-Agro",
@@ -2787,7 +3002,7 @@
   {
     "id": "5901",
     "name": "BRAVOXIN",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V582062",
     "target_species": "rund melkprod, schaap melkprod",
     "composition": "per dosis (1 ml):C. perfringenstype A (α) toxoïd: ≥ 0,5 IEC. perfringenstype B & C (β) toxoïd: ≥ 20,5 IEC. perfringenstype D (ε) toxoïd: ≥ 5,9 IEC. chauvoeivolledige geïnactiveerde cultuur: ≥ 90% beschermingC. novyitoxoïd: ≥ 3,8 IEC. septicumtoxoïd: ≥ 3,3 IEC. tetanitoxoïd: ≥ 4,5 IEC. sordelliitoxoïd: ≥ 4,4 EC. haemolyticumtoxoïd: ≥ 25,0 EAdjuv: aluin",
@@ -2962,7 +3177,7 @@
     "withdrawal_period": "Vlees+slachtafval: Bo: 22 d; Su: 13 d; Ov: 16 dNiet goedgekeurd voor gebruik bij dieren die melk voor humane consumptie produceren. Niet gebruiken bij drachtige dieren bestemd voor de productie van melk voor humane consumptie binnen 2 maanden voor de verwachte partus.",
     "packaging": "fles 100 ml, 250 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc4c811e5c015ab3a9f522?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc4c811e5c015ab3a9f522"
   },
   {
     "id": "5884",
@@ -3066,7 +3281,7 @@
     "withdrawal_period": "Vlees en slachtafval: Bo: 15 d, Ov: 2 d, Capr: 1 dMelk: Bo, Ov, Capr: 0 h",
     "packaging": "fles 1 l (+ 2 doseerbekers)rugzak 2,5 l, 5 l (+ afgiftedop)",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc523b1e5c015ab3b0c149?version=6"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc523b1e5c015ab3b0c149"
   },
   {
     "id": "5866",
@@ -3128,7 +3343,7 @@
   {
     "id": "5849",
     "name": "SHUTOUT 2,6 g",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V582417",
     "target_species": "rund melkprod",
     "composition": "bismutsubnitraat: 2,6 g",
@@ -3724,13 +3939,13 @@
     "id": "5765",
     "name": "MIRATAZ 20 mg/g",
     "firm": "Dechra",
-    "registration_number": "EU/2/19/247/001",
+    "registration_number": "EU/2/19/247/003",
     "target_species": "kat",
     "composition": "mirtazapine (hemihydraat): 20 mg/g",
     "pharmaceutical_form": "zalf",
     "administration_route": "voor transdermaal gebruik",
     "posology": "Fe (lft > 7,5 m, LG > 2 kg): 1 x 2 mg pd (14 d)",
-    "packaging": "tube 5 g",
+    "packaging": "tube 3 g",
     "prescription": "R/",
     "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/a42377ed-7179-4550-96a6-1febfad92c46"
   },
@@ -4229,7 +4444,7 @@
     "firm": "Kernfarm",
     "registration_number": "BE-V573244",
     "target_species": "varken",
-    "composition": "per dosis (2 ml):geïnactiveerdParvovirus suis, stam MSV Bio-37: min 4 log2HIgeïnactiveerde stammen:Leptospira interrogans,serogroep Pomona, serovar Pomona, stam MSLB 1037: min 1:32 ALRLeptospira interrogans,serogroep Sejroe, serovar Hardjo, stam MSLB 1039: min 1:40 ALRLeptospira interrogans,serogroep Australis, serovar Bratislava, stam MSLB 1040: min 1:40 ALRLeptospira interrogans,serogroep Grippotyphosa, serovar Grippotyphosa, stam MSLB 1042: min 1:51 ALRLeptospira interrogans,serogroep Icterohaemorrhagiae, serovar Icterohaemorrhagiae, stam MSLB 1041: min 1:51 ALRLeptospira interrogans,serogroep Canicola, serovar Canicola, stam MSLB 1043: min 1:51 ALRAdjuv: emulsigen",
+    "composition": "per dosis (2 ml):geïnactiveerdParvovirus suis, stam Bio-37: min 4 log2HIgeïnactiveerde stammen:Leptospira interrogans,serogroep Pomona, serovar Pomona, stam MSLB 1037: min 1:32 ALRLeptospira borgpetersenii,serogroep Sejroe, serovar Hardjo, stam MSLB 1039: min 1:40 ALRLeptospira interrogans,serogroep Australis, serovar Bratislava, stam MSLB 1040: min 1:40 ALRLeptospira kirschneri,serogroep Grippotyphosa, serovar Grippotyphosa, stam MSLB 1042: min 1:51 ALRLeptospira interrogans,serogroep Icterohaemorrhagiae, serovar Icterohaemorrhagiae, stam MSLB 1041: min 1:51 ALRLeptospira interrogans,serogroep Canicola, serovar Canicola, stam MSLB 1043: min 1:51 ALRAdjuv: emulsigen",
     "pharmaceutical_form": "vaccin voor injectie",
     "administration_route": "im",
     "posology": "Su (zeugen, gelten):- Primovac: 2 doses/dier (5-6 w en 2-3 w vóór dekking)- Hervac: 1 dosis/dier (2-3 w vóór dekking)Su (beren):- Primovac: 2 doses/dier (7 w en 4 w vóór dekking)- Hervac: 1 dosis/dier/4 m",
@@ -4237,7 +4452,7 @@
     "withdrawal_period": "Wachttijd: 0 d",
     "packaging": "fles 50 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc4e461e5c015ab3aba339?version=1"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc4e461e5c015ab3aba339"
   },
   {
     "id": "5694",
@@ -4561,7 +4776,7 @@
   {
     "id": "5656",
     "name": "NOBILIS SALENVAC ETC",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V557617",
     "target_species": "kip",
     "composition": "per dosis (0,5 ml):geïnactiveerdeSalmonellaEnteritidis, stam PT4: 1–6,6 RPgeïnactiveerdeSalmonellaTyphimurium, stam DT104: 1–16,1 RPgeïnactiveerdeSalmonellaInfantis, stam A, S03499-06: 1–26,6 RPadjuv: aluminiumhydroxide",
@@ -4634,7 +4849,7 @@
     "withdrawal_period": "Wachttijd: 0 d",
     "packaging": "ampul 2000 doses, 4000 doses",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc4ef91e5c015ab3ac3759?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc4ef91e5c015ab3ac3759"
   },
   {
     "id": "5646",
@@ -4748,7 +4963,7 @@
   {
     "id": "5630",
     "name": "SERESTO DOG 1,25 g + 0,56 g halsband voor honden ≤ 8 kg",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V500986",
     "target_species": "hond",
     "composition": "per halsband:imidacloprid: 1,25 gflumethrine: 0,56 g",
@@ -4761,7 +4976,7 @@
   {
     "id": "5629",
     "name": "SERESTO DOG 4,50 g + 2,03 g halsband voor honden > 8 kg",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V501093",
     "target_species": "hond",
     "composition": "per halsband:imidacloprid: 4,5 gflumethrine: 2,03 g",
@@ -4774,7 +4989,7 @@
   {
     "id": "5628",
     "name": "SERESTO CAT 1,25 g + 0,56 g halsband voor katten",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V500995",
     "target_species": "kat",
     "composition": "per halsband:imidacloprid: 1,25 gflumethrine: 0,56 g",
@@ -4940,7 +5155,7 @@
   {
     "id": "5608",
     "name": "NOBIVAC MYXO-RHD PLUS",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "EU/2/19/244/001-003",
     "target_species": "konijn niet-voedselprod, konijn voedselprod",
     "composition": "levend myxomavirus met RHD-virus vector (stam 009): min 10exp3,0 en max 10exp5,8 FFU/dosislevend myxomavirus met RHD-virus vector (stam MK1899): min 10exp3,0 en max 10exp5,8 FFU/dosis",
@@ -5080,12 +5295,12 @@
     "withdrawal_period": "Vlees en slachtafval: 0 dNiet goedgekeurd voor gebruik bij dieren die melk voor humane consumptie produceren.",
     "packaging": "poeder 1 kg, 5 kg (zak)",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc50931e5c015ab3adcd76?version=1"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc50931e5c015ab3adcd76"
   },
   {
     "id": "5586",
     "name": "NEPTRA oordruppels opl honden",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "EU/2/19/246/001-003",
     "target_species": "hond",
     "composition": "florfenicol: 16,7 mg/mlterbinafine (hydrochloride): 14,9 mg/mlmometasonfuroaat: 2,2 mg/ml",
@@ -5129,7 +5344,7 @@
   {
     "id": "5576",
     "name": "PORCILIS LAWSONIA",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V544995",
     "target_species": "varken",
     "composition": "per dosis (2 ml):geïnactiveerd Lawsonia intracellularis stam SPAH-08: ≥ 5323 UAdjuv: lichte minerale olie, aluminiumhydroxide",
@@ -5176,7 +5391,7 @@
     "id": "5569",
     "name": "RESPIPORC FLUpan H1N1",
     "firm": "Ceva",
-    "registration_number": "EU/2/17/209/001–002",
+    "registration_number": "EU/2/17/209/003",
     "target_species": "varken",
     "composition": "per dosis (1 ml):geïnact influenza A-virus/humaan,stam: A/Jena/VI5258/2009(H1N1)pdm09: ≥ 16 HEadjuv: carbomeer 971P NF",
     "pharmaceutical_form": "vaccin voor injectie",
@@ -5465,7 +5680,7 @@
     "firm": "Pharmagal Bio",
     "registration_number": "BE-V538355",
     "target_species": "duif niet-voedselprod, duif voedselprod",
-    "composition": "per dosis (0,3 ml):duivenparamyxovirus 1 (PPMV1), geïnactiveerd, stam 988M: ≥ 6,9 log2 HIduivenherpesvirus 1 (PHV1), geïnactiveerd, stam V298/70: ≥ 38,1 EUpluimvee-adenovirus type 8 (FAdV-8), geïnactiveerd, stam M2/E:  ≥ 24,7 EUadjuv.: paraffine-olie, sorbitaan-oleaat, polysorbaat 80",
+    "composition": "per dosis (0,3 ml):duivenparamyxovirus 1 (PPMV1), geïnactiveerd, stam 988M: ≥ 6,9 log2 HIduivenherpesvirus 1 (PHV1), geïnactiveerd, stam V298/70: ≥ 38,1 EUpluimvee-adenovirus type E, serotype 8 (FAdV-8), geïnactiveerd, stam M2/E:  ≥ 24,7 EUadjuv.: paraffine-olie, sorbitaan-oleaat, polysorbaat 80",
     "pharmaceutical_form": "vaccin voor injectie",
     "administration_route": "sc",
     "posology": "duif (lft > 4 w): 1 dosis/dier",
@@ -5473,7 +5688,7 @@
     "withdrawal_period": "Wachttijd: 0 d",
     "packaging": "fles 50 dosissen",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc51a51e5c015ab3afb76d?version=1"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc51a51e5c015ab3afb76d"
   },
   {
     "id": "5532",
@@ -5504,7 +5719,7 @@
   {
     "id": "5526",
     "name": "SPASMIPUR 20 mg/ml",
-    "firm": "Richter Pharma",
+    "firm": "VetViva Richter",
     "registration_number": "BE-V541280",
     "target_species": "paard niet-voedselprod, paard melkprod, rund melkprod, schaap melkprod, varken",
     "composition": "hyoscinebutylbromide: 20 mg/ml",
@@ -5761,7 +5976,7 @@
   {
     "id": "5482",
     "name": "BAYCOX IRON 36 mg/ml + 182 mg/ml",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "EU/2/19/239/001",
     "target_species": "varken",
     "composition": "toltrazuril: 36,4 mg/mlijzer III (gleptoferron): 182 mg/ml",
@@ -5816,7 +6031,7 @@
     "withdrawal_period": "Vlees en slachtafval: 35 dNiet goedgekeurd voor gebruik bij dieren die melk voor humane consumptie produceren.Niet gebruiken bij drachtige koeien of vaarzen die bestemd zijn voor de productie van melk voor humane consumptie, binnen 2 maanden (60 dagen) vóór de verwachte partus.",
     "packaging": "fles 1 lrugzak 2,5 l",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc51411e5c015ab3aeea40?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc51411e5c015ab3aeea40"
   },
   {
     "id": "5475",
@@ -6437,7 +6652,7 @@
   {
     "id": "5404",
     "name": "NEXMECTIN 18,7 mg/g",
-    "firm": "Eco AH",
+    "firm": "Acme",
     "registration_number": "BE-V538897",
     "target_species": "paard niet-voedselprod, paard voedselprod",
     "composition": "ivermectine: 18,7 mg/g",
@@ -6447,7 +6662,7 @@
     "withdrawal_period": "Vlees+slachtafval: 34 dNiet toedienen aan merries waarvan de melk bestemd is voor humane consumptie",
     "packaging": "spuit 1 x 7,49 g",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc51741e5c015ab3af53ae?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc51741e5c015ab3af53ae"
   },
   {
     "id": "5402",
@@ -6649,7 +6864,7 @@
     "administration_route": "im, iv, sc",
     "posology": "Bo, Su: 1 x 2,5 mg/kg trim + 12,5 mg/kg sulf pd (im, iv)(tot 2 d na verdwijnen van sympt, max 5 d)Ca, Fe: 1 x 5 mg/kg trim + 25 mg/kg sulf pd (sc)(tot 2 d na verdwijnen van sympt, max 5 d)",
     "withdrawal_period": "Vlees+slachtafval: Bo: 12 d, Su: 20 d, Melk: Bo: 48 h",
-    "packaging": "fles 100 ml",
+    "packaging": "fles 100 ml, 250 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc517f1e5c015ab3af65c4"
   },
@@ -6856,7 +7071,7 @@
     "composition": "butafosfan: 100 mg/mlcyanocobalamine: 0,05 mg/ml",
     "pharmaceutical_form": "oplossing voor injectie",
     "administration_route": "iv, im, sc",
-    "posology": "Eq, Bo: 5-10 mg butafosfan + 2,5-5 µg cyanocobalamine/kg ivBo:-preventie van ketose: 3 j (binnen de 10 d voor het afkalven)-behandeling van ketose: 3 jCa: 10-15 mg butafosfan + 5-7,5 µg cyanocobalamine/kg iv, im, sc",
+    "posology": "Eq, Bo: 5-10 mg butafosfan + 2,5-5 µg cyanocobalamine/kg ivBo:-preventie van ketose: 3 d (binnen de 10 d voor het afkalven)-behandeling van ketose: 3 dCa: 10-15 mg butafosfan + 5-7,5 µg cyanocobalamine/kg iv, im, sc",
     "withdrawal_period": "Vlees en slachtafval: Eq, Bo: 0 dMelk: Eq, Bo: 0 h",
     "packaging": "fles 100 ml",
     "prescription": "R/",
@@ -6874,7 +7089,7 @@
     "posology": "Ca:- zonder premed: 6,5 mg/kg- premed (alpha-2-agonist): 3 mg/kg- premed (acepromazine): 4,5 mg/kg- onderhoud: 1,5 mg/kgFe:- zonder premed: 8 mg/kg- premed (alpha-2-agonist): 2 mg/kg- premed (acepromazine): 6 mg/kg- onderhoud: 2 mg/kg",
     "packaging": "fles 5 x 20 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc56221e5c015ab3b92e6d?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc56221e5c015ab3b92e6d"
   },
   {
     "id": "5348",
@@ -6936,7 +7151,7 @@
   {
     "id": "5331",
     "name": "SARNACURAN Cattle",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V519253",
     "target_species": "rund",
     "composition": "foxim: 500 mg/ml",
@@ -7043,7 +7258,7 @@
   {
     "id": "5316",
     "name": "BAYCOX MULTI",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V504355",
     "target_species": "rund, varken, schaap",
     "composition": "toltrazuril: 50 mg/ml",
@@ -7064,7 +7279,7 @@
     "composition": "amoxicilline trihydraat: 574 mg/g",
     "pharmaceutical_form": "poeder",
     "administration_route": "po in het drinkwater",
-    "posology": "Su: 20 mg/kg in 2 toedieningen pd  (max 5 d)kip: 15 mg/kg pd (3 of 5 d)kalkoen: 15-20 mg/kg pd (3 of 5 d)eend: 20 mg/kg pd (3 d)",
+    "posology": "Su:-pasteurellosis: 20 mg/kg in 2 toedieningen pd (5 d)-infecties metS. suis: 20 mg/kg pd (4 d)kip: 15 mg/kg pd (3 of 5 d)kalkoen: 15-20 mg/kg pd (3 of 5 d)eend: 20 mg/kg pd (3 d)",
     "withdrawal_period": "Vlees+slachtafval: Su: 2 d, kip: 1 d, kalkoen: 5 d, eend: 9 dNiet toedienen aan dieren waarvan de eieren bestemd zijn voor humane consumptie",
     "packaging": "poeder 1 kg (pot)",
     "prescription": "R/",
@@ -7242,7 +7457,7 @@
     "withdrawal_period": "Vlees en slachtafval: Eq, Bo, Su, Ov, Capr: 0 dMelk: Eq, Bo, Ov, Capr: 0 d",
     "packaging": "fles 100 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc51e21e5c015ab3b01e8d?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc51e21e5c015ab3b01e8d"
   },
   {
     "id": "5278",
@@ -7360,7 +7575,7 @@
     "administration_route": "po in het drinkwater",
     "posology": "Su: 5 mg T + 25 mg S/kg pd (4-7 d)Av: 7,5 mg T + 37,5 mg S/kg pd (3 d)",
     "withdrawal_period": "Vlees+org: Su: 8 d, Av: 5 dNiet gebruiken bij vogels die eieren voor humane consumptie produceren",
-    "packaging": "bidon 5 l",
+    "packaging": "fles 1 lbidon 5 l",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc51d31e5c015ab3b0054f"
   },
@@ -8179,14 +8394,14 @@
     "firm": "Virbac",
     "registration_number": "BE-V501733",
     "target_species": "hond",
-    "composition": "geatt hondenziektevirus (CDV), Lederle stam: 10exp3-10exp4,9 CCID50geatt hondenadenovirus type 2 (CAV-2) Manhattan stam: 10exp4-10exp6 CCID50geatt hondenparvovirus (CPV), CPV780916 stam: 10exp5-10exp6,8 CCID50geatt hondenparainfluenza virus (CPiV), Manhattan stam: 10exp5-10exp6,9 CCID50",
+    "composition": "geatt hondenziektevirus (CDV), Lederle stam: 10exp3-10exp4,9 CCID50geatt hondenadenovirus type 2 (CAV-2) Manhattan stam: 10exp4-10exp6 CCID50geatt hondenparvovirus (CPV), Cornell 780916 stam: 10exp5-10exp6,8 CCID50geatt hondenparainfluenza virus (CPiV), Manhattan stam: 10exp5-10exp6,9 CCID50",
     "pharmaceutical_form": "vaccin voor injectie",
     "administration_route": "sc",
-    "posology": "Ca: Primovac (lft > 8 w): 2 inj met 3-4 w interval (bij mat imm eventueel 3de inj vanaf lft 15 w)Revac: 1 dosis/jaar, daarna 1 dosis/3 jaar (CDV, CAV2, CPV, CAV1) en 1 dosis/jaar (CPiV)",
+    "posology": "Ca: Primovac (lft > 8 w): 2 inj met 3-4 w interval (bij mat imm eventueel 3de inj vanaf lft 15 w)gevoelige Ca: 1 inj op het lft van 6 w, daarna  gebruikelijke vaccinatieschemaRevac: 1 dosis/jaar, daarna 1 dosis/3 jaar (CDV, CAV2, CPV, CAV1) en 1 dosis/jaar (CPiV)",
     "ooi_doi": "OOI: CDV, CAV2 en CPV: 3 w na basisvac, CPiV en CAV1: 4 w na basisvacDOI: 1 jaar na basisvac, na 1ste hervac: 3 jaar (CDV, CAV2, CPV, CAV1) en 1 jaar (CPiV)",
     "packaging": "10 flacons lyofilisaat + 10 flacons oplosmiddel50 flacons lyofilisaat + 50 flacons oplosmiddel",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc583e1e5c015ab3be0acf?version=3"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc583e1e5c015ab3be0acf"
   },
   {
     "id": "4973",
@@ -8445,15 +8660,15 @@
     "firm": "Genera",
     "registration_number": "BE-V500764",
     "target_species": "kip, kalkoen",
-    "composition": "levend, lentogeen Newcastle disease virus, La Sota-stam: 10exp6,0 tot 10exp7,0 TCID50",
+    "composition": "levend Newcastle disease virus, La Sota-stam: 10exp6,0 tot 10exp7,0 TCID50",
     "pharmaceutical_form": "gevriesdroogd vaccin",
-    "administration_route": "oculonasaal of via het drinkwater",
+    "administration_route": "grove spray, oculonasaal of via het drinkwater",
     "posology": "kip (vanaf lft 1 d): 1 dosis/dier, eventueel Hervac na 35 dkalkoen (vanaf lft 14 d): 1 dosis/dier",
     "ooi_doi": "OOI: kip, kalkoen: 21 d post vacDOI: kip: 35 d post vacDOI kalkoen: geen info",
     "withdrawal_period": "Wachttijd: 0 d",
     "packaging": "fles 10 x 2500 dosissen, 10 x 5000 dosissen",
     "prescription": "R/i",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc592e1e5c015ab3c0241c?version=3"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc592e1e5c015ab3c0241c"
   },
   {
     "id": "4951",
@@ -8760,7 +8975,7 @@
     "posology": "Ca:- wondinfect, abces, mondholte/tand inf: 11 mg/kg pd, kan in 2 giften (7-10 d, max 4 d indien geen therap effect)- opp pyodermie: 11 mg/kg pd, kan in 2 giften (min 21 d)- osteomyelitis: 2 x 11 mg/kg pd (min 28 d, max 14 d indien geen therap effect)",
     "packaging": "tabl 120",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc53ca1e5c015ab3b4047a?version=5"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc53ca1e5c015ab3b4047a"
   },
   {
     "id": "4926",
@@ -9060,7 +9275,7 @@
     "composition": "carprofen: 50 mg/ml",
     "pharmaceutical_form": "oplossing voor injectie",
     "administration_route": "iv, sc",
-    "posology": "Ca (lft > 10 w): 4 mg/kg (iv, sc) (event behandeling po verderzetten)Fe (lft > 5 m): 4 mg/kg (iv, sc)",
+    "posology": "Ca (lft > 10 w): 4 mg/kg (iv, sc) (event behandeling po verderzetten, max 5 d)Fe (lft > 5 m): 4 mg/kg (iv, sc)",
     "packaging": "fles 20 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5c111e5c015ab3c69b6f"
@@ -9136,7 +9351,7 @@
     "posology": "Ca, Fe (wondinfect, abces), Ca (mondholte/tand inf):11 mg/kg pd, kan in 2 giften (7-10 d, max 4 d indien geen therap effect)Ca osteomyelitis: 2 x 11 mg/kg pd (min 28 d, max 14 d indien geen therap effect)",
     "packaging": "fles 20 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc53cb1e5c015ab3b40514?version=5"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc53cb1e5c015ab3b40514"
   },
   {
     "id": "4892",
@@ -9150,7 +9365,7 @@
     "posology": "Ca:- wondinfect, abces, mondholte/tand inf: 11 mg/kg pd, kan in 2 giften (7-10 d, max 4 d indien geen therap effect)- opp pyodermie: 11 mg/kg pd, kan in 2 giften (min 21 d)- osteomyelitis: 2 x 11 mg/kg pd (min 28 d, max 14 d indien geen therap effect)",
     "packaging": "tabl 120",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc53cb1e5c015ab3b4048a?version=5"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc53cb1e5c015ab3b4048a"
   },
   {
     "id": "4891",
@@ -9438,7 +9653,7 @@
     "withdrawal_period": "Vlees+org: 35 dNiet gebruiken bij merries die melk produceren voor humane consumptie",
     "packaging": "spuit 1 of 12 x 7,49 g",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc55161e5c015ab3b6d4ac?version=3"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc55161e5c015ab3b6d4ac"
   },
   {
     "id": "4866",
@@ -9555,18 +9770,18 @@
   },
   {
     "id": "4854",
-    "name": "PEPTICURE",
+    "name": "PEPTICURE 370 mg/g",
     "firm": "Norbrook Lab",
     "registration_number": "BE-V470595",
     "target_species": "paard voedselprod, paard niet-voedselprod",
     "composition": "omeprazol: 370 mg/g",
     "pharmaceutical_form": "pasta",
     "administration_route": "po",
-    "posology": "Eq (lft > 4 w, LG >70 kg):Behandeling: 4 mg pasta/kg pd (28 d)Preventie: 1 mg pasta/kg pd",
-    "withdrawal_period": "Vlees+org: 1 dNiet toedienen aan Eq die melk voor menselijke consumptie produceren",
+    "posology": "Eq (lft > 4 w, LG >70 kg):Behandeling: 4 mg pasta/kg pd (28 d), daarna 1 mg/kg pd (28 d). Indien maagzweren terugkeren, behandeling herhalen.Preventie: 1 mg pasta/kg pd",
+    "withdrawal_period": "Vlees+org: 1 dNiet toedienen aan dieren die melk voor menselijke consumptie produceren",
     "packaging": "spuit 7 x 7,57g",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc55ec1e5c015ab3b8b423?version=5"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc55ec1e5c015ab3b8b423"
   },
   {
     "id": "4848",
@@ -9640,21 +9855,6 @@
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc564e1e5c015ab3b99186?version=3"
   },
   {
-    "id": "4838",
-    "name": "TAF SPRAY 28,5 mg/g",
-    "firm": "Dechra",
-    "registration_number": "BE-V467937",
-    "target_species": "paard niet-voedselprod, paard voedselprod, rund melkprod, schaap melkprod, geit melkprod, varken, konijn niet-voedselprod, konijn voedselprod, nerts",
-    "composition": "thiamfenicol: 28,5 mg/g",
-    "pharmaceutical_form": "spray",
-    "administration_route": "voor cutaan gebruik",
-    "posology": "Eq, Bo, Su, Capr, Ov, nerts, konijn: spray 1 x pd voor 3 sec (max 3 d)",
-    "withdrawal_period": "Vlees+org: Eq, Bo, Ov, Capr, Su, konijn: 0 d, Su: 14 d, Melk: 0 hNiet op de uier van lacterende dieren gebruiken indien de melk bestemd is voor humane consumptie",
-    "packaging": "fles 150 ml",
-    "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc57061e5c015ab3bb11e1?version=3"
-  },
-  {
     "id": "4837",
     "name": "EFFITIX 134 mg/1200 mg middelgrote honden",
     "firm": "Virbac",
@@ -9666,7 +9866,7 @@
     "posology": "Ca (10-20 kg LG): 1 pipetvlo, teek: 4 w",
     "packaging": "4 pipetten",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc571f1e5c015ab3bb5589?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc571f1e5c015ab3bb5589"
   },
   {
     "id": "4836",
@@ -9680,7 +9880,7 @@
     "posology": "Ca (4-10 kg LG): 1 pipetvlo, teek: 4 w",
     "packaging": "4 pipetten",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc571f1e5c015ab3bb5535?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc571f1e5c015ab3bb5535"
   },
   {
     "id": "4835",
@@ -9694,7 +9894,7 @@
     "posology": "Ca (1,5-4 kg LG): 1 pipetvlo, teek: 4 w",
     "packaging": "4 pipetten",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc571f1e5c015ab3bb54d0?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc571f1e5c015ab3bb54d0"
   },
   {
     "id": "4834",
@@ -10052,7 +10252,7 @@
     "withdrawal_period": "Vlees+org: 15 d, Melk: 0 h",
     "packaging": "fles 1 l, 2,5 l, 5 l",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc589b1e5c015ab3becf13?version=5"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc589b1e5c015ab3becf13"
   },
   {
     "id": "4804",
@@ -10156,7 +10356,7 @@
   {
     "id": "4797",
     "name": "ADVANTAGE DOG 100, spot-on",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V459697",
     "target_species": "hond",
     "composition": "imidacloprid: 100 mg",
@@ -10499,7 +10699,7 @@
     "withdrawal_period": "Wachttijd: 0 d",
     "packaging": "fles 50 ml (poeder) + 50 ml diluens, 100 ml (poeder) + 100 ml diluens",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc54391e5c015ab3b50992?version=5"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc54391e5c015ab3b50992"
   },
   {
     "id": "4762",
@@ -10980,8 +11180,8 @@
     "pharmaceutical_form": "oplossing voor injectie",
     "administration_route": "iv",
     "posology": "Eq, Bo, Ca, Fe: 5-75 ml/kg/haanbevolen: 15 ml/kg/haan te passen bij shock",
-    "withdrawal_period": "Wachttijden: 0 d",
-    "packaging": "infusiezak 20 x 500 ml, 10 x 1000 ml, 2 x 5000 ml",
+    "withdrawal_period": "Vlees en slachtafval: 0 dMelk: 0 h",
+    "packaging": "infusiezak 2 x 5000 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5c151e5c015ab3c6a43f"
   },
@@ -10996,7 +11196,7 @@
     "administration_route": "iv",
     "posology": "Eq, Bo, Ca, Fe: 5-75 ml/kg/haanbevolen: 15 ml/kg/haan te passen bij shock",
     "withdrawal_period": "Vlees en slachtafval: 0 dMelk: 0 h",
-    "packaging": "infusiezak 20 x 500 en 10 x 1000 ml",
+    "packaging": "infusiezak 500 ml, 10 x 1000 ml, 15 x 500 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5c101e5c015ab3c6986b"
   },
@@ -11006,7 +11206,7 @@
     "firm": "Huvepharma",
     "registration_number": "BE-V442023",
     "target_species": "varken",
-    "composition": "apramycine: 100 g/kg",
+    "composition": "apramycine (sulfaat): 100 g/kg",
     "pharmaceutical_form": "premix voor gemedicineerd voer",
     "administration_route": "po",
     "posology": "Su: 4000-8000 IU/kg LG pd (min 21 d)",
@@ -11140,8 +11340,8 @@
     "composition": "ketamine (hydrochloride): 100 mg/ml",
     "pharmaceutical_form": "oplossing voor injectie",
     "administration_route": "im, sc, iv",
-    "posology": "Eq:xylazine+ketamine: 1,1 mg/kg xylazine (traag iv) en na 2 min, max 5 min 2,2 mg/kg ketamine (iv bolus)detomidine/ketamine: 20 mcg/kg detomidine (iv) en na 5 min, 2,2 mg/kg ketamine (iv bolus) * langere anesth kan dmv natriumthiopental of detomidine/ketamine (cf SKP)romifidine+ketamine: 100 mcg/kg romifidine (iv) en na 5-10 min, 2,2 mg/kg ketamine (iv bolus) * langere anesth kan dmv natriumthiopental of romifidine/ketamine (cf SKP)Ca:xylazine+ketamine: 1 mg/kg xylazine (im) en 15 mg/kg ketamine (im)medetomidine+ketamine: 40 mcg/kg medetomidine (im) en 5,0-7,5 mg/kg ketamine (im)butorfanol+medetomidine+ketamine: 0,1 mg/kg butorfanol en 25 mcg/kg medetomidine en 15 min later, 5 mg/kg ketamineFe:ketamine (mono-anesth): 11-33 mg/kg ketamine (voorkeur im of iv, sc)premed met atropine: 0,05 mg/kg of acepromazine: 0,11 mg/kg (im)eventueel verlengd met combinatie van methoxyfluraan, halothaan, lachgas en zuurstofxylazine+ketamine: 1,1 mg/kg xylazine (im) en 0,03 mg/kg atropine (im) en na 20 min, 22 mg/kg ketamine (im)medetomidine+ketamine:im: 80 mcg/kg medetomidine (im) en 2,5-7,5 mg/kg ketamine (im), eventueel verlengd met halothaan en zuurstof, met of zonder lachgasiv: 40 mcg/kg medetomidine (iv) en 1,25 mg/kg ketamine (iv)butorfanol+medetomidine+ketamine:im: 0,4 mg/kg butorfanol en 80 mcg/kg medetomidine en 5 mg/kg ketamineiv: 0,1 mg/kg butorfanol en 40 mcg/kg medetomidine en 1,25-2,5 mg/kg ketamine",
-    "withdrawal_period": "Vlees+org: Eq: 1 dMelk: 1 d",
+    "posology": "Eq:xylazine+ketamine: 1,1 mg/kg xylazine (traag iv) en na 2 min, max 5 min 2,2 mg/kg ketamine (iv bolus)detomidine/ketamine: 20 mcg/kg detomidine (iv) en na 5 min, 2,2 mg/kg ketamine (iv bolus) * langere anesth kan dmv natriumthiopental of detomidine/ketamine (cf SKP)romifidine+ketamine: 100 mcg/kg romifidine (iv) en na 5-10 min, 2,2 mg/kg ketamine (iv bolus) * langere anesth kan dmv natriumthiopental of romifidine/ketamine (cf SKP)Ca:xylazine+ketamine: 1 mg/kg xylazine (im) en 15 mg/kg ketamine (im)medetomidine+ketamine: 40 mcg/kg medetomidine (im) en 5,0-7,5 mg/kg ketamine (im)butorfanol+medetomidine+ketamine: 0,1 mg/kg butorfanol im en 25 mcg/kg medetomidine im en 15 min later, 5 mg/kg ketamine imFe:ketamine (mono-anesth): 11-33 mg/kg ketamine (voorkeur im of iv, sc)premed met atropine: 0,05 mg/kg of acepromazine: 0,11 mg/kg (im)eventueel verlengd met combinatie van methoxyfluraan, halothaan, lachgas en zuurstofxylazine+ketamine: 1,1 mg/kg xylazine (im) en 0,03 mg/kg atropine (im) en na 20 min, 22 mg/kg ketamine (im)medetomidine+ketamine:im: 80 mcg/kg medetomidine (im) en 2,5-7,5 mg/kg ketamine (im), eventueel verlengd met halothaan en zuurstof, met of zonder lachgasiv: 40 mcg/kg medetomidine (iv) en 1,25 mg/kg ketamine (iv)butorfanol+medetomidine+ketamine:im: 0,4 mg/kg butorfanol en 80 mcg/kg medetomidine en 5 mg/kg ketamineiv: 0,1 mg/kg butorfanol en 40 mcg/kg medetomidine en 1,25-2,5 mg/kg ketamine",
+    "withdrawal_period": "Vlees+org: Eq: 1 dMelk: 24 h",
     "packaging": "fles 10 ml, 50 ml",
     "prescription": "R/psych",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5c521e5c015ab3c72ba8"
@@ -11367,9 +11567,9 @@
     "target_species": "paard niet-voedselprod, paard voedselprod, rund melkprod, varken",
     "composition": "flunixine (meglumine): 50 mg/ml",
     "pharmaceutical_form": "oplossing voor injectie",
-    "administration_route": "iv (Eq, Bo), im (Su)",
-    "posology": "Eq:- aandoening skelet, spierstelsel: 1,1 mg/kg iv, met 24 h interval (max 5 d)- koliek: 1,1 mg/kg iv, behandeling kan 1 of 2 x herhaald wordenBo: 1,1-2,2 mg/kg iv, met 24 h interval (max 3 d)Su (LG > 6 kg): 1 x 2,2 mg/kg (max 5 ml op één plaats)",
-    "withdrawal_period": "Vlees en slachtafval: Eq: 28 d, Bo: 10 d, Su: 24 dMelk: Bo: 48 hNiet gebruiken bij paarden die melk produceren voor humane consumptie.",
+    "administration_route": "iv (Eq, Bo), im (Bo, Su)",
+    "posology": "Eq:- aandoening skelet, koorts: 1,1 mg/kg pd iv (max 5 d)- koliek: 1,1 mg/kg iv, behandeling kan 1 of 2 x herhaald worden- aanvullende therapie: 0,25 mg/kg elke 6-8 h of 1,1 mg/kg pd iv (max 5 d)Bo:- aanvullende therapie, aandoening skelet: 2,2 mg/kg iv, im met 24 h interval (max 3 d) (im: max 8 ml op één plaats)- postop pijn (onthoornen) (lft < 9 w): 1 x 2,2 ml iv, 15-20 min voor onthoornenSu:- aanvullende therapie, aandoening skelet: 2,2 mg/kg pd im (max 3 d) (max 4 ml op één plaats)- postop pijn (castratie, couperen van de staart) (zuigende biggen): 1 x 2,2 mg/kg, 15-30 min voor ingreep",
+    "withdrawal_period": "Vlees en slachtafval: Eq: 5 d, Bo: 4 d (iv), 31 d (im), Su: 24 dMelk: Bo: 24 h (iv), 36 h (im)Niet gebruiken bij paarden die melk produceren voor humane consumptie.",
     "packaging": "fles 100 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc74141e5c015ab3f654be"
@@ -11762,7 +11962,7 @@
     "administration_route": "po",
     "posology": "Eq:dag 1: 2 x 4.4 mg/kg pddag 2-4 : 2 x 2.2 mg/kg pddaarna: 1 x 2.2 mg/kg pd of om de 2 d",
     "withdrawal_period": "Niet toedienen aan Eq die bestemd zijn voor humane consumptie of aan Eq waarvan de melk bestemd is voor humane consumptie",
-    "packaging": "zakje 20 x 5 g",
+    "packaging": "zakje 20, 100",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5cb11e5c015ab3c7f7ee"
   },
@@ -11819,11 +12019,11 @@
     "composition": "cloprostenol (natrium): 0,0875 mg/ml",
     "pharmaceutical_form": "oplossing voor injectie",
     "administration_route": "im",
-    "posology": "Bo: 0,5 mg/dier, cyclussynchronisatie: 2 x behandelen met 11 d intervalSu: 1 x 0,175 mg/dier",
-    "withdrawal_period": "Vlees+org: Bo, Su: 2 d, Melk Bo: 0 h",
+    "posology": "Bo: 0,5 mg/dierSu: 1 x 0,175 mg/dier",
+    "withdrawal_period": "Vlees+org: Bo, Su: 1 d,Melk Bo: 0 h",
     "packaging": "fles 50 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5e3a1e5c015ab3cb514b?version=3"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5e3a1e5c015ab3cb514b"
   },
   {
     "id": "4620",
@@ -12397,11 +12597,11 @@
     "composition": "ketoprofen: 100 mg/ml",
     "pharmaceutical_form": "oplossing voor injectie",
     "administration_route": "iv, im",
-    "posology": "Eq locomot. aandoen.: 2,2 mg/kg (iv) 3-5 dEq koliek: 2,2 mg/kg (iv) (mag herhaald worden)Bo: 3 mg/kg (iv, im) (max 3 d)Su: 3 mg/kg (im)",
+    "posology": "Eq locomot. aandoen.: 2,2 mg/kg pd (iv) 3-5 dEq koliek: 2,2 mg/kg (iv) (mag herhaald worden)Bo: 3 mg/kg pd (iv, im) (max 3 d)Su: 3 mg/kg (im)",
     "withdrawal_period": "Vlees: Eq: 1 d, Bo (iv): 1 d, Bo (im): 2 d, Su: 2 dMelk: Bo: 0 hNiet toedienen aan Eq die melk produceren voor humane consumptie",
     "packaging": "fles 100 ml, 250 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc60641e5c015ab3cf7e4b?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc60641e5c015ab3cf7e4b"
   },
   {
     "id": "4555",
@@ -12450,7 +12650,7 @@
   {
     "id": "4551",
     "name": "SERESTO 1,25 g + 0,56 g halsband katten",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V400084",
     "target_species": "kat",
     "composition": "imidacloprid: 1,25 gflumethrine: 0,56 g",
@@ -12479,7 +12679,7 @@
   {
     "id": "4548",
     "name": "VERAFLOX 25 mg/ml po susp katten",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "EU/2/10/107/013",
     "target_species": "kat",
     "composition": "pradofloxacine: 25 mg/ml",
@@ -12491,46 +12691,19 @@
     "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/d45345c1-68b2-443d-8fd0-93e61345f527"
   },
   {
-    "id": "4547",
-    "name": "VERAFLOX 120 mg  tabl honden",
-    "firm": "Bayer",
-    "registration_number": "EU/2/10/107/009, EU/2/10/107/011",
-    "target_species": "hond",
-    "composition": "pradofloxacine: 120 mg",
-    "pharmaceutical_form": "deelbare tablet",
-    "administration_route": "po",
-    "posology": "Ca: 1 x 3 mg/kg pd (7-35 d, afh van indicatie)",
-    "packaging": "tabl 7, 70",
+    "id": "4542",
+    "name": "QUIFLOR S 100 mg/ml inj opl rund",
+    "firm": "Krka",
+    "registration_number": "BE-V399664",
+    "target_species": "rund melkprod",
+    "composition": "marbofloxacine: 100 mg/ml",
+    "pharmaceutical_form": "oplossing voor injectie",
+    "administration_route": "im",
+    "posology": "Bo: 1 x 8 mg/kg",
+    "withdrawal_period": "Vlees+org: 3 d, Melk: 72 h",
+    "packaging": "fles 100 ml",
     "prescription": "R/",
-    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/d45345c1-68b2-443d-8fd0-93e61345f527"
-  },
-  {
-    "id": "4546",
-    "name": "VERAFLOX 60 mg tabl honden",
-    "firm": "Bayer",
-    "registration_number": "EU/2/10/107/005",
-    "target_species": "hond",
-    "composition": "pradofloxacine: 60 mg",
-    "pharmaceutical_form": "deelbare tablet",
-    "administration_route": "po",
-    "posology": "Ca: 1 x 3 mg/kg pd (7-35 d, afh van indicatie)",
-    "packaging": "tabl 7",
-    "prescription": "R/",
-    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/d45345c1-68b2-443d-8fd0-93e61345f527"
-  },
-  {
-    "id": "4545",
-    "name": "VERAFLOX 15 mg tabl honden, katten",
-    "firm": "Bayer",
-    "registration_number": "EU/2/10/107/001, EU/2/10/107/003",
-    "target_species": "hond, kat",
-    "composition": "pradofloxacine: 15 mg",
-    "pharmaceutical_form": "deelbare tablet",
-    "administration_route": "po",
-    "posology": "Ca: 1 x 3 mg/kg pd (7-35 d, afh van indicatie)Fe: 1 x 3 mg/kg pd (5 d)",
-    "packaging": "tabl 7, 70",
-    "prescription": "R/",
-    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/d45345c1-68b2-443d-8fd0-93e61345f527"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc60f31e5c015ab3d0b950"
   },
   {
     "id": "4539",
@@ -12756,7 +12929,7 @@
     "withdrawal_period": "Vlees+org: 1 d, Melk: 0 h",
     "packaging": "fles 20 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc570f1e5c015ab3bb2f7a?version=3"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc570f1e5c015ab3bb2f7a"
   },
   {
     "id": "4523",
@@ -12767,10 +12940,10 @@
     "composition": "fipronil: 402,6 mgpermethrine: 3597,0 mg",
     "pharmaceutical_form": "spot-on",
     "administration_route": "voor cutaan gebruik",
-    "posology": "Ca (40-60 kg LG): 1 pipetvlo, teek: 4 w",
+    "posology": "Ca (40-60 kg LG): 1 pipetCa (PV > 60 kg): geschikte combinatie van pipettenvlo, teek: 4 w",
     "packaging": "4 pipetten",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc571f1e5c015ab3bb5598?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc571f1e5c015ab3bb5598"
   },
   {
     "id": "4522",
@@ -12784,7 +12957,7 @@
     "posology": "Ca (20-40 kg LG): 1 pipetvlo, teek: 4 w",
     "packaging": "4 pipetten",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc571f1e5c015ab3bb5590?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc571f1e5c015ab3bb5590"
   },
   {
     "id": "4519",
@@ -12912,8 +13085,8 @@
     "composition": "cloprostenol (natrium): 0,250 mg/ml",
     "pharmaceutical_form": "oplossing voor injectie",
     "administration_route": "im",
-    "posology": "Bo: 0,5 mg/dier, cyclussynchronisatie: 2 x behandelen met 11 d intervalSu: 1 x 0,175 mg/dier",
-    "withdrawal_period": "Vlees+org: Bo, Su: 2 d, Melk Bo: 0 h",
+    "posology": "Bo: 0,5 mg/dierSu: 1 x 0,175 mg/dier",
+    "withdrawal_period": "Vlees+org: Bo, Su: 1 dMelk: Bo: 0 h",
     "packaging": "fles 50 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5e3a1e5c015ab3cb513b"
@@ -13059,7 +13232,7 @@
   {
     "id": "4490",
     "name": "BAYTRIL FLAVOUR 25 mg/ml",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V392034",
     "target_species": "kat",
     "composition": "enrofloxacine: 25 mg/ml",
@@ -13317,7 +13490,7 @@
     "withdrawal_period": "Vlees: 2 d, Melk: 12 h",
     "packaging": "fles 20 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc63e01e5c015ab3d72a3e?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc63e01e5c015ab3d72a3e"
   },
   {
     "id": "4462",
@@ -13447,7 +13620,7 @@
     "withdrawal_period": "Vlees+org: 0 d, Melk: 0 d",
     "packaging": "fles 20 ml",
     "prescription": "R/psych",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc66781e5c015ab3dcb981?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc66781e5c015ab3dcb981"
   },
   {
     "id": "4448",
@@ -13745,11 +13918,11 @@
   },
   {
     "id": "4419",
-    "name": "BLOCKADE 2,5 mg/g",
+    "name": "BLOCKADE 2,56 mg/ml",
     "firm": "DeLaval",
     "registration_number": "BE-V360175",
     "target_species": "rund melkprod",
-    "composition": "jodium: 2,5 mg/g",
+    "composition": "jodium: 2,56 mg/ml",
     "pharmaceutical_form": "oplossing",
     "administration_route": "voor speendip",
     "posology": "Bo: 5 ml/dier/behandeling",
@@ -13774,7 +13947,7 @@
   {
     "id": "4417",
     "name": "ENGEMYCIN spray",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V356307",
     "target_species": "rund melkprod, schaap melkprod, varken",
     "composition": "oxytetracycline hydrochloride: 25 mg/ml",
@@ -13857,7 +14030,7 @@
     "posology": "Ca:analgesie: 0,2 - 0,4 mg/kgsedatie: 0,1 - 0,2 mg/kg butorfanol met 10 - 30 mcg/kg medetomidineFe: analgesie: 0,1-0,2 mg/kg",
     "packaging": "fles 10 ml",
     "prescription": "R/psych",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc64bd1e5c015ab3d90552?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc64bd1e5c015ab3d90552"
   },
   {
     "id": "4410",
@@ -14382,11 +14555,11 @@
     "firm": "Boehringer Ingelheim",
     "registration_number": "BE-V340085",
     "target_species": "varken",
-    "composition": "geïnact Mycoplasma hyopneumoniae (J stam, isolaat B-3745): min 1,0 RP/mlAdjuv: carbomeer",
+    "composition": "geïnact Mycoplasma hyopneumoniae (J stam): min 1,0 RP/mlAdjuv: carbomeer",
     "pharmaceutical_form": "vaccin voor injectie",
     "administration_route": "im",
     "posology": "Su (lft > 3 w): 1 x 1 dosis (1 ml)met INGELVAC CIRCOFLEX: lft > 3 w",
-    "ooi_doi": "OOI: 2 w na vacDOI: min 26 w",
+    "ooi_doi": "OOI: 2 w na vacDOI: 26 w",
     "withdrawal_period": "Wachttijd: 0 d",
     "packaging": "fles 50 ml, 100 ml, 250 ml",
     "prescription": "R/",
@@ -14539,7 +14712,7 @@
     "withdrawal_period": "Vlees en slachtafval: 4 d",
     "packaging": "zak 24 kg",
     "prescription": "R/premix",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc68201e5c015ab3e046fe?version=3"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc68201e5c015ab3e046fe"
   },
   {
     "id": "4350",
@@ -14553,7 +14726,7 @@
     "posology": "Ca:sedatie: 15 - 80 mcg/kg (iv) of 20 - 100 mcg/kg (im)premed: 10 - 40 mcg/kg (afh van gebruikte anaesthetica)Fe:sedatie: 50 - 150 mcg/kg (iv, im, sc)",
     "packaging": "fles 10 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc68b31e5c015ab3e17fb7?version=3"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc68b31e5c015ab3e17fb7"
   },
   {
     "id": "4349",
@@ -14587,7 +14760,7 @@
   {
     "id": "4347",
     "name": "BYEMITE 500 mg/ml",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V333837",
     "target_species": "kip eiprod",
     "composition": "foxim: 500 mg/ml",
@@ -14604,15 +14777,15 @@
     "name": "VETMULIN 100 g/kg premix",
     "firm": "Huvepharma",
     "registration_number": "BE-V333453",
-    "target_species": "varken, kip eiprod, konijn voedselprod, konijn niet-voedselprod",
+    "target_species": "varken, kip eiprod, kalkoen, konijn voedselprod, konijn niet-voedselprod",
     "composition": "tiamuline waterstoffumaraat: 100 g/kg",
     "pharmaceutical_form": "premix voor gemedicineerd voer",
     "administration_route": "po",
-    "posology": "Su:-dysenterie, colitis, pneumonie: 5-10 mg/kg LG pd (7-10 d)-PPE (ileïtis): 7,5 mg/kg LG pd (10-14 d)kip: CRD, airsacculitis, synovitis: 25 mg/kg LG pd (3-5 d)kalkoen: sinusitis, airsacculitis: 40 mg/kg LG pd (3-5 d)konijn:-enzoötische enterocolitis: 3 mg/kg LG pd (2-3 d na het verdwijnen van klinische verschijnselen)-metafylaxe van enzoötische enterocolitis: 3 mg/kg LG pd (3-4 w vanaf 1ste w na het spenen)",
+    "posology": "Su:-dysenterie, colitis, pneumonie: 5-10 mg/kg LG pd (7-10 d)-PPE (ileïtis): 7,5 mg/kg LG pd (10-14 d)kip: CRD, airsacculitis: 25 mg/kg LG pd (3-5 d)kalkoen: sinusitis, airsacculitis: 40 mg/kg LG pd (3-5 d)konijn:-enzoötische enterocolitis: 3 mg/kg LG pd (2-3 d na het verdwijnen van klinische verschijnselen)-metafylaxe van enzoötische enterocolitis: 3 mg/kg LG pd (3-4 w vanaf 1ste w na het spenen)",
     "withdrawal_period": "Vlees+org: Su: 6 d, kip: 1 d, kalkoen: 4 d, konijn: 0 dEi: kip: 0 d",
     "packaging": "zak 20 kg",
     "prescription": "R/premix",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc68e81e5c015ab3e1fb7f?version=5"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc68e81e5c015ab3e1fb7f"
   },
   {
     "id": "4345",
@@ -14768,8 +14941,8 @@
     "composition": "flunixine (meglumine): 50 mg/ml",
     "pharmaceutical_form": "oplossing voor injectie",
     "administration_route": "iv (Bo, Eq), im (Su)",
-    "posology": "Bo: 2,2 mg/kg pd (1-3 d)Eq: 1,1 mg/kg pd (1-5 d)Su: 2,2 mg/kg pd (alle 12 u)",
-    "withdrawal_period": "Bo: (orgaan)vlees: 4 d; melk: 24 uEq: (orgaan)vlees: 28 dSu: (orgaan)vlees: 28 d\nNiet goedgekeurd voor gebruik bij lacterende paarden die melk voor humane consumptie produceren.",
+    "posology": "Eq:-aandoeningen van het bewegingsapparaat, koorts: 1,1 mg/kg pd iv (max 5 d)-koliek: 1,1 mg/kg iv. Herhaal 1-2 x indien nodig-endotoxemie: 0,25 mg/kg elke 6-8 h of 1 x 1,1 mg/kg pd iv (max 5 d)Bo: 2,2 mg/kg pd iv (max 3 d)kalf (lft < 9 w): 1 x 2,2 mg/kg iv, 15-20 min voor onthoornenSu (zeug): 2,2 mg/kg pd im (max 3 d)zuigende biggen: 1 x 2,2 mg/kg im, 15-30 min voor castratie of couperen van de staart",
+    "withdrawal_period": "Vlees en slachtafval: Eq: 5 d, Bo: 4 d, Su: 28 dMelk: Bo: 24 hNiet goedgekeurd voor gebruik bij lacterende paarden die melk voor humane consumptie produceren.",
     "packaging": "fles 100 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc69f81e5c015ab3e44f6c"
@@ -14924,7 +15097,7 @@
   {
     "id": "4313",
     "name": "IVERMAX 18,7 mg/g orale pasta paarden",
-    "firm": "Eco AH",
+    "firm": "Acme",
     "registration_number": "BE-V318202",
     "target_species": "paard voedselprod, paard niet-voedselprod",
     "composition": "ivermectine: 18,7 mg/g",
@@ -14934,7 +15107,7 @@
     "withdrawal_period": "Vlees: 34 dNiet gebruiken bij merries waarvan de melk bestemd is voor humane consumptie",
     "packaging": "spuit 7,49 g",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc6b4c1e5c015ab3e712e1?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc6b4c1e5c015ab3e712e1"
   },
   {
     "id": "4312",
@@ -15007,7 +15180,7 @@
     "withdrawal_period": "Vlees+org: 2 d, Melk: 12 h",
     "packaging": "fles 15 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5b381e5c015ab3c4d2e7?version=3"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5b381e5c015ab3c4d2e7"
   },
   {
     "id": "4306",
@@ -15026,7 +15199,7 @@
   {
     "id": "4304",
     "name": "NOBILIS ND C2",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V281057",
     "target_species": "kip",
     "composition": "geatt Newcastle disease virus stam C2: min.5,7-max.7,5 log10 EID50/dosis",
@@ -15035,7 +15208,7 @@
     "posology": "kip (lft 1 d): 1 dosis/dierna 2 - 3 w vac met stam Clone 30",
     "ooi_doi": "seroneg dieren:OOI: 2 wDOI: 5 wdieren met mat As:OOI: 2 w",
     "withdrawal_period": "Wachttijd: 0 d",
-    "packaging": "fles 12 x 5000 doses",
+    "packaging": "fles 10 x 1000 doses, 12 x 2500 doses, 12 x 5000 doses, 10 x 10.000 doses, 12 x 10.000 doses",
     "prescription": "R/i",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc4af61e5c015ab3a88bf9"
   },
@@ -15164,7 +15337,7 @@
     "posology": "Ca:- sedatie:750 mcg/m² lich opp (iv) of 1000 mcg/m² lich opp (im) (20 - 80 mcg/kg)- premed:10 - 40 mcg/kgFe:- matige - diepe sedatie:50 - 150 mcg/kg- anesth:80 mcg/kg (met 2,5 - 7,5 mg/kg ketamine)",
     "packaging": "fles 10 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc6ba91e5c015ab3e7be36?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc6ba91e5c015ab3e7be36"
   },
   {
     "id": "4288",
@@ -15358,7 +15531,7 @@
   {
     "id": "4270",
     "name": "NOBIVAC TRICAT TRIO",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V296895",
     "target_species": "kat",
     "composition": "per dosis (1 ml):geatt kattencalicivirus (stam F9): min 10exp4,6 pfugeatt  feline rhinotracheïtisvirus, stam G2620A: min 10exp5,2 pfugeatt kattenpanleucopenievirus (stam MW-1): min. 10exp4,3 CCID50",
@@ -15728,7 +15901,7 @@
   },
   {
     "id": "4235",
-    "name": "CYCLIX Porcine",
+    "name": "CYCLIX 87,5 mcg/ml",
     "firm": "Virbac",
     "registration_number": "BE-V279212",
     "target_species": "varken",
@@ -15736,14 +15909,14 @@
     "pharmaceutical_form": "oplossing voor injectie",
     "administration_route": "im",
     "posology": "Su: 2 ml/dier",
-    "withdrawal_period": "Vlees: 2 d",
+    "withdrawal_period": "Vlees en slachtafval: 1 d",
     "packaging": "fles 20 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc70781e5c015ab3f0b2dc"
   },
   {
     "id": "4234",
-    "name": "CYCLIX 250 µg/ml",
+    "name": "CYCLIX 250 mcg/ml",
     "firm": "Virbac",
     "registration_number": "BE-V279212",
     "target_species": "rund melkprod",
@@ -15876,6 +16049,20 @@
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc69fc1e5c015ab3e45717?version=6"
   },
   {
+    "id": "4222",
+    "name": "ZANTEL tabl honden",
+    "firm": "Chanelle",
+    "registration_number": "BE-V272492, BE-V370797, BE-V370806",
+    "target_species": "hond",
+    "composition": "praziquantel: 50 mgfenbendazole: 500 mg",
+    "pharmaceutical_form": "tablet",
+    "administration_route": "po",
+    "posology": "Ca (lft > 2 w): 5 mg/kg praz + 50 mg/kg fenb pd (2 d)",
+    "packaging": "tabl 2, 3, 4, 6, 8, 10, 12, 20, 24, 30, 48, 50, 60, 100, 120, 200, 400",
+    "prescription": "R/",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc66f41e5c015ab3ddb885"
+  },
+  {
     "id": "4221",
     "name": "CANIGEN PUPPY 2b",
     "firm": "Virbac",
@@ -15981,7 +16168,7 @@
   {
     "id": "4214",
     "name": "ADVOCATE SPOT-ON opl zeer grote honden",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "EU/2/03/039/009",
     "target_species": "hond",
     "composition": "per pipet:moxidectine: 100 mgimidacloprid: 400 mg",
@@ -15995,7 +16182,7 @@
   {
     "id": "4213",
     "name": "ADVOCATE SPOT-ON opl middelgrote honden",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "EU/2/03/039/025",
     "target_species": "hond",
     "composition": "per pipet:moxidectine: 25 mgimidacloprid: 100 mg",
@@ -16069,7 +16256,7 @@
   {
     "id": "4208",
     "name": "NOBIVAC DUCAT",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V267653",
     "target_species": "kat",
     "composition": "geatt felien rhinotracheïtisvirus, stam G2620A: min 10exp4,8 TCID50/dosisgeatt felien calicivirus, stam F9: min 10exp4,6 PFU/dosis",
@@ -16145,7 +16332,7 @@
   {
     "id": "4203",
     "name": "NOBILIS RT+ IB multi + ND + EDS",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V265876",
     "target_species": "kip",
     "composition": "per dosis (0,5 ml) geïnact antigenen van:infectieuze bronchitis virus, stam M41: min 5,5 log2 VN Einfectieuze bronchitis virus, stam 249 g: min 4 log2 VN Eaviaire rhinotracheïtis virus, stam But1#8544: min 9,5 log2 Elisa EEgg Drop Syndrome '76 virus, stam BC14: min 6,5 log2 HI ENewcastle disease virus, stam Clone 30: min 50 PD50 EAdjuv: vloeibare paraffine",
@@ -16213,7 +16400,7 @@
     "posology": "Bo: 5 ml verdunde opl/dier/behandeling",
     "withdrawal_period": "Vlees: 0 d, Melk: 0 h",
     "packaging": "vat 5 l, 20 l",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc67cc1e5c015ab3df869f?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc67cc1e5c015ab3df869f"
   },
   {
     "id": "4195",
@@ -16477,7 +16664,7 @@
     "withdrawal_period": "Vlees: Bo, Su: 2 d, Melk: Bo: 0 h",
     "packaging": "fles 50 ml, 10 x 5 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc6f4f1e5c015ab3ee9b6b?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc6f4f1e5c015ab3ee9b6b"
   },
   {
     "id": "4172",
@@ -16544,7 +16731,7 @@
   {
     "id": "4162",
     "name": "NOBIVAC Pi",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V259016",
     "target_species": "hond",
     "composition": "geatt hondenpara-influenzavirus (Cornell): 5,5-7,3 log10 TCID50/ml",
@@ -16574,7 +16761,7 @@
   {
     "id": "4160",
     "name": "NOBILIS PARAMYXO P201",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V255744",
     "target_species": "duif voedselprod, duif niet-voedselprod",
     "composition": "geïnact duivenparamyxovirus-1 (PPMV-1) antigeen stam P201: min 6,8 en max 10,2 log2 HI eenheden in kippen/dosis (0,25 ml)Adjuv: vloeibare paraffine",
@@ -16632,6 +16819,20 @@
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc72141e5c015ab3f357b5"
   },
   {
+    "id": "4156",
+    "name": "PRILIUM 300 mg",
+    "firm": "Vetoquinol",
+    "registration_number": "BE-V254213",
+    "target_species": "hond",
+    "composition": "imidapril hydrochloride: 300 mg",
+    "pharmaceutical_form": "poeder voor oplossing",
+    "administration_route": "po",
+    "posology": "Ca (LG > 8 kg): 0,25 mg/kg pd",
+    "packaging": "fles 30 ml (1,030 g poeder) en applic (2 ml)",
+    "prescription": "R/",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc72321e5c015ab3f3831b"
+  },
+  {
     "id": "4155",
     "name": "PRILIUM 150 mg",
     "firm": "Vetoquinol",
@@ -16643,7 +16844,7 @@
     "posology": "Ca (LG > 4 kg): 0,25 mg/kg pd",
     "packaging": "fles 30 ml (0,880 g poeder) en applic (2 ml)",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc72321e5c015ab3f38328?version=1"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc72321e5c015ab3f38328"
   },
   {
     "id": "4154",
@@ -16657,7 +16858,7 @@
     "posology": "Ca (LG > 2 kg): 0,25 mg/kg pd",
     "packaging": "fles 30 ml (0,805 g poeder) en applic (2 ml)",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc72321e5c015ab3f3831e?version=1"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc72321e5c015ab3f3831e"
   },
   {
     "id": "4153",
@@ -16778,7 +16979,7 @@
   {
     "id": "4144",
     "name": "ADVOCATE SPOT-ON opl grote honden",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "EU/2/03/039/009",
     "target_species": "hond",
     "composition": "per pipet:moxidectine: 62,5 mgimidacloprid: 250 mg",
@@ -16792,7 +16993,7 @@
   {
     "id": "4143",
     "name": "ADVOCATE SPOT-ON opl grote katten",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "EU/2/03/039/003",
     "target_species": "kat",
     "composition": "per pipet:moxidectine: 8 mgimidacloprid: 80 mg",
@@ -16895,7 +17096,7 @@
   {
     "id": "4130",
     "name": "PANACUR EQUINE GUARD",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V247922",
     "target_species": "paard voedselprod, paard niet-voedselprod, ezel",
     "composition": "fenbendazole: 100 mg/ml",
@@ -16998,7 +17199,7 @@
   {
     "id": "4121",
     "name": "NOBILIS RISMAVAC + CA 126",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V278406, BE-V233213",
     "target_species": "kip",
     "composition": "per dosis:levend kippenherpesvirus (stam CVI 988): min 3,0 log10 pfulevend kalkoenherpesvirus (stam FC 126): min 3,0 log10 pfuin kippen embryo fibroblasten",
@@ -17014,7 +17215,7 @@
   {
     "id": "4120",
     "name": "BOVILIS IBR MARKER LIVE",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V286894",
     "target_species": "rund melkprod",
     "composition": "per dosis (2 ml):bovien herpesvirus 1 (stam GK/D, gE-negatief): 10exp 5,7 - 10 exp7,3 TCID50",
@@ -17207,7 +17408,7 @@
   {
     "id": "4103",
     "name": "CANINSULIN",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V199035BE-V404503",
     "target_species": "hond, kat",
     "composition": "insuline: 40 IE/ml",
@@ -17445,7 +17646,7 @@
     "pharmaceutical_form": "oplossing voor injectie",
     "administration_route": "im (Eq, Bo, Su, Ca, Fe), iv, iartic, intrabursaal, lokaal (Eq)",
     "posology": "ontsteking, allergie:Eq, Bo, Su: 0,06 mg/kgCa, Fe: 0,1 mg/kgBo prim ketose: 0,02 - 0,04 mg/kgBo inleiding partus: 0,04 mg/kgEq arthritis, bursitis, tendosynovitis: iartic, intrabursale of lokale inj 1 - 5 ml",
-    "withdrawal_period": "Vlees: Eq: 8 d, Bo: 8 d, Su: 2 d, Melk: 72 hNiet toedienen aan Eq die melk voor humane consumptie produceren",
+    "withdrawal_period": "Vlees en slachtafval: Eq: 8 d, Bo: 8 d, Su: 2 d, Melk: 72 hNiet toedienen aan Eq die melk voor humane consumptie produceren",
     "packaging": "fles 100 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc6be31e5c015ab3e84a81"
@@ -17453,7 +17654,7 @@
   {
     "id": "4082",
     "name": "DEXAFORT",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V059437",
     "target_species": "rund melkprod, hond",
     "composition": "dexamethason (natriumfosfaat): 1,32 mg/mldexamethason (phenylpropionaat): 2,67 mg/ml",
@@ -17584,7 +17785,7 @@
   },
   {
     "id": "4072",
-    "name": "OXYTOCINE 10 UI/ml",
+    "name": "OXYTOCINE  10 Un./ml",
     "firm": "VMD",
     "registration_number": "BE-V104291",
     "target_species": "paard melkprod, paard niet-voedselprod, rund melkprod, schaap melkprod, geit melkprod, varken, hond, kat",
@@ -17595,7 +17796,7 @@
     "withdrawal_period": "Vlees: 0 d Melk: 0 d",
     "packaging": "fles 100 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc86fa1e5c015ab30d1228?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc86fa1e5c015ab30d1228"
   },
   {
     "id": "4071",
@@ -17615,7 +17816,7 @@
   {
     "id": "4070",
     "name": "PG-600",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V011733",
     "target_species": "varken",
     "composition": "choriongonadotrofine (hCG): 200 IE/dosisserumgonadotrofine (PMSG): 400 IE/dosis",
@@ -17656,20 +17857,6 @@
     "packaging": "fles 5 x 10 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc829c1e5c015ab30ba9e8"
-  },
-  {
-    "id": "4067",
-    "name": "MEGECAT 5 mg",
-    "firm": "Vetoquinol",
-    "registration_number": "BE-V133235",
-    "target_species": "kat",
-    "composition": "megestrolacetaat: 5 mg",
-    "pharmaceutical_form": "tablet",
-    "administration_route": "po",
-    "posology": "Fe: 5 mg/14 dmax 12 m",
-    "packaging": "tabl 6",
-    "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7ff31e5c015ab309c7e7"
   },
   {
     "id": "4062",
@@ -18004,7 +18191,7 @@
     "pharmaceutical_form": "gevriesdroogd vaccin",
     "administration_route": "po in het drinkwater",
     "posology": "vleeskuiken: 1 dosis vanaf lft 1 dfok- en legkip: 1 dosis vanaf lft 1 d, 2de dosis op 7 w, 3de dosis op 16 w, min 3 w voor legperiode",
-    "ooi_doi": "OOI: binnen 15 d na vacDOI: 50 w na 3-voudige vac of min 6 w na enkelvoudige vac",
+    "ooi_doi": "OOI: binnen 15 d na vacDOI: fokkippen en leghennen: 46 w na laatste vac, vleeskuikens: min 6 w na vac",
     "withdrawal_period": "Vlees+org: 21 d, Ei: 21 d",
     "packaging": "fles 10 x 500 doses, 1000 doses, 1500 doses, 2000 doses, 2500 doses",
     "prescription": "R/",
@@ -18094,7 +18281,7 @@
     "pharmaceutical_form": "spot-on",
     "administration_route": "voor transdermaal gebruik",
     "posology": "Ca (lft > 6 w, LG ≤ 60 kg): 1 geschikte pipet/dierCa (LG > 60 kg): gebruik geschikte combinatie van pipettenFe (lft > 6 w, LG ≤ 10 kg): 1 geschikte pipet/dierFe (LG > 10 kg): gebruik geschikte combinatie van pipetten",
-    "packaging": "pipet3 of 15 x 15 mg/0,25 ml (Ca/Fe)3 of 6 x 30 mg/0,25 ml (Ca/Fe)3 of 6 x 45 mg/0,75 ml (Fe)3 x 60 mg/1 ml (Fe)3 of 6 x 30 mg/0,25 ml (Ca)3 of 6 x 60 mg/0,5 ml (Ca)3 of 6 x 120 mg/1 ml (Ca)3 x 360 mg/3 ml (Ca)",
+    "packaging": "pipet3 of 15 x 15 mg/0,25 ml (Ca/Fe)3 of 6 x 30 mg/0,25 ml (Ca/Fe)3 of 6 x 45 mg/0,75 ml (Fe)3 of 6 x 30 mg/0,25 ml (Ca)3 of 6 x 60 mg/0,5 ml (Ca)3 of 6 x 120 mg/1 ml (Ca)3 x 360 mg/3 ml (Ca)",
     "prescription": "R/",
     "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/6760fdcb-4ec9-484e-8b5f-0bafa3fa9927"
   },
@@ -18215,7 +18402,7 @@
   {
     "id": "4000",
     "name": "BAYCOX 2,5 % orale opl",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V142694",
     "target_species": "kip, kalkoen",
     "composition": "toltrazuril: 25 mg/ml",
@@ -18230,7 +18417,7 @@
   {
     "id": "3999",
     "name": "VECOXAN 2,5 mg/ml",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V210612",
     "target_species": "rund, schaap",
     "composition": "diclazuril: 2,5 mg/ml",
@@ -18327,21 +18514,6 @@
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7b6d1e5c015ab301c0f3?version=1"
   },
   {
-    "id": "3988",
-    "name": "FENDOV 1250",
-    "firm": "Zoetis",
-    "registration_number": "BE-V148407 BE-V301061",
-    "target_species": "rund",
-    "composition": "oxfendazole: 5 x 1.250 mg",
-    "pharmaceutical_form": "bolus",
-    "administration_route": "po",
-    "posology": "Bo, herkauwend (250 - 500 kg LG): 1 bolus/dier",
-    "withdrawal_period": "Vlees: 7 maandenNiet toedienen aan dieren waarvan de melk bestemd is voor humane consumptie",
-    "packaging": "boli 3 x 4",
-    "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc6c491e5c015ab3e918f5?version=5"
-  },
-  {
     "id": "3986",
     "name": "PANACUR tabl 250 mg",
     "firm": "Intervet Int",
@@ -18387,7 +18559,7 @@
   {
     "id": "3983",
     "name": "PANACUR SR bolus",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V172523",
     "target_species": "rund",
     "composition": "fenbendazole: 12 g",
@@ -18402,7 +18574,7 @@
   {
     "id": "3982",
     "name": "PANACUR PUPPY",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V205703",
     "target_species": "hond",
     "composition": "fenbendazole: 100 mg/ml",
@@ -18415,7 +18587,7 @@
   {
     "id": "3980",
     "name": "PANACUR pasta",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V119174",
     "target_species": "paard voedselprod, paard niet-voedselprod, ezel",
     "composition": "fenbendazole: 187,5 mg/g",
@@ -18459,14 +18631,14 @@
     "id": "3974",
     "name": "FLUBENOL 5 % poeder",
     "firm": "Elanco",
-    "registration_number": "BE-V108701",
+    "registration_number": "BE-V108701, BE-V326837",
     "target_species": "varken, kip eiprod, kalkoen, gans, fazant",
     "composition": "flubendazole: 50 mg/g",
     "pharmaceutical_form": "poeder",
     "administration_route": "po met het voeder",
     "posology": "big, mestvarken: 1 mg/kg pd (5 d, ernstige T. suis: 10 d)fokvarken: 0,5 mg/kg pd (10 d) of 1 x 5 mg/kgkalkoen: 0,95 mg/kg pd (7 d)kip, gans: 1,43 mg/kg pd (7 d)fazant: 2,86 mg/kg pd (7 d)",
-    "withdrawal_period": "Vlees: Su: 5 d, kip, kalkoen, gans: 1 d, fazant: 5 dEi: 0 d",
-    "packaging": "poeder 600 g, 2 kg",
+    "withdrawal_period": "Vlees en slachtafval: Su: 5 d, kip, kalkoen, gans: 1 d, fazant: 5 dEi: kip, kalkoen, gans, fazant: 0 d",
+    "packaging": "securitainer 600 gzak 2 kg",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc69f81e5c015ab3e4507a"
   },
@@ -18488,7 +18660,7 @@
   {
     "id": "3972",
     "name": "VETALGIN",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V068171",
     "target_species": "paard voedselprod, paard niet-voedselprod, rund melkprod, varken",
     "composition": "metamizolnatrium monohydraat: 500 mg/ml",
@@ -18563,7 +18735,7 @@
   {
     "id": "3966",
     "name": "OTOMAX ear drops susp",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V206622 BE-V206631",
     "target_species": "hond",
     "composition": "gentamicine (sulfaat): 2640 IE/mlbetamethason (valeraat): 0,88 mg/mlclotrimazole: 8,80 mg/ml",
@@ -18681,7 +18853,7 @@
   {
     "id": "3954",
     "name": "NAFPENZAL DC",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V023572",
     "target_species": "rund melkprod",
     "composition": "procaïne benzylpenicilline: 300 mg/injdihydrostreptomycine (sulfaat): 100 mg/injnafcilline (natrium): 100 mg/inj",
@@ -18696,7 +18868,7 @@
   {
     "id": "3951",
     "name": "CEPRAVIN DRY COW",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V133323",
     "target_species": "rund melkprod",
     "composition": "cefalonium: 250 mg",
@@ -18861,7 +19033,7 @@
   {
     "id": "3938",
     "name": "METRICURE",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V180722",
     "target_species": "rund melkprod",
     "composition": "cefapirine (benzathine): 500 mg",
@@ -18977,7 +19149,7 @@
   {
     "id": "3926",
     "name": "BAYTRIL FLAVOUR 150 mg tabl",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V180266",
     "target_species": "hond, kat",
     "composition": "enrofloxacine: 150 mg",
@@ -18991,7 +19163,7 @@
   {
     "id": "3925",
     "name": "BAYTRIL FLAVOUR 50 mg tabl",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V153133",
     "target_species": "hond, kat",
     "composition": "enrofloxacine: 50 mg",
@@ -19005,7 +19177,7 @@
   {
     "id": "3924",
     "name": "BAYTRIL FLAVOUR 15 mg tabl",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V153063",
     "target_species": "hond, kat",
     "composition": "enrofloxacine: 15 mg",
@@ -19019,7 +19191,7 @@
   {
     "id": "3923",
     "name": "BAYTRIL 100 mg/ml opl po kip, kalkoen, konijn",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V140314",
     "target_species": "kip, kalkoen, konijn voedselprod, konijn niet-voedselprod",
     "composition": "enrofloxacine: 100 mg/ml",
@@ -19242,7 +19414,7 @@
   {
     "id": "3906",
     "name": "NEOPEN",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V336646",
     "target_species": "rund melkprod, varken, schaap, hond, kat",
     "composition": "procaïne benzylpenicilline: 200.000 IE/ml (200 mg/ml)neomycine base: 100 mg/ml",
@@ -19327,7 +19499,7 @@
     "withdrawal_period": "Vlees: kalf: 7 d, Su: 3 d",
     "packaging": "poeder 1 kg",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7a361e5c015ab3ff71cd?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7a361e5c015ab3ff71cd"
   },
   {
     "id": "3898",
@@ -19347,7 +19519,7 @@
   {
     "id": "3897",
     "name": "ENGEMYCINE 10% LA",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V322086, BE-V139063",
     "target_species": "rund, varken, schaap",
     "composition": "oxytetracycline (hydrochloride): 100 mg/ml",
@@ -19538,7 +19710,7 @@
   {
     "id": "3879",
     "name": "CEPOREX inj",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V404494",
     "target_species": "rund melkprod, hond, kat",
     "composition": "cefalexine (natrium): 180 mg/ml",
@@ -19598,7 +19770,7 @@
   {
     "id": "3873",
     "name": "ALBIPEN LA",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V282466, BE-V121186",
     "target_species": "varken",
     "composition": "ampicilline (anhydrisch): 100 mg/ml",
@@ -19608,7 +19780,7 @@
     "withdrawal_period": "Vlees+org: 24 d",
     "packaging": "fles 200 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc6fc61e5c015ab3ef4b84"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/67d068a641393c0123abdb62"
   },
   {
     "id": "3872",
@@ -19628,7 +19800,7 @@
   {
     "id": "3869",
     "name": "NOBIVAC BbPi",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V222817",
     "target_species": "hond",
     "composition": "geatt Bordetella bronchiseptica (B-C2): min 10exp8 en max 10exp9,7 CFU/dosisgeatt hondenpara-influenzavirus (Cornell): min 10exp3 en max 10exp5,8 TCID50/dosis",
@@ -19643,7 +19815,7 @@
   {
     "id": "3867",
     "name": "PORCILIS PRRS",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V221182,BE-V278433",
     "target_species": "varken",
     "composition": "per dosis (2 ml im of 0,2 ml iderm):geatt PRRS-virus, DV: 10exp4-10exp6,3 TCID50Adjuv diluens: dl-alfa-tocoferylacetaat",
@@ -19690,7 +19862,7 @@
   {
     "id": "3862",
     "name": "ANTI-TETANUSSERUM",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V067356",
     "target_species": "paard voedselprod, paard niet-voedselprod, rund melkprod, varken, schaap melkprod, hond",
     "composition": "tetanus-As: min 1.160 IE/ml",
@@ -19706,7 +19878,7 @@
   {
     "id": "3859",
     "name": "NOBILIS IB MULTI + ND",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V285056, BE-V218671",
     "target_species": "kip",
     "composition": "geïnact infectieuze bronchitisvirus:M41: min 5,5 log2 VN E/dosisD274: min 4 log2 VN E/dosisgeïnact Newcastle disease virus clone 30: min 50 PD50/dosisAdjuv: vloeibare paraffine",
@@ -19881,7 +20053,7 @@
   {
     "id": "3846",
     "name": "ROMPUN opl 2 %",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V041815",
     "target_species": "paard voedselprod, paard niet-voedselprod, rund melkprod, hond, kat",
     "composition": "xylazine (hydrochloride): 20 mg/ml",
@@ -20007,7 +20179,7 @@
     "withdrawal_period": "Vlees+org: kip: 7 d, konijn: 2 dNiet toedienen aan vogels die eieren voor menselijke consumptie produceren of binnen de 14 d voor het begin van de leg",
     "packaging": "container 1 l",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc60c81e5c015ab3d059fb?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc60c81e5c015ab3d059fb"
   },
   {
     "id": "3833",
@@ -20027,7 +20199,7 @@
   {
     "id": "3832",
     "name": "SERESTO 4,50 g + 2,03 g halsband honden > 8 kg",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V400111",
     "target_species": "hond",
     "composition": "imidacloprid: 4,50 gflumethrine: 2,03 g",
@@ -20041,7 +20213,7 @@
   {
     "id": "3831",
     "name": "SERESTO 1,25 g + 0,56 g halsband honden tot 8 kg",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V400093",
     "target_species": "hond",
     "composition": "imidacloprid: 1,25 gflumethrine: 0,56 g",
@@ -20079,21 +20251,6 @@
     "packaging": "fles 10 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc66771e5c015ab3dcb6b4"
-  },
-  {
-    "id": "3827",
-    "name": "BUTOX PROTECT 7,5 mg/ml",
-    "firm": "Intervet Int via MSD AH",
-    "registration_number": "BE-V371061",
-    "target_species": "rund melkprod, schaap melkprod",
-    "composition": "deltamethrine: 7,5 mg/ml",
-    "pharmaceutical_form": "suspensie",
-    "administration_route": "voor cutaan gebruik",
-    "posology": "- vliegen:Bo: 10 ml (LG < 100 kg), 20 ml (LG: >100, <300 kg) of 30 ml (LG > 300 kg)eventueel herhalen om de 6-10 w- luizen en schapenluisvliegen:Bo, Ov: 10 ml/dier(ooien behandelen 4-6 w voor het werpen)",
-    "withdrawal_period": "Vlees+org: Bo: 18 d, Ov: 1 dMelk: Bo: 0 d, Ov: 12 h",
-    "packaging": "fles 1 l en 2,5 l",
-    "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc66eb1e5c015ab3ddacde"
   },
   {
     "id": "3823",
@@ -20211,7 +20368,7 @@
   {
     "id": "3814",
     "name": "ADVOCATE SPOT-ON opl kleine honden",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "EU/2/03/039/005",
     "target_species": "hond",
     "composition": "per pipet:moxidectine: 10 mgimidacloprid: 40 mg",
@@ -20225,7 +20382,7 @@
   {
     "id": "3813",
     "name": "ADVOCATE SPOT-ON opl kleine katten en fretten",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "EU/2/03/039/019",
     "target_species": "kat, fret",
     "composition": "per pipet:moxidectine: 4 mgimidacloprid: 40 mg",
@@ -20269,7 +20426,7 @@
   {
     "id": "3810",
     "name": "REGUMATE EQUINE",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V269726",
     "target_species": "paard voedselprod, paard niet-voedselprod",
     "composition": "altrenogest: 2,2 mg/ml",
@@ -20372,15 +20529,15 @@
   {
     "id": "3802",
     "name": "NOBIVAC RABIES",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V138686",
     "target_species": "paard niet-voedselprod, paard melkprod, rund melkprod, schaap melkprod, hond, kat",
     "composition": "geïnact rabiësvirus, stam Pasteur RIV: min 2,0 IEadjuv: aluminiumfosfaat",
     "pharmaceutical_form": "vaccin voor injectie",
-    "administration_route": "im (Eq, Bo, Ov), im, sc (Ca, Fe)",
-    "posology": "Primovac:Eq, Bo, Ov (lft > 6 m): 1 dosis (im)Eq, Bo, Ov (lft < 6 m): 2de dosis na lft 6 m (im)Ca, Fe (lft > 3 m): 1 dosis (im, sc)Ca, Fe (lft < 3 m): 2de dosis na lft 3 m (im, sc)Hervac:Eq, Bo: 1 dosis/2 jaarOv: 1 dosis/jaarCa, Fe: 1 dosis/3 jaarNobivac Rabies kan gebruikt worden als suspensiemiddel voor Nobivac DHPPi, Nobivac DHP, Nobivac Parvo-C, Nobivac Pi, Nobivac Ducat",
+    "administration_route": "im, sc",
+    "posology": "Basisvac:Eq, Bo, Ov (lft > 6 m): 1 dosis (im)Eq, Bo, Ov (lft < 6 m): 2de dosis op lft 6 m (im)Ca, Fe (lft > 12 w): 1 dosis (im, sc)Ca, Fe (lft < 12 w): 2de dosis op lft 12 w (im, sc)Hervac:Eq, Bo: 1 dosis/2 jaarOv: 1 dosis/jaarCa, Fe: 1 dosis/3 jaarNobivac Rabies kan gebruikt worden als suspensiemiddel voor Nobivac DHPPi, Nobivac DHP, Nobivac Parvo-C, Nobivac Pi, Nobivac Ducat",
     "ooi_doi": "OOI: 3-4 w na vacDOI: Ca, Fe: 3 j, Bo, Eq: 2 j, Ov: 1 j",
-    "withdrawal_period": "Vlees: 0 d, Melk: 0 d",
+    "withdrawal_period": "Wachttijd: 0 d",
     "packaging": "fles 10 x 1 dosis",
     "prescription": "R/i",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7f4c1e5c015ab3092d76"
@@ -20429,7 +20586,7 @@
   {
     "id": "3798",
     "name": "FOLLIGON",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V059272",
     "target_species": "paard niet-voedselprod, paard melkprod, rund melkprod, varken, schaap melkprod, geit melkprod, hond, konijn niet-voedselprod, konijn voedselprod",
     "composition": "serumgonadotrofine equine (PMSG): 1.000 IE",
@@ -20444,7 +20601,7 @@
   {
     "id": "3797",
     "name": "CHORULON",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V059315",
     "target_species": "paard niet-voedselprod, paard melkprod, rund melkprod, hond",
     "composition": "choriongonadotrofine (HCG): 1.500 IE/5 ml",
@@ -20459,7 +20616,7 @@
   {
     "id": "3796",
     "name": "LAURABOLIN 25 mg/ml",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V011891",
     "target_species": "hond",
     "composition": "nandrolonlaurinaat: 25 mg/ml",
@@ -20473,7 +20630,7 @@
   {
     "id": "3795",
     "name": "REGUMATE 4 mg/ml opl po varkens",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V346446",
     "target_species": "varken",
     "composition": "altrenogest: 4 mg/ml",
@@ -20532,7 +20689,7 @@
   {
     "id": "3788",
     "name": "NOBILIS REO INAC",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V201101, BE-V333137",
     "target_species": "kip",
     "composition": "geïnact reovirus (1733 + 2408): min 7,4 log2 ELISA-E/dosisAdjuv: vloeibare paraffine",
@@ -20548,7 +20705,7 @@
   {
     "id": "3787",
     "name": "NOBILIS CAV P4",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V180731",
     "target_species": "kip",
     "composition": "geatt chicken anaemia virus (26P4): min 10exp 3 TCID50/dosisAdjuv: dl-alpha-tocopherol",
@@ -20564,7 +20721,7 @@
   {
     "id": "3785",
     "name": "PARACOX-5",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V211321",
     "target_species": "kip",
     "composition": "E. acervulina HP: 500 - 650 oöcysten/dosisE. maxima CP: 200-260 oöcysten/dosisE. maxima MFP: 100 - 130 oöcysten/dosisE. mitis HP: 1000-1300 oöcysten/dosisE. tenella HP: 500-650 oöcysten/dosis",
@@ -20573,14 +20730,14 @@
     "posology": "kuiken (lft 1-3 d): 1 dosis (0,004 ml)/dier",
     "ooi_doi": "spray op voer/kippen z/ solv & via drinkwater:OOI: 14 d, DOI: 40 dSpray op de kip met solv:OOI: 21 d, DOI: 10 w",
     "withdrawal_period": "Wachttijd: 0 d",
-    "packaging": "fles 5 x 1000, 5 x 5000 dosissen",
+    "packaging": "fles 1000, 5000 dosissen",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc51171e5c015ab3ae9b5d"
   },
   {
     "id": "3784",
     "name": "PARACOX-8",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V172541",
     "target_species": "kip",
     "composition": "E. acervulina HP: 500 oöcysten/dosisE. brunetti HP: 100 oöcysten/dosisE. maxima CP: 200 oöcysten/dosisE. maxima MFP: 100 oöcysten/dosisE. mitis HP: 1000 oöcysten/dosisE. necatrix HP: 500 oöcysten/dosisE. praecox HP: 100 oöcysten/dosisE. tenella HP: 500 oöcysten/dosis",
@@ -20644,7 +20801,7 @@
   {
     "id": "3778",
     "name": "NOBILIS RISMAVAC",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V274757, BE-V096467",
     "target_species": "kip",
     "composition": "geatt celgebonden Marekvirus (CVI 988): min 3 log10 TCID50/dosis",
@@ -20660,7 +20817,7 @@
   {
     "id": "3776",
     "name": "NOBILIS ND CLONE 30",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V112594",
     "target_species": "kip",
     "composition": "levend Newcastle disease virus (clone 30): min 6log10 ELD50/dosis",
@@ -20749,7 +20906,7 @@
     "posology": "Primovac:Bo (lft: 2 w-3 m): 1 dosis (2 ml) inas, 2de dosis op lft 3 m (im)Bo met mat imm: 1 extra dosis (inas of im) 3 w na 1ste vacBo (lft > 3 m): 1 x 1 dosis (im, inas)drachtige Bo: 2 x 1 dosis (2 ml) met 3 - 5 w interval (im) of 1 dosis im (Rispoval IBR marker vivum) gevolgd door 1 dosis (Rispoval IBR marker inact) 6 m later. 2de dosis niet later dan bij de start van 2de trimester van drachtonmiddellijk infectierisico: 1 dosis inas, 2de dosis na 3-5 w (im)Hervac:Bo: 1ste hervac 6 m na primovac, dan om de 6 m (Rispoval IBR marker vivum) of 12 m (Rispoval IBR marker inact)",
     "ooi_doi": "OOI: 7 d na 1e dosis inas of 21 d na 1e dosis imDOI (Bo lft 2 w - < 3m): 3 m (inas)DOI (Bo lft 3 m of meer): 6 m",
     "withdrawal_period": "Wachttijd: 0 d",
-    "packaging": "fles 50 dossisen (100 ml)",
+    "packaging": "fles 10 doses + 20 ml, 50 doses + 100 ml",
     "prescription": "R/i",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7a6d1e5c015ab3ffe55b"
   },
@@ -20772,7 +20929,7 @@
   {
     "id": "3765",
     "name": "BOVILIS BVD",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V206227",
     "target_species": "rund melkprod",
     "composition": "geïnact BVD-virus type 1 (stam C86): eq. met 50 Elisa U met inductie van min 4,6 log2 VN EAdjuv: aluminiumhydroxide, aluminiumfosfaat",
@@ -20952,7 +21109,7 @@
   {
     "id": "3737",
     "name": "KARSIVAN",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V144137",
     "target_species": "hond",
     "composition": "propentofylline: 50 mg",
@@ -20981,7 +21138,7 @@
   {
     "id": "3733",
     "name": "SARNACURAN pour-on",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V146115",
     "target_species": "varken",
     "composition": "foxim: 75 mg/ml",
@@ -20996,7 +21153,7 @@
   {
     "id": "3732",
     "name": "SARNACURAN opl",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V125474",
     "target_species": "schaap, varken",
     "composition": "foxim: 500 mg/ml",
@@ -21046,10 +21203,10 @@
     "pharmaceutical_form": "oplossing voor injectie",
     "administration_route": "sc",
     "posology": "Bo, kalf: 0,2 mg/kg iver + 2 mg/kg clor",
-    "withdrawal_period": "Vlees: 66 dNiet toedienen tijdens de lactatie of binnen de 60 d voor het kalven indien de melk (producten) bestemd is (zijn) voor humane consumptie",
+    "withdrawal_period": "Vlees en slachtafval: 66 dNiet goedgekeurd voor gebruik bij dieren die melk voor humane consumptie produceren. Niet toedienen tijdens de lactatie of binnen de 60 d voor het kalven indien de melk (producten) bestemd is (zijn) voor humane consumptie",
     "packaging": "fles 50 ml, 200 ml, 500 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7e761e5c015ab307bb35?version=6"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7e761e5c015ab307bb35"
   },
   {
     "id": "3728",
@@ -21094,7 +21251,7 @@
     "withdrawal_period": "Vlees: 14 d, Melk: 5 d",
     "packaging": "fles 1 l",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc58531e5c015ab3be3175?version=3"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc58531e5c015ab3be3175"
   },
   {
     "id": "3725",
@@ -21288,21 +21445,6 @@
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5aff1e5c015ab3c46632"
   },
   {
-    "id": "3708",
-    "name": "COLISTINE SULFAAT 1 MIO IE/ml",
-    "firm": "VMD",
-    "registration_number": "BE-V134391",
-    "target_species": "rund",
-    "composition": "colistine sulfaat: 1.000.000 IE/ml",
-    "pharmaceutical_form": "oplossing voor injectie",
-    "administration_route": "im",
-    "posology": "kalf: 2 x pd 50.000 IE/kg (3 d)",
-    "withdrawal_period": "Vlees+org: kalf: 62 d",
-    "packaging": "fles 100 ml",
-    "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc6a0d1e5c015ab3e483fe?version=3"
-  },
-  {
     "id": "3707",
     "name": "LINCOMYCINE-VMD inj",
     "firm": "VMD",
@@ -21392,17 +21534,17 @@
   },
   {
     "id": "3700",
-    "name": "PROACTIVE PLUS 0,15% w/w",
+    "name": "PROACTIVE PLUS 1,5 mg/g",
     "firm": "DeLaval",
     "registration_number": "BE-V341083",
     "target_species": "rund melkprod",
     "composition": "jodium: 1,5 mg/g",
     "pharmaceutical_form": "oplossing",
     "administration_route": "voor speendip of spray",
-    "posology": "Bo: 5 ml/dier/behandeling",
-    "withdrawal_period": "Vlees: 0 d, Melk: 0 h",
+    "posology": "Bo: 5 ml/dier/behandeling (max 2 x pd)",
+    "withdrawal_period": "Vlees en slachtafval: 0 dMelk: 0 d",
     "packaging": "vat 20, 60 en 200 l",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc67521e5c015ab3de5438?version=3"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc67521e5c015ab3de5438"
   },
   {
     "id": "3699",
@@ -21413,7 +21555,7 @@
     "composition": "per ml vaccin:max 2 van de volgende serotypen:geïnact blauwtongvirus serotype 8 (BTV-8), stam BTV8/BEL/2006/01: ≥ 245,67 µggeïnact blauwtongvirus serotype 4 (BTV-4), stam BTV-4/SPA-1/2004: ≥ 22,06 µggeïnact blauwtongvirus serotype 1 (BTV-1), stam BTV-1/ALG/2006/01: ≥ 9,06 µgAdjuv: aluminiumhydroxide en gezuiverd saponine (Quil A)",
     "pharmaceutical_form": "suspensie voor vaccin voor injectie",
     "administration_route": "sc",
-    "posology": "Basisvac:Bo (lft > 2 m): 2 x 4 ml/dier met 3-4 w intervalOv (lft > 2,5 m):-2 x 2 ml/dier met 3 w interval-monovalent BTV-1 of BTV-4: 1 x 2 ml/dierHervac Bo, Ov: 1 dosis/j",
+    "posology": "Basisvac:Bo (lft > 2 m): 2 x 4 ml/dier met 3-4 w intervalOv (lft > 2,5 m):-2 x 2 ml/dier met 3 w interval-monovalent BTV-1 of BTV-4: 1 x 2 ml/dier-bivalent BTV-1+4: 1 x 2 ml/dierHervac Bo, Ov: 1 dosis/j",
     "ooi_doi": "OOI (Ov): 21 d na basisvacOOI (Bo): 28 d (BTV-1), 21 d (BTV-4), 31 d (BTV-8) na basisvacDOI: 1 j na basisvac (Bo, Ov)",
     "withdrawal_period": "Wachttijd: 0 d",
     "packaging": "fles 100 ml, 252 ml",
@@ -21464,6 +21606,22 @@
     "packaging": "fles 250 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc86da1e5c015ab30d0eec?version=2"
+  },
+  {
+    "id": "3691",
+    "name": "FOOTVAX",
+    "firm": "Intervet Int",
+    "registration_number": "BE-V163161",
+    "target_species": "schaap melkprod",
+    "composition": "geïnact Bacteroïdes nodosus (Dichelobacter nodosus)serotypes A, B1, B2, C, D, E, F, G, H: 10 mcg pili/dosisserotype I: 5 x 10exp8 cells/minAdjuv: vloeibare paraffine, manide oleate",
+    "pharmaceutical_form": "vaccin voor injectie",
+    "administration_route": "sc",
+    "posology": "Primovac:Ov (lft > 3 m): 2 x 1 dosis (1 ml) met 4 - 6 w intervalHervac:1 dosis/4 - 6 m",
+    "ooi_doi": "OOI: 2 w, DOI: 6 m",
+    "withdrawal_period": "Wachttijd: 0 d",
+    "packaging": "fles 20 ml",
+    "prescription": "R/i",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7d581e5c015ab3057b0b"
   },
   {
     "id": "3689",
@@ -21630,12 +21788,12 @@
     "ooi_doi": "OOI: CPV: 7 d na vac, CAV, PI, CDV: 3 w na vacDOI: PI: min 12 m, CPV: min 12 m, CDV, CAV: niet aangetoond",
     "packaging": "fles 25 x 1 dosis + 25 x 1 ml diluens",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7db71e5c015ab306369d?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7db71e5c015ab306369d"
   },
   {
     "id": "3675",
     "name": "NOBIVAC DHPPi",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V161682",
     "target_species": "hond",
     "composition": "geatt hondenziektevirus (stam Onderstepoort): min 10exp4,0 TCID50/mlgeatt hondenadenovirus type 2 (stam Manhattan LPV3): min 10exp4,0 TCID50/mlgeatt hondenparvovirus (stam 154): min 10exp7,0 TCID50/mlgeatt hondenpara-influenzavirus (stam Cornell): min 10exp5,5 TCID50/ml",
@@ -21650,7 +21808,7 @@
   {
     "id": "3674",
     "name": "NOBIVAC DHP",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V151173",
     "target_species": "hond",
     "composition": "geatt hondenziektevirus (stam Onderstepoort): min 10exp 4 TCID50/mlgeatt hondenadenovirus (CAV2) (stam Manhattan LPV3): min 10exp 4 TCID50/mlgeatt hondenparvovirus (stam 154): min 10exp 7 TCID50/ml",
@@ -21681,7 +21839,7 @@
   {
     "id": "3672",
     "name": "BOVILIS ROTAVEC CORONA",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V215546",
     "target_species": "rund melkprod",
     "composition": "per dosis van 2 ml:geïnact bovien rotavirus (UK-Compton-stam, serotype G6 P5): min 874 Egeïnact bovien coronavirus (Mebus-stam): min 340 EE. coli, stam CN7985, serotype O101:K99:F41: min 560 EAdjuv: minerale olie, aluminiumhydroxide",
@@ -21761,7 +21919,7 @@
   {
     "id": "3665",
     "name": "PORCILIS ERY-PARVO",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V328623, BE-V182804",
     "target_species": "varken",
     "composition": "per dosis (2 ml):geïnact Erysipelothrix rhusiopathiae (M2 serotype 2): min 1 ppdgeïnact varkensparvovirus (PPV 014): min 552 EUAdjuv: dl-alfa-tocopherolacetaat",
@@ -21878,7 +22036,7 @@
   {
     "id": "3650",
     "name": "PORCILIS ERY+PARVO+LEPTO",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V502097",
     "target_species": "varken",
     "composition": "per dosis (2 ml):geïnactiveerde stammen van:Erysipelothrix rhusiopathiae, serotype 2 (stam M2): ≥ 1 ppdVarkens parvovirus (stam 014): ≥ 130 ULeptospira interrogansserogroep Canicola serovar Portland-Vere (stam Ca-12-000): ≥ 2816 ULeptospira interrogansserogroep Icterohaemorrhagiae serovar Copenhageni (stam Ic-02-001): ≥ 210 ULeptospira interrogansserogroep Australis serovar Bratislava (stam As-05-073): ≥ 1310 ULeptospira kirschneriserogroep Grippotyphosa serovar Dadas (stam Gr-01-005): ≥ 648 ULeptospira interrogansserogroep Pomona serovar Pomona (stam Po-01-000): ≥ 166 ULeptospira santarosaiserogroep Tarassovi serovar Gatuni (stam S1148/02): ≥ 276 UAdjuv: dl-alpha-tocoferylacetaat",

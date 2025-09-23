@@ -1,5 +1,203 @@
 [
   {
+    "id": "6390",
+    "name": "VETORYL 20 mg caps",
+    "firm": "Dechra",
+    "registration_number": "BE-V663814",
+    "target_species": "chien",
+    "composition": "trilostane: 20 mg",
+    "pharmaceutical_form": "gélule",
+    "administration_route": "po",
+    "posology": "Ca (PV > 3 kg): dose d'attaque: 1 x 2 mg/kg pj avec la nourritureadapter ensuite la dose en fonction de la réaction",
+    "packaging": "caps 30",
+    "prescription": "R/",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/67923760528fae481047dc0e"
+  },
+  {
+    "id": "6388",
+    "name": "CEPEDOL Vet 20 mg",
+    "firm": "CP-Pharma",
+    "registration_number": "BE-V662494",
+    "target_species": "chien",
+    "composition": "chlorhydrate de tramadol: 20 mg",
+    "pharmaceutical_form": "comprimé à croquer et sécable",
+    "administration_route": "po",
+    "posology": "Ca: 2-4 mg/kg chaque 6-8 h (max 16 mg/kg pj)",
+    "packaging": "comprimé 100",
+    "prescription": "R/",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/66262e06a302366d3b4e4545"
+  },
+  {
+    "id": "6387",
+    "name": "CEPEDOL Vet 80 mg",
+    "firm": "CP-Pharma",
+    "registration_number": "BE-V662496",
+    "target_species": "chien",
+    "composition": "chorhydrate de tramadol: 80 mg",
+    "pharmaceutical_form": "comprimé à croquer et sécable",
+    "administration_route": "po",
+    "posology": "Ca: 2-4 mg/kg chaque 6-8 h (max 16 mg/kg pj)",
+    "packaging": "comprimé 100",
+    "prescription": "R/",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/66264d28a302366d3b4e47fb"
+  },
+  {
+    "id": "6386",
+    "name": "CEPEDOL Vet 120 mg",
+    "firm": "CP-Pharma",
+    "registration_number": "BE-V662497",
+    "target_species": "chien",
+    "composition": "chlorhydrate de tramadol: 120 mg",
+    "pharmaceutical_form": "comprime à croquer et sécable",
+    "administration_route": "po",
+    "posology": "Ca: 2-4 mg/kg chaque 6-8 h (max 16 mg/kg pj)",
+    "packaging": "comprimé100",
+    "prescription": "R/",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/66264fb8a302366d3b4e488d"
+  },
+  {
+    "id": "6385",
+    "name": "NUMELVI 21,6 mg",
+    "firm": "Intervet Int",
+    "registration_number": "EU/2/25/351/005, EU/2/25/351/006",
+    "target_species": "chien",
+    "composition": "atinvicitinib: 21,6 mg",
+    "pharmaceutical_form": "comprimé sécable",
+    "administration_route": "po",
+    "posology": "Ca: 0,8-1,2 mg/kg pj (au moment ou à proximité du repas)",
+    "packaging": "comprimé 30, 90",
+    "prescription": "R/",
+    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/65721e91-cc97-4231-970b-bf3b48bae269"
+  },
+  {
+    "id": "6384",
+    "name": "NUMELVI 31,6 mg",
+    "firm": "Intervet Int",
+    "registration_number": "EU/2/25/351/007, EU/2/25/351/008",
+    "target_species": "chien",
+    "composition": "atinvicitinib: 31,6 mg",
+    "pharmaceutical_form": "comprimé sécable",
+    "administration_route": "po",
+    "posology": "Ca: 0,8-1,2 mg/kg pj (au moment ou à proximité du repas)",
+    "packaging": "comprimé 30, 90",
+    "prescription": "R/",
+    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/65721e91-cc97-4231-970b-bf3b48bae269"
+  },
+  {
+    "id": "6383",
+    "name": "NUMELVI 7,2 mg",
+    "firm": "Intervet Int",
+    "registration_number": "EU/2/25/351/003, EU/2/25/351/004",
+    "target_species": "chien",
+    "composition": "atinvicitinib: 7,2 mg",
+    "pharmaceutical_form": "comprimé sécable",
+    "administration_route": "po",
+    "posology": "Ca: 0,8-1,2 mg/kg pj (au moment ou à proximité du repas)",
+    "packaging": "comprimé 30, 90",
+    "prescription": "R/",
+    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/65721e91-cc97-4231-970b-bf3b48bae269"
+  },
+  {
+    "id": "6382",
+    "name": "NUMELVI  4,8 mg",
+    "firm": "Intervet Int",
+    "registration_number": "EU/2/25/351/001, EU/2/25/351/002",
+    "target_species": "chien",
+    "composition": "atinvicitinib: 4,8 mg",
+    "pharmaceutical_form": "comprimé sécable",
+    "administration_route": "po",
+    "posology": "Ca: 0,8-1,2 mg/kg pj (au moment ou à proximité du repas)",
+    "packaging": "comprimé 30, 90",
+    "prescription": "R/",
+    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/65721e91-cc97-4231-970b-bf3b48bae269"
+  },
+  {
+    "id": "6381",
+    "name": "ELMARO 10 mg/kg sol.",
+    "firm": "Elanco",
+    "registration_number": "EU/2/25/337/001",
+    "target_species": "chien, chat",
+    "composition": "maropitant: 10 mg/ml",
+    "pharmaceutical_form": "solution injectable",
+    "administration_route": "sc, iv (bolus)",
+    "posology": "Ca, Fe: 1 x 1 mg/kg pj (max 5 j)",
+    "packaging": "facon 20 ml",
+    "prescription": "R/",
+    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/87da497d-3b2a-4008-a212-20ee64400cd9"
+  },
+  {
+    "id": "6379",
+    "name": "TRILOTAB 60 mg",
+    "firm": "CP-Pharma",
+    "registration_number": "BE-V661796",
+    "target_species": "chien",
+    "composition": "trilostane: 60 mg",
+    "pharmaceutical_form": "comprimé à croquer",
+    "administration_route": "po",
+    "posology": "Ca (PV > 7,5 kg):dose initiale: 1 x 2 mg/kg pj pendant le repasadapter ensuite la dose en fonction de la réaction",
+    "packaging": "compr 30",
+    "prescription": "R/",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/6512a231e2770d0c7a85bab8"
+  },
+  {
+    "id": "6378",
+    "name": "TRILOTAB 30 mg",
+    "firm": "CP-Pharma",
+    "registration_number": "BE-V661795",
+    "target_species": "chien",
+    "composition": "trilostane: 30 mg",
+    "pharmaceutical_form": "comprimé à croquer",
+    "administration_route": "po",
+    "posology": "Ca (PV > 3,75 kg):dose initiale: 1 x 2 mg/kg pj pendant le repasadapter ensuite la dose en fonction de la réaction",
+    "packaging": "compr 30",
+    "prescription": "R/",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/65129f80e2770d0c7a85ba16"
+  },
+  {
+    "id": "6377",
+    "name": "TRILOTAB 10 mg",
+    "firm": "CP-Pharma",
+    "registration_number": "BE-V661794",
+    "target_species": "chien",
+    "composition": "trilostane: 10 mg",
+    "pharmaceutical_form": "comprimé à croquer",
+    "administration_route": "po",
+    "posology": "Ca (PV > 1,25 kg):dose initiale: 1 x 2 mg/kg pj pendant le repasadapter ensuite la dose en fonction de la réaction",
+    "packaging": "compr 30",
+    "prescription": "R/",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/65129cf5e2770d0c7a85b8e1"
+  },
+  {
+    "id": "6372",
+    "name": "VETMEDIN 1,5 mg/ml sol po",
+    "firm": "Boehringer Ingelheim",
+    "registration_number": "BE-V664358",
+    "target_species": "chien",
+    "composition": "pimobendane: 1,5 mg/ml",
+    "pharmaceutical_form": "solution",
+    "administration_route": "po",
+    "posology": "Ca: 2 x 0,25 mg/kg pj à jeun",
+    "packaging": "flacon 50 ml + seringue-doseuse",
+    "prescription": "R/",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/68232a501d57d84a81c76a11"
+  },
+  {
+    "id": "6370",
+    "name": "NOBILIS MULTRIVA REOm",
+    "firm": "Intervet Int",
+    "registration_number": "EU/2/24/333/001",
+    "target_species": "poule",
+    "composition": "par dose (0,3 ml):réovirus aviaire inact:-souche ARV-1: ≥ 11,5 U-souche ARV-4: ≥ 11,4 UAdjuv: paraffine liquide légère",
+    "pharmaceutical_form": "vaccin injectable",
+    "administration_route": "im",
+    "posology": "poule:-Primovac (âge > 7 sem): 1 dose/animal (ou avec un vaccin vivant)-Rappel (âge > 8 sem): 1 dose/animal max 3 sem avant début de la ponte et min 4 sem après primovac",
+    "ooi_doi": "OOI: 4 sem après rappel (1 j d'âge chez la descendance)DOI: 80 sem après rappel (3 sem d'âge chez la descendance)",
+    "withdrawal_period": "Temps d'attente: 0 j",
+    "packaging": "flacon 1000 doses",
+    "prescription": "R/",
+    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/c208b623-52de-4638-88c4-9d36e88e6375"
+  },
+  {
     "id": "6367",
     "name": "LABIMYCIN LA 300 mg/ml",
     "firm": "Labiana Life Sciences",
@@ -650,7 +848,7 @@
     "pharmaceutical_form": "comprimé",
     "administration_route": "po",
     "posology": "Fe (âge > 6 sem, PV > 1,25 kg):- Douleur et inflammation postop:24 h après traitement initial avec sol inject:0,05 mg/kg pj (max 4 j) po- Troubles musculo-squel aigus:Dose initiale: 1 x 0,2 mg/kgDose d’entretien: 0,05 mg/kg pj- Troubles musculo-squel chron:Dose initiale: 1 x 0,1 mg/kgDose d’entretien: 0,05 mg/kg pjEn l’absence d’amélioration clinique, arrêter le traitement au bout de 14 j max",
-    "packaging": "compr 10, 90",
+    "packaging": "compr 90",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/665efe141748d141bc9ee503"
   },
@@ -1043,6 +1241,22 @@
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/66b6066e9aa2b45a6f08d1ba"
   },
   {
+    "id": "6209",
+    "name": "CEVAC SALMUNE ETI K",
+    "firm": "Ceva-Phylaxia",
+    "registration_number": "EU/2/24/320/002",
+    "target_species": "poule",
+    "composition": "par dose (0,5 ml):Salmonella enterica, subsp.enterica, sérovar Enteritidis, souche 038-90, inactivée: min 122 unités ELISASalmonella enterica, subsp.enterica, sérovar Typhimurium, souche 076-94, inactivée: min 212 unités ELISASalmonella enterica, subsp.enterica, sérovar Infantis, souche SM-595, inactivée: min 157 unités ELISAAdjuv: gel d'hydroxyde d'aluminium",
+    "pharmaceutical_form": "vaccin injectable",
+    "administration_route": "im",
+    "posology": "poule (âge: min 10 sem): 2 doses à 4 sem d'intervalle2e dose max 4 sem avant début de la ponte",
+    "ooi_doi": "OOI: 4 sem après 2e vacDOI: S. Enteridis: 69 sem après 2e vac, S. Tiphimurium: 71 sem après 2e vac, S. Infantis: 44 sem après 2e vac",
+    "withdrawal_period": "Temps d'attente: 0 j",
+    "packaging": "flacon 5 x 1000 doses",
+    "prescription": "R/",
+    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/493be25f-ddb6-472c-a561-109d76841bb3"
+  },
+  {
     "id": "6202",
     "name": "LODISURE 1 mg",
     "firm": "Dechra",
@@ -1183,12 +1397,12 @@
     "name": "SYVAZUL BTV-3",
     "firm": "Laboratorios Syva",
     "registration_number": "EU/2/24/332/001-002",
-    "target_species": "ovin prod de lait",
-    "composition": "virus de la fièvre catarrhale, sérotype 3 (BTV-3), souche BTV-3/NET2023, inactivé: ≥ 10exp6,9 DICC50/mlAdjuv: hydroxyde d'aluminium, Quil A",
+    "target_species": "bovin prod de lait, ovin prod de lait",
+    "composition": "virus de la fièvre catarrhale, sérotype 3 (BTV-3), souche BTV-3/NET2023, inactivé: ≥ 10exp7,2 DICC50/mlAdjuv: hydroxyde d'aluminium, Quil A",
     "pharmaceutical_form": "vaccin",
-    "administration_route": "sc",
-    "posology": "Ov (âge > 3 m):- primovac: 1 x 2 ml (sc)- rappel: non établi",
-    "ooi_doi": "OOI: 4 sem après primovacDOI non établie",
+    "administration_route": "im, sc",
+    "posology": "Bo (âge > 2 m si animaux naïfs, > 3 m si imm mat):- primovac: 2 x 2 ml (im) à 3 sem d'intervalle- rappel: non établiOv (âge > 3 m):- primovac: 1 x 2 ml (sc)- rappel: non établi",
+    "ooi_doi": "OOI: Bo: 3 sem après primovac, Ov: 4 sem après primovacDOI non établie",
     "withdrawal_period": "Temps d'attente: 0 j",
     "packaging": "flacon 80 ml",
     "prescription": "R/Autorisation de mise sur le marché en raison de circonstances exceptionnelles.Vergunning voor het in de handel brengen onder uitzonderlijke omstandigheden.",
@@ -1322,8 +1536,8 @@
     "composition": "flunixine méglumine: 50 mg/ml",
     "pharmaceutical_form": "solution injectable",
     "administration_route": "iv (Eq, Bo), im (Bo, Su)",
-    "posology": "Eq:-maladies du système musculo-squ: 1 mg/kg pj iv (1-5 j)-colique: 1 mg/kg iv, peut être répété 1 ou 2 xBo: 2 mg/kg pj iv, im (1-3 j)Su:-syndrome MMA: 2 mg/kg pj im (1-3 j)-affections resp: 1 x 2 mg/kg im",
-    "withdrawal_period": "Viande et abats: Eq: 10 j, Bo: 10 j (iv), 31 j (im), Su: 20 jLait: Bo: 24 h (iv), 36 h (im)Ne pas utiliser chez les juments produisant du lait destiné à la consommation humaine.",
+    "posology": "Eq:- troubles musculosquelett, fièvre: 1,1 mg/kg 1 x pj iv (max 5 j)- colique: 1,1 mg/kg iv, traitement peut être répété 1 ou 2 x- thérapie d'appoint: 0,25 mg/kg toutes les 6-8 h ou 1,1 mg/kg pj iv (max 5 j)Bo:- thérapie d'appoint, troubles musculosqu.: 2,2 mg/kg iv, im à 24 h d'intervalle (max 3 j) (max 20 ml au même site)- douleur postop (écornage) (âge < 9 sem): 1 x 2,2 mg/kg iv, 15-20 min avant écornageSu:- thérapie d'appoint, troubles musculosqu.: 2,2 mg/kg im pj (max 3 j) (max 5 ml au même site)- douleur postop (castration, coupe de la queue) (porcelets allaités): 1 x 2,2 mg/kg im, 15-30 min avant procédure",
+    "withdrawal_period": "Viande et abats: Eq: 5 j, Bo: 4 j (iv), 31 j (im), Su: 24 jLait: Bo: 24 h (iv), 36 h (im)Ne pas utiliser chez les chevaux producteurs de lait destiné à la consommation humaine.",
     "packaging": "flacon 100 ml, 250 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc4c061e5c015ab3a9870f"
@@ -1807,20 +2021,6 @@
     "packaging": "flacon 15 ml + seringue",
     "prescription": "R/",
     "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/24adcfae-42bf-419c-ab43-8898c44a2630"
-  },
-  {
-    "id": "6082",
-    "name": "CHANISUR gtts auric, susp",
-    "firm": "Chanelle",
-    "registration_number": "BE-V661144",
-    "target_species": "chien, chat",
-    "composition": "miconazole (nitrate): 23 mgprednisolone (acétate): 5 mgpolymyxine B (sulfate): 5500 UI",
-    "pharmaceutical_form": "suspension",
-    "administration_route": "pour instill auriculaire, à usage cutané",
-    "posology": "Ca, Fe:-otite externe: 2 x 5 gtts/oreille pj (7-10 j, max 14 j)-inf cut: qques gtts 2 x pj (max 14 j)-inf persistante : traitement peut être poursuivi pendant 2-3 sem",
-    "packaging": "flacon 15 ml, 30 ml",
-    "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/63e4f3de4c43ee0acb7bb598"
   },
   {
     "id": "6081",
@@ -2541,6 +2741,21 @@
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc4f431e5c015ab3ac6da6"
   },
   {
+    "id": "5960",
+    "name": "RENUTEND",
+    "firm": "Boehringer Ingelheim",
+    "registration_number": "EU/2/22/282/001",
+    "target_species": "cheval non prod d'aliments, cheval prod de lait",
+    "composition": "cellules souches mésenchymateuses allogéniques du sang périphérique des chevaux, différenciées dans la voie ténocytaire (CSMsp) : 2,0 – 3,5 x 106/ml",
+    "pharmaceutical_form": "suspension injectable",
+    "administration_route": "intra-lésionnelle",
+    "posology": "Eq: 1 dose/animal",
+    "withdrawal_period": "Temps d'attente: 0 j",
+    "packaging": "flacon 1 ml",
+    "prescription": "R/",
+    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/f39990b7-9564-499b-bacc-7ccfd27f997e"
+  },
+  {
     "id": "5958",
     "name": "METROCLOS 500 mg",
     "firm": "Vet-Agro",
@@ -2787,7 +3002,7 @@
   {
     "id": "5901",
     "name": "BRAVOXIN",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V582062",
     "target_species": "bovin prod de lait, ovin prod de lait",
     "composition": "par dose (1 ml):C. perfringenstype A (α) anatoxine: ≥ 0,5 UIC. perfringenstype B & C (β) anatoxine: ≥ 20,5 UIC. perfringenstype D (ε) anatoxine: ≥ 5,9 UIC. chauvoeianaculture: ≥ 90% de protectionC. novyianatoxine: ≥ 3,8 UIC. septicumanatoxine: ≥ 3,3 UIC. tetanianatoxine: ≥ 4,5 UIC. sordelliianatoxine: ≥ 4,4 UC. haemolyticumanatoxine: ≥ 25,0 UAdjuv: alun",
@@ -2962,7 +3177,7 @@
     "withdrawal_period": "Viande+abats: Bo: 22 j, Su: 13 j, Ov: 16 jNe pas utiliser chez les animaux producteurs de lait destiné à la consommation humaine. Ne pas utiliser chez les animaux gravides producteurs de lait destiné à la consommation humaine au cours des 2 mois précédant la mise bas.",
     "packaging": "flacon 100 ml, 250 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc4c811e5c015ab3a9f474?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc4c811e5c015ab3a9f474"
   },
   {
     "id": "5884",
@@ -3066,7 +3281,7 @@
     "withdrawal_period": "Viande et abats: Bo: 15 j, Ov: 2 j, Capr: 1 jLait: Bo, Ov, Capr: 0 h",
     "packaging": "flacon 1 l (+ 2 doseurs)bidon 2,5 l, 5 l (+ bouchon de distribution)",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc523a1e5c015ab3b0bfdf?version=6"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc523a1e5c015ab3b0bfdf"
   },
   {
     "id": "5866",
@@ -3128,7 +3343,7 @@
   {
     "id": "5849",
     "name": "SHUTOUT 2,6 g",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V582417",
     "target_species": "bovin prod de lait",
     "composition": "bismuth (sous-nitrate): 2,6 g",
@@ -3724,13 +3939,13 @@
     "id": "5765",
     "name": "MIRATAZ 20 mg/g",
     "firm": "Dechra",
-    "registration_number": "EU/2/19/247/001",
+    "registration_number": "EU/2/19/247/003",
     "target_species": "chat",
     "composition": "mirtazapine (hémihydrate): 20 mg/g",
     "pharmaceutical_form": "pommade",
     "administration_route": "à usage transdermique",
     "posology": "Fe (âge > 7,5 m, PV > 2 kg): 1 x 2 mg pj (14 j)",
-    "packaging": "tube 5 g",
+    "packaging": "tube 3 g",
     "prescription": "R/",
     "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/7d4ed9be-bc6a-4ad2-a9fc-a5f212cbe53a"
   },
@@ -4229,7 +4444,7 @@
     "firm": "Kernfarm",
     "registration_number": "BE-V573244",
     "target_species": "porc",
-    "composition": "par dose (2 ml):Parvovirus suis, souche inactivée MSV Bio-37: min 4 log2IHsouches inactivées:Leptospira interrogans,sérogroupe Pomona, serovar Pomona, souche MSLB 1037: min 1:32 RALLeptospira interrogans,sérogroupe Sejroe, serovar Hardjo, souche MSLB 1039: min 1:40 RALLeptospira interrogans,sérogroupe Australis, serovar Bratislava, souche MSLB 1040: min 1:40 RALLeptospira interrogans,sérogroupe Grippotyphosa, serovar Grippotyphosa, souche MSLB 1042: min 1:51 RALLeptospira interrogans,sérogroupe Icterohaemorrhagiae, serovar Icterohaemorrhagiae, souche MSLB 1041: min 1:51 RALLeptospira interrogans,sérogroupe Canicola, serovar Canicola, souche MSLB 1043: min 1:51 RALAdjuv: emulsigen",
+    "composition": "par dose (2 ml):Parvovirus suis, souche inactivée Bio-37: min 4 log2IHsouches inactivées:Leptospira interrogans,sérogroupe Pomona, serovar Pomona, souche MSLB 1037: min 1:32 RALLeptospira borgpetersenii,sérogroupe Sejroe, serovar Hardjo, souche MSLB 1039: min 1:40 RALLeptospira interrogans,sérogroupe Australis, serovar Bratislava, souche MSLB 1040: min 1:40 RALLeptospira kirschneri,sérogroupe Grippotyphosa, serovar Grippotyphosa, souche MSLB 1042: min 1:51 RALLeptospira interrogans,sérogroupe Icterohaemorrhagiae, serovar Icterohaemorrhagiae, souche MSLB 1041: min 1:51 RALLeptospira interrogans,sérogroupe Canicola, serovar Canicola, souche MSLB 1043: min 1:51 RALAdjuv: emulsigen",
     "pharmaceutical_form": "vaccin injectable",
     "administration_route": "im",
     "posology": "Su (truies, cochettes):- Primovac: 2 doses/animal (5-6 sem et 2-3 sem avant saillie)- Revac: 1 dose/animal (2-3 sem avant saillie)Su (verrat):- Primovac: 2 doses/animal (7 sem et 4 sem avant saillie)- Revac: 1 dose/animal/4 m",
@@ -4237,7 +4452,7 @@
     "withdrawal_period": "Temps d'attente: 0 j",
     "packaging": "flacon 50 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc4e461e5c015ab3aba32f?version=1"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc4e461e5c015ab3aba32f"
   },
   {
     "id": "5694",
@@ -4561,7 +4776,7 @@
   {
     "id": "5656",
     "name": "NOBILIS SALENVAC ETC",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V557617",
     "target_species": "poule",
     "composition": "par dose (0,5 ml):SalmonellaEnteritidis inactivée, souche PT4: 1–6,6 ARSalmonellaTyphimurium inactivée, souche DT104: 1–16,1 ARSalmonellaInfantis inactivée, souche A, S03499-06: 1–26,6 ARadjuv: hydroxyde d'aluminium",
@@ -4634,7 +4849,7 @@
     "withdrawal_period": "Temps d'attente: 0 j",
     "packaging": "ampoule 2000 doses, 4000 doses",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc4ef91e5c015ab3ac36a8?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc4ef91e5c015ab3ac36a8"
   },
   {
     "id": "5646",
@@ -4748,7 +4963,7 @@
   {
     "id": "5630",
     "name": "SERESTO DOG 1,25 g + 0,56 g collier pour chiens ≤ 8 kg",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V500986",
     "target_species": "chien",
     "composition": "par collier:imidaclopride: 1,25 gfluméthrine: 0,56 g",
@@ -4761,7 +4976,7 @@
   {
     "id": "5629",
     "name": "SERESTO DOG 4,50 g + 2,03 g collier pour chiens > 8 kg",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V501093",
     "target_species": "chien",
     "composition": "par collier:imidaclopride: 4,5 gfluméthrine: 2,03 g",
@@ -4774,7 +4989,7 @@
   {
     "id": "5628",
     "name": "SERESTO CAT 1,25 g + 0,56 g collier pour chats",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V500995",
     "target_species": "chat",
     "composition": "par collier:imidaclopride: 1,25 gfluméthrine: 0,56 g",
@@ -4940,7 +5155,7 @@
   {
     "id": "5608",
     "name": "NOBIVAC MYXO-RHD PLUS",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "EU/2/19/244/001-003",
     "target_species": "lapin non prod d'aliments, lapin prod d'aliments",
     "composition": "virus viv de la myxomatose exprimant une glycoprotéine du virus de la MHL (souche 009): min 10exp3.0 et max 10exp5,8 FFU/dosevirus viv de la myxomatose exprimant une glycoprotéine du virus de la MHL (souche MK1899): min 10exp3.0 et max 10exp5,8 FFU/dose",
@@ -5080,12 +5295,12 @@
     "withdrawal_period": "Viande et abats: 0 jNe pas utiliser chez les animaux producteurs de lait destiné à la consommation humaine.",
     "packaging": "poudre 1 kg, 5 kg (sac)",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc50931e5c015ab3adccde?version=1"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc50931e5c015ab3adccde"
   },
   {
     "id": "5586",
     "name": "NEPTRA sol auric chiens",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "EU/2/19/246/001-003",
     "target_species": "chien",
     "composition": "florfénicol: 16,7 mg/mlterbinafine (chlorhydrate): 14,9 mg/mlmométasone furoate: 2,2 mg/ml",
@@ -5129,7 +5344,7 @@
   {
     "id": "5576",
     "name": "PORCILIS LAWSONIA",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V544995",
     "target_species": "porc",
     "composition": "par dose (2 ml):Lawsonia intracellularis, souche SPAH-08 inactivée ≥ 5323 Uadjuv: huile minérale légère, aluminium (hydroxyde)",
@@ -5176,7 +5391,7 @@
     "id": "5569",
     "name": "RESPIPORC FLUpan H1N1",
     "firm": "Ceva",
-    "registration_number": "EU/2/17/209/001–002",
+    "registration_number": "EU/2/17/209/003",
     "target_species": "porc",
     "composition": "par dose (1 ml):virus grippal humain inactivé, de type A,souche: A/Jena/VI5258/2009(H1N1)pdm09: ≥ 16 UHAadjuv: carbomère 971P NF",
     "pharmaceutical_form": "vaccin injectable",
@@ -5465,7 +5680,7 @@
     "firm": "Pharmagal Bio",
     "registration_number": "BE-V538355",
     "target_species": "pigeon non prod d'aliments, pigeon prod d'aliments",
-    "composition": "par dose (0,3 ml):paramyxovirus 1 du pigeon (PPMV1), inactivé, souche 988M:  ≥ 6,9 log2 HIherpèsvirus 1 du pigeon (PHV1), inactivé, souche V298/70: ≥ 38,1 EUadénovirus de volaille de type 8 (FAdV-8), inactivé, souche M2/E: ≥24,7 EUadjuv.: huile de paraffine, oléate de sorbitane, polysorbate 80",
+    "composition": "par dose (0,3 ml):paramyxovirus 1 du pigeon (PPMV1), inactivé, souche 988M:  ≥ 6,9 log2 HIherpèsvirus 1 du pigeon (PHV1), inactivé, souche V298/70: ≥ 38,1 EUadénovirus de volaille de type E, sérotype 8 (FAdV-8), inactivé, souche M2/E: ≥24,7 EUadjuv.: huile de paraffine, oléate de sorbitane, polysorbate 80",
     "pharmaceutical_form": "vaccin injectable",
     "administration_route": "sc",
     "posology": "pigeon (âge > 4 sem): 1 dose/animal",
@@ -5473,7 +5688,7 @@
     "withdrawal_period": "Temps d'attente: 0 j",
     "packaging": "flacon 50 doses",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc51a51e5c015ab3afb6dd?version=1"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc51a51e5c015ab3afb6dd"
   },
   {
     "id": "5532",
@@ -5504,7 +5719,7 @@
   {
     "id": "5526",
     "name": "SPASMIPUR 20 mg/ml",
-    "firm": "Richter Pharma",
+    "firm": "VetViva Richter",
     "registration_number": "BE-V541280",
     "target_species": "cheval non prod d'aliments, cheval prod de lait, bovin prod de lait, ovin prod de lait, porc",
     "composition": "butylbromure d'hyoscine: 20 mg/ml",
@@ -5761,7 +5976,7 @@
   {
     "id": "5482",
     "name": "BAYCOX IRON 36 mg/ml + 182 mg/ml",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "EU/2/19/239/001",
     "target_species": "porc",
     "composition": "toltrazuril: 36,4 mg/mlfer III (gleptoferron): 182 mg/ml",
@@ -5816,7 +6031,7 @@
     "withdrawal_period": "Viande et abats: 35 jNe pas utiliser chez les animaux producteurs de lait destiné à la consommation humaine.Ne pas utiliser chez les vaches ou génisses gestantes dont le lait est destiné à la consommation humaine, dans les 2 mois (60 jours) précédant le vêlage.",
     "packaging": "flacon 1 lsac à dos 2,5 l",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc51401e5c015ab3aee98d?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc51401e5c015ab3aee98d"
   },
   {
     "id": "5475",
@@ -6437,7 +6652,7 @@
   {
     "id": "5404",
     "name": "NEXMECTIN 18,7 mg/g",
-    "firm": "Eco AH",
+    "firm": "Acme",
     "registration_number": "BE-V538897",
     "target_species": "cheval non prod d'aliments, cheval prod d'aliments",
     "composition": "ivermectine: 18,7 mg/g",
@@ -6447,7 +6662,7 @@
     "withdrawal_period": "Viande+abats: 34 jNe pas administrer aux Eq dont le lait est destiné à la consommation humaine.",
     "packaging": "seringue 1 x 7,49 g",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc51741e5c015ab3af5310?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc51741e5c015ab3af5310"
   },
   {
     "id": "5402",
@@ -6649,7 +6864,7 @@
     "administration_route": "im, iv, sc",
     "posology": "Bo, Su: 1 x 2,5 mg/kg trim + 12,5 mg/kg sulf pj (im, iv)(jusqu'à 2 j après la disparition des symptômes, max 5 j)Ca, Fe: 1 x 5 mg/kg trim + 25 mg/kg sulf pj (sc)(jusqu'à 2 j après la disparition des symptômes, max 5 j)",
     "withdrawal_period": "Viande+abats: Bo: 12 j, Su: 20 j, Lait: Bo: 48 h",
-    "packaging": "flacon 100 ml",
+    "packaging": "flacon 100 ml, 250 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc517e1e5c015ab3af64de"
   },
@@ -6780,7 +6995,7 @@
     "firm": "Dechra",
     "registration_number": "BE-V531537",
     "target_species": "bovin prod de lait",
-    "composition": "pénéthamate hydroiodide: 400 mg/ml",
+    "composition": "pénéthamate iohydrate: 400 mg/ml",
     "pharmaceutical_form": "suspension injectable",
     "administration_route": "im",
     "posology": "Bo: 10-15 mg/kg pj (3 j)",
@@ -6874,7 +7089,7 @@
     "posology": "Ca:- sans préméd: 6,5 mg/kg- préméd (agoniste alpha2): 3 mg/kg- préméd (acépromazine): 4,5 mg/kg- entretien: 1,5 mg/kgFe:- sans préméd: 8 mg/kg- préméd (agoniste alpha2): 2 mg/kg- préméd (acépromazine): 6 mg/kg- entretien: 2 mg/kg",
     "packaging": "flacon 5 x 20 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc56221e5c015ab3b92d27?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc56221e5c015ab3b92d27"
   },
   {
     "id": "5348",
@@ -6936,7 +7151,7 @@
   {
     "id": "5331",
     "name": "SARNACURAN Cattle",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V519253",
     "target_species": "bovin",
     "composition": "phoxime: 500 mg/ml",
@@ -7043,7 +7258,7 @@
   {
     "id": "5316",
     "name": "BAYCOX MULTI",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V504355",
     "target_species": "bovin, porc, ovin",
     "composition": "toltrazuril: 50 mg/ml",
@@ -7064,7 +7279,7 @@
     "composition": "amoxicilline trihydrate: 574 mg/g",
     "pharmaceutical_form": "poudre",
     "administration_route": "po dans l'eau de boisson",
-    "posology": "Su: 20 mg/kg en 2 admin pj (5 j)poule: 15 mg/kg pj (3 ou 5 j)dinde: 15-20 mg/kg pj (3 ou 5 j)canard: 20 mg/kg pj (3 j)",
+    "posology": "Su:-pasteurellose: 20 mg/kg en 2 admin pj (5 j)-infections àS. suis: 20 mg/kg pj (4 j)poule: 15 mg/kg pj (3 ou 5 j)dinde: 15-20 mg/kg pj (3 ou 5 j)canard: 20 mg/kg pj (3 j)",
     "withdrawal_period": "Viande+abats: Su: 2 j, poule: 1 j, dinde: 5 j, canard: 9 jNe pas administrer aux animaux dont les œufs sont destinés à la consommation humaine",
     "packaging": "poudre 1 kg (pot)",
     "prescription": "R/",
@@ -7242,7 +7457,7 @@
     "withdrawal_period": "Viande et abats: Eq, Bo, Su, Ov, Capr: 0 jLait: Eq, Bo, Ov, Capr: 0 j",
     "packaging": "flacon 100 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc51e21e5c015ab3b01e09?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc51e21e5c015ab3b01e09"
   },
   {
     "id": "5278",
@@ -7360,7 +7575,7 @@
     "administration_route": "po dans l'eau de boisson",
     "posology": "Su: 5 mg de T + 25 mg de S/kg pj (4-7 j)Av: 7,5 mg de T + 37,5 mg de S/kg pj (3 j)",
     "withdrawal_period": "Viande+abats: Su: 8 j, Av: 5 jNe pas utiliser chez les oiseaux dont les œufs sont destinés à la production humaine",
-    "packaging": "bidon 5 l",
+    "packaging": "flacon 1 lbidon 5 l",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc51d31e5c015ab3b00523"
   },
@@ -8179,10 +8394,10 @@
     "firm": "Virbac",
     "registration_number": "BE-V501733",
     "target_species": "chien",
-    "composition": "virus att de la maladie de Carré (CDV), souche Lederle: 10exp3-10exp4,9 DICC50adénovirus canin de type 2 (CAV-2) att, souche Manhattan: 10exp4-10exp6 DICC50parvovirus canin (CPV) att, souche CPV780916: 10exp5-10exp6,8 DICC50virus parainfluenza (CPiV) att, souche Manhatten: 10exp5-10exp6,9 DICC50",
+    "composition": "virus att de la maladie de Carré (CDV), souche Lederle: 10exp3-10exp4,9 DICC50adénovirus canin de type 2 (CAV-2) att, souche Manhattan: 10exp4-10exp6 DICC50parvovirus canin (CPV) att, souche Cornell 780916: 10exp5-10exp6,8 DICC50virus parainfluenza (CPiV) att, souche Manhatten: 10exp5-10exp6,9 DICC50",
     "pharmaceutical_form": "vaccin injectable",
     "administration_route": "sc",
-    "posology": "Ca: Primovac (âge > 8 sem): 2 inj à 3-4 sem d'intervalle (en cas d'imm mat, éventuellement 3e inj dès l'âge de 15 sem)Revac: 1 dose/an, puis 1 dose/3 ans (CDV, CAV2, CPV, CAV1) et 1 dose/an (CPiV)",
+    "posology": "Ca: Primovac (âge > 8 sem): 2 inj à 3-4 sem d'intervalle (en cas d'imm mat, éventuellement 3e inj dès l'âge de 15 sem)Ca sensibles: 1 inj à 6 sem d'âge, puis schéma de vac habituel (âge > 8 sem)Revac: 1 dose/an, puis 1 dose/3 ans (CDV, CAV2, CPV, CAV1) et 1 dose/an (CPiV)",
     "ooi_doi": "OOI: CDV, CAV2 et CPV: 3 sem après vac de base, CPiV et CAV1: 4 sem après vac de baseDOI: 1 an après vac de base, puis 3 ans (CDV, CAV2, CPV, CAV1) et 1 an (CPiV) après 1er rappel",
     "packaging": "10 flacons de lyophilisat + 10 flacons de solvant50 flacons de lyophilisat + 50 flacons de solvant",
     "prescription": "R/",
@@ -8445,15 +8660,15 @@
     "firm": "Genera",
     "registration_number": "BE-V500764",
     "target_species": "poule, dinde",
-    "composition": "virus viv lentogénique de la maladie de Newcastle, souche La Sota: 10exp6.0 à 10exp7.0 DICT50",
+    "composition": "virus viv de la maladie de Newcastle, souche La Sota: 10exp6.0 à 10exp7.0 DICT50",
     "pharmaceutical_form": "vaccin lyophilisé",
-    "administration_route": "par voie oculonasale ou dans l'eau de boisson",
+    "administration_route": "par voie oculonasale, nébulisation ou dans l'eau de boisson",
     "posology": "poule (dès l'âge de 1 j): 1 dose/animal, Revac possible après 35 jdinde (dès l'âge de 14 j): 1 dose/animal",
     "ooi_doi": "OOI: poule, dinde: 21 j post vacDOI: poule: 35 j post vacDOI dinde: pas d'info",
     "withdrawal_period": "Temps d'attente: 0 j",
     "packaging": "flacon 10 x 2500 doses, 10 x 5000 doses",
     "prescription": "R/i",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc592e1e5c015ab3c02352?version=3"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc592e1e5c015ab3c02352"
   },
   {
     "id": "4951",
@@ -8491,7 +8706,7 @@
     "firm": "Vet-Agro",
     "registration_number": "BE-V500311",
     "target_species": "cheval prod d'aliments, cheval non prod d'aliments, bovin prod de lait, porc, chien, chat",
-    "composition": "dexaméthasone (phosphate de sodium): 2 mg/ml",
+    "composition": "dexaméthasone (phosphate de disodium): 2 mg/ml",
     "pharmaceutical_form": "solution injectable",
     "administration_route": "iv (Eq), im (Eq, Bo, Su, Ca, Fe), iartic (Eq)",
     "posology": "Eq, Bo, Su: 0,06 mg/kgEq (iartic): 1-5 mlBo (cétose prim): 0,02 à 0,04 mg/kg imBo (induction parturition après 260e j): 0,04 mg/kg imCa, Fe: 0,1 mg/kg im",
@@ -8760,7 +8975,7 @@
     "posology": "Ca:- plaies infect, abcès, infect dentaires/cavité buccale: 11 mg/kg pj, éventuellement en 2 prises (7-10 j, max 4 j en l'absence d'effet thérapeutique)- pyodermite superf: 11 mg/kg pj, éventuellement en 2 prises (min 21 j)- ostéomyélite: 2 x 11 mg/kg pj (min 28 j, max 14 j en l'absence d'effet thérapeutique)",
     "packaging": "compr 120",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc53ca1e5c015ab3b4037e?version=5"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc53ca1e5c015ab3b4037e"
   },
   {
     "id": "4926",
@@ -9060,7 +9275,7 @@
     "composition": "carprofène: 50 mg/ml",
     "pharmaceutical_form": "solution injectable",
     "administration_route": "iv, sc",
-    "posology": "Ca (âge > 10 sem): 4 mg/kg (iv, sc) (peut être suivi de carprofène en comprimés)Fe (âge > 5 m): 4 mg/kg (iv, sc)",
+    "posology": "Ca (âge > 10 sem): 4 mg/kg (iv, sc) (peut être suivi de carprofène en comprimés max 5 j)Fe (âge > 5 m): 4 mg/kg (iv, sc)",
     "packaging": "flacon 20 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5c101e5c015ab3c69a2e"
@@ -9136,7 +9351,7 @@
     "posology": "Ca, Fe (plaies infect, abcès), Ca (infect dentaires/cavité buccale):11 mg/kg pj, éventuellement en 2 prises (7-10 j, max 4 j en l'absence d'effet thérapeutique)Ca ostéomyélite: 2 x 11 mg/kg pj (min 28 j, max 14 j en l'absence d'effet thérapeutique)",
     "packaging": "flacon 20 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc53ca1e5c015ab3b4040f?version=5"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc53ca1e5c015ab3b4040f"
   },
   {
     "id": "4892",
@@ -9150,7 +9365,7 @@
     "posology": "Ca:- plaies infect, abcès, infect dentaires/cavité buccale: 11 mg/kg pj, éventuellement en 2 prises (7-10 j, max 4 j en l'absence d'effet thérapeutique)- pyodermite superf: 11 mg/kg pj, éventuellement en 2 prises (min 21 j)- ostéomyélite: 2 x 11 mg/kg pj (min 28 j, max 14 j en l'absence d'effet thérapeutique)",
     "packaging": "compr 120",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc53ca1e5c015ab3b403ae?version=5"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc53ca1e5c015ab3b403ae"
   },
   {
     "id": "4891",
@@ -9438,7 +9653,7 @@
     "withdrawal_period": "Viande+abats : 35 jNe pas utiliser chez les Eq producteurs de lait destiné à la consommation humaine",
     "packaging": "seringue 1 ou 12 x 7,49 g",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc55161e5c015ab3b6d3c7?version=3"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc55161e5c015ab3b6d3c7"
   },
   {
     "id": "4866",
@@ -9555,18 +9770,18 @@
   },
   {
     "id": "4854",
-    "name": "PEPTICURE",
+    "name": "PEPTICURE 370 mg/g",
     "firm": "Norbrook Lab",
     "registration_number": "BE-V470595",
     "target_species": "cheval prod d'aliments, cheval non prod d'aliments",
     "composition": "oméprazole 370 mg/g",
     "pharmaceutical_form": "pâte",
     "administration_route": "po",
-    "posology": "Eq (âge > 4 sem, PV >70 kg):- traitement: 4 mg pâte/kg pj (28 j)- prévention: 1 mg pâte/kg pj",
-    "withdrawal_period": "Viande+abats: 1 jNe pas administrer aux Eq dont le lait est destiné à la consommation humaine",
+    "posology": "Eq (âge > 4 sem, PV >70 kg):- traitement: 4 mg pâte/kg pj (28 j), puis 1 mg/kg pj (28 j). Si récidive, recommencer le traitement.- prévention: 1 mg pâte/kg pj",
+    "withdrawal_period": "Viande+abats: 1 jNe pas administrer aux animaux dont le lait est destiné à la consommation humaine",
     "packaging": "seringues 7 x 7,57g",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc55eb1e5c015ab3b8b340?version=5"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc55eb1e5c015ab3b8b340"
   },
   {
     "id": "4848",
@@ -9640,21 +9855,6 @@
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc564e1e5c015ab3b99042?version=3"
   },
   {
-    "id": "4838",
-    "name": "TAF SPRAY 28,5 mg/g",
-    "firm": "Dechra",
-    "registration_number": "BE-V467937",
-    "target_species": "cheval non prod d'aliments, cheval prod d'aliments, bovin prod de lait, ovin prod de lait, chèvre prod de lait, porc, lapin non prod d'aliments, lapin prod d'aliments, vison",
-    "composition": "thiamphénicol: 28,5 mg/g",
-    "pharmaceutical_form": "spray",
-    "administration_route": "à usage cutané",
-    "posology": "Eq, Bo, Su, Capr, Ov, vison, lapin: pulvériser 1 x pj pendant 3 sec (max 3 j)",
-    "withdrawal_period": "Viande+abats: Eq, Bo, Capr, Ov, Su, lapin: 0 j, Su: 14 j, Lait: 0 hNe pas utiliser sur les mamelles des animaux en lactation si leur lait est destiné à la consommation humaine",
-    "packaging": "flacon 150 ml",
-    "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc57061e5c015ab3bb1030?version=3"
-  },
-  {
     "id": "4837",
     "name": "EFFITIX 134 mg/1200 mg chiens moyens",
     "firm": "Virbac",
@@ -9666,7 +9866,7 @@
     "posology": "Ca (PV de 10-20 kg): 1 pipettepuces, tiques: 4 sem",
     "packaging": "4 pipettes",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc571e1e5c015ab3bb5429?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc571e1e5c015ab3bb5429"
   },
   {
     "id": "4836",
@@ -9680,7 +9880,7 @@
     "posology": "Ca (PV de 4-10 kg): 1 pipettepuces, tiques: 4 sem",
     "packaging": "4 pipettes",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc571e1e5c015ab3bb53c6?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc571e1e5c015ab3bb53c6"
   },
   {
     "id": "4835",
@@ -9694,7 +9894,7 @@
     "posology": "Ca (PV de 1,5-4 kg): 1 pipettepuces, tiques: 4 sem",
     "packaging": "4 pipettes",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc571e1e5c015ab3bb5359?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc571e1e5c015ab3bb5359"
   },
   {
     "id": "4834",
@@ -10052,7 +10252,7 @@
     "withdrawal_period": "Viande+abats: 15 j, Lait: 0 h",
     "packaging": "flacon 1 l, 2,5 l, 5 l",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc589a1e5c015ab3bece84?version=5"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc589a1e5c015ab3bece84"
   },
   {
     "id": "4804",
@@ -10156,7 +10356,7 @@
   {
     "id": "4797",
     "name": "ADVANTAGE DOG 100, spot-on",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V459697",
     "target_species": "chien",
     "composition": "imidaclopride: 100 mg",
@@ -10499,7 +10699,7 @@
     "withdrawal_period": "Temps d'attente: 0 j",
     "packaging": "flacon 50 ml (poudre) + 50 ml solvant, 100 ml (poudre) + 100 ml solvant",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc54391e5c015ab3b50818?version=5"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc54391e5c015ab3b50818"
   },
   {
     "id": "4762",
@@ -10980,8 +11180,8 @@
     "pharmaceutical_form": "solution injectable",
     "administration_route": "iv",
     "posology": "Eq, Bo, Ca, Fe: 5-75 ml/kg/hrecommandé: 15 ml/kg/h(à adapter en cas de choc)",
-    "withdrawal_period": "Temps d'attente: 0 j",
-    "packaging": "poche pour perfusion 20 x 500 ml, 10 x 1000 ml, 2 x 5000 ml",
+    "withdrawal_period": "Viande et abats: 0 jLait: 0 h",
+    "packaging": "poche pour perfusion 2 x 5000 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5c141e5c015ab3c6a2f2"
   },
@@ -10996,7 +11196,7 @@
     "administration_route": "iv",
     "posology": "Eq, Bo, Ca, Fe: 5-75 ml/kg/hrecommandé: 15 ml/kg/h(à adapter en cas de choc)",
     "withdrawal_period": "Viande et abats: 0 jLait: 0 h",
-    "packaging": "poche pour perfusion 20 x 500 ml, 10 x 1000 ml",
+    "packaging": "poche pour perfusion 500 ml, 10 x 1000 ml, 15 x 500 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5c0f1e5c015ab3c6975c"
   },
@@ -11006,7 +11206,7 @@
     "firm": "Huvepharma",
     "registration_number": "BE-V442023",
     "target_species": "porc",
-    "composition": "apramycine: 100 g/kg",
+    "composition": "apramycine (sulfate): 100 g/kg",
     "pharmaceutical_form": "prémélange médicamenteux",
     "administration_route": "po",
     "posology": "Su: 4000-8000 UI/kg PV pj (min 21 j)",
@@ -11140,8 +11340,8 @@
     "composition": "kétamine (chlorhydrate): 100 mg/ml",
     "pharmaceutical_form": "solution injectable",
     "administration_route": "im, sc, iv",
-    "posology": "Eq:xylazine+kétamine: 1,1 mg de xylazine/kg (iv lente) et après 2 minutes, max 5 min 2,2 mg de kétamine/kg (iv bolus)détomidine/kétamine: 20 mcg de détomidine/kg (iv) et après 5 minutes, 2,2 mg de kétamine/kg (iv bolus) *l’anesth peut être prolongée avec le thiopental sodique ou la détomidine/kétamine (cf RCP)romifidine+kétamine: 100 mcg de romifidine/kg (iv) et après 5-10 minutes, 2,2 mg de kétamine/kg (iv bolus) *l’anesth peut être prolongée avec le thiopental sodique ou la romifidine/kétamine (cf RCP)Ca:xylazine+kétamine: 1 mg de xylazine/kg (im) et 15 mg de kétamine/kg (im)médétomidine+kétamine: 40 mcg de médétomidine/kg (im) et 5,0-7,5 mg de kétamine/kg (im)butorphanol+médétomidine+kétamine: 0,1 mg de butorphanol/kg et 25 mcg de médétomidine/kg et 15 minutes plus tard, 5 mg de kétamine/kgFe:kétamine (mono-anesth): 11-33 mg de kétamine/kg (de préférence im ou iv, sc)préméd avec atropine: 0,05 mg/kg ou acépromazine: 0,11 mg/kg (im)éventuellement prolongée par association méthoxyflurane, halothane, protoxyde d'azote et oxygènexylazine+kétamine: 1,1 mg de xylazine/kg (im) et 0,03 mg d’atropine/kg (im) et après 20 minutes, 22 mg de kétamine/kg (im)médétomidine+kétamine:im: 80 mcg de médétomidine/kg (im) et 2,5-7,5 mg de kétamine/kg (im), éventuellement prolongée par halothane et oxygène, avec ou sans protoxyde d'azoteiv: 40 mcg de médétomidine/kg (iv) et 1,25 mg de kétamine/kg (iv)butorphanol+médétomidine+kétamine:im: 0,4 mg de butorphanol/kg et 80 mcg de médétomidine/kg et 5 mg de kétamine/kgiv: 0,1 mg de butorphanol/kg et 40 mcg de médétomidine/kg et 1,25-2,5 mg de kétamine/kg",
-    "withdrawal_period": "Viande+abats: Eq: 1 jLait: 1 j",
+    "posology": "Eq:xylazine+kétamine: 1,1 mg de xylazine/kg (iv lente) et après 2 minutes, max 5 min 2,2 mg de kétamine/kg (iv bolus)détomidine/kétamine: 20 mcg de détomidine/kg (iv) et après 5 minutes, 2,2 mg de kétamine/kg (iv bolus) *l’anesth peut être prolongée avec le thiopental sodique ou la détomidine/kétamine (cf RCP)romifidine+kétamine: 100 mcg de romifidine/kg (iv) et après 5-10 minutes, 2,2 mg de kétamine/kg (iv bolus) *l’anesth peut être prolongée avec le thiopental sodique ou la romifidine/kétamine (cf RCP)Ca:xylazine+kétamine: 1 mg de xylazine/kg (im) et 15 mg de kétamine/kg (im)médétomidine+kétamine: 40 mcg de médétomidine/kg (im) et 5,0-7,5 mg de kétamine/kg (im)butorphanol+médétomidine+kétamine: 0,1 mg de butorphanol/kg im et 25 mcg de médétomidine/kg im et 15 minutes plus tard, 5 mg de kétamine/kg imFe:kétamine (mono-anesth): 11-33 mg de kétamine/kg (de préférence im ou iv, sc)préméd avec atropine: 0,05 mg/kg ou acépromazine: 0,11 mg/kg (im)éventuellement prolongée par association méthoxyflurane, halothane, protoxyde d'azote et oxygènexylazine+kétamine: 1,1 mg de xylazine/kg (im) et 0,03 mg d’atropine/kg (im) et après 20 minutes, 22 mg de kétamine/kg (im)médétomidine+kétamine:im: 80 mcg de médétomidine/kg (im) et 2,5-7,5 mg de kétamine/kg (im), éventuellement prolongée par halothane et oxygène, avec ou sans protoxyde d'azoteiv: 40 mcg de médétomidine/kg (iv) et 1,25 mg de kétamine/kg (iv)butorphanol+médétomidine+kétamine:im: 0,4 mg de butorphanol/kg et 80 mcg de médétomidine/kg et 5 mg de kétamine/kgiv: 0,1 mg de butorphanol/kg et 40 mcg de médétomidine/kg et 1,25-2,5 mg de kétamine/kg",
+    "withdrawal_period": "Viande+abats: Eq: 1 jLait: 24 h",
     "packaging": "flacon 10 ml, 50 ml",
     "prescription": "R/psych",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5c521e5c015ab3c72a89"
@@ -11367,9 +11567,9 @@
     "target_species": "cheval non prod d'aliments, cheval prod d'aliments, bovin prod de lait, porc",
     "composition": "flunixine (méglumine): 50 mg/ml",
     "pharmaceutical_form": "solution injectable",
-    "administration_route": "iv (Eq, Bo), im (Su)",
-    "posology": "Eq:- troubles musculosquelett: 1,1 mg/kg iv, à 24 h d'intervalle (max 5 j)- colique: 1,1 mg/kg iv, traitement peut être répété 1 ou 2 xBo: 1,1-2,2 mg/kg iv, à 24 h d'intervalle (max 3 j)Su (PV > 6 kg): 1 x 2,2 mg/kg im (max 5 ml au même site)",
-    "withdrawal_period": "Viande et abats: Eq: 28 j, Bo: 10 j, Su: 24 jLait: Bo: 48 hNe pas utiliser chez les chevaux producteurs de lait destiné à la consommation humaine.",
+    "administration_route": "iv (Eq, Bo), im (Bo, Su)",
+    "posology": "Eq:- troubles musculosquelett, fièvre: 1,1 mg/kg 1 x pj iv (max 5 j)- colique: 1,1 mg/kg iv, traitement peut être répété 1 ou 2 x- thérapie d'appoint: 0,25 mg/kg toutes les 6-8 h ou 1,1 mg/kg pj iv (max 5 j)Bo:- thérapie d'appoint, troubles musculosqu.: 2,2 mg/kg iv, im à 24 h d'intervalle (max 3 j) (im: max 8 ml au même site)- douleur postop (écornage) (âge < 9 sem): 1 x 2,2 mg/kg iv, 15-20 min avant écornageSu:- thérapie d'appoint, troubles musculosqu.: 2,2 mg/kg im pj (max 3 j) (max 4 ml au même site)- douleur postop (castration, coupe de la queue) (porcelets allaités): 1 x 2,2 mg/kg im, 15-30 min avant procédure",
+    "withdrawal_period": "Viande et abats: Eq: 5 j, Bo: 4 j (iv), 31 j (im), Su: 24 jLait: Bo: 24 h (iv), 36 h (im)Ne pas utiliser chez les chevaux producteurs de lait destiné à la consommation humaine.",
     "packaging": "flacon 100 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc74141e5c015ab3f65466"
@@ -11762,7 +11962,7 @@
     "administration_route": "po",
     "posology": "Eq:jour 1: 2 x 4.4 mg/kg pjjour 2-4 : 2 x 2.2 mg/kg pjensuite: 1 x 2.2 mg/kg pj ou 1 j sur 2",
     "withdrawal_period": "Ne pas administrer aux Eq destinés à la consommation humaine ni aux Eq dont le lait est destiné à la consommation humaine.",
-    "packaging": "sachet 20 x 5 g",
+    "packaging": "sachet 20, 100",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5cb01e5c015ab3c7f748"
   },
@@ -11819,11 +12019,11 @@
     "composition": "cloprosténol (sodique): 0,0875 mg/ml",
     "pharmaceutical_form": "solution injectable",
     "administration_route": "im",
-    "posology": "Bo: 0,5 mg/animal, synchronisation des chaleurs: traiter 2 x à 11 j d'intervalleSu: 1 x 0,175 mg/animal",
-    "withdrawal_period": "Viande+abats: Bo, Su: 2 j, Lait Bo: 0 h",
+    "posology": "Bo: 0,5 mg/animalSu: 1 x 0,175 mg/animal",
+    "withdrawal_period": "Viande+abats: Bo, Su: 1 jLait Bo: 0 h",
     "packaging": "flacon 50 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5e3a1e5c015ab3cb4fec?version=3"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5e3a1e5c015ab3cb4fec"
   },
   {
     "id": "4620",
@@ -12397,11 +12597,11 @@
     "composition": "kétoprofène: 100 mg/ml",
     "pharmaceutical_form": "solution injectable",
     "administration_route": "iv, im",
-    "posology": "Eq:- troubles musculo-squel: 2,2 mg/kg (iv) 3-5 j- coliques: 2,2 mg/kg (iv) (peut être répété)Bo: 3 mg/kg (iv, im) (max 3 j)Su: 3 mg/kg (im)",
+    "posology": "Eq:- troubles musculo-squel: 2,2 mg/kg pj (iv) 3-5 j- coliques: 2,2 mg/kg (iv) (peut être répété)Bo: 3 mg/kg pj (iv, im) (max 3 j)Su: 3 mg/kg (im)",
     "withdrawal_period": "Viande: Eq: 1 j, Bo (iv): 1 j, Bo (im): 2 j, Su: 2 jLait: Bo: 0 h, Eq: ne pas administrer aux Eq dont le lait est destiné à la consommation humaine",
     "packaging": "flacon 100 ml, 250 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc60641e5c015ab3cf7cdc?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc60641e5c015ab3cf7cdc"
   },
   {
     "id": "4555",
@@ -12450,7 +12650,7 @@
   {
     "id": "4551",
     "name": "SERESTO 1,25 g + 0,56 g collier chats",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V400084",
     "target_species": "chat",
     "composition": "imidaclopride: 1,250 gfluméthrine: 0,56 g",
@@ -12479,7 +12679,7 @@
   {
     "id": "4548",
     "name": "VERAFLOX 25 mg/ml susp po chats",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "EU/2/10/107/013",
     "target_species": "chat",
     "composition": "pradofloxacine: 25 mg/ml",
@@ -12491,46 +12691,19 @@
     "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/be754f93-5616-4e18-9cda-f297b136ad10"
   },
   {
-    "id": "4547",
-    "name": "VERAFLOX 120 mg compr chiens",
-    "firm": "Bayer",
-    "registration_number": "EU/2/10/107/009, EU/2/10/107/011",
-    "target_species": "chien",
-    "composition": "pradofloxacine: 120 mg",
-    "pharmaceutical_form": "comprimé sécable",
-    "administration_route": "po",
-    "posology": "Ca: 1 x 3 mg/kg pj (7-35 j, selon l'indication)",
-    "packaging": "compr 7, 70",
+    "id": "4542",
+    "name": "QUIFLOR S 100 mg/ml sol inj bovins",
+    "firm": "Krka",
+    "registration_number": "BE-V399664",
+    "target_species": "bovin prod de lait",
+    "composition": "marbofloxacine: 100 mg/ml",
+    "pharmaceutical_form": "solution injectable",
+    "administration_route": "im",
+    "posology": "Bo: 1 x 8 mg/kg",
+    "withdrawal_period": "Viande+abats: 3 j, Lait: 72 h",
+    "packaging": "flacon 100 ml",
     "prescription": "R/",
-    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/be754f93-5616-4e18-9cda-f297b136ad10"
-  },
-  {
-    "id": "4546",
-    "name": "VERAFLOX 60 mg compr chiens",
-    "firm": "Bayer",
-    "registration_number": "EU/2/10/107/005",
-    "target_species": "chien",
-    "composition": "pradofloxacine: 60 mg",
-    "pharmaceutical_form": "comprimé sécable",
-    "administration_route": "po",
-    "posology": "Ca: 1 x 3 mg/kg pj (7-35 j, selon l'indication)",
-    "packaging": "compr 7",
-    "prescription": "R/",
-    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/be754f93-5616-4e18-9cda-f297b136ad10"
-  },
-  {
-    "id": "4545",
-    "name": "VERAFLOX 15 mg compr chiens, chats",
-    "firm": "Bayer",
-    "registration_number": "EU/2/10/107/001, EU/2/10/107/003",
-    "target_species": "chien, chat",
-    "composition": "pradofloxacine: 15 mg",
-    "pharmaceutical_form": "comprimé sécable",
-    "administration_route": "po",
-    "posology": "Ca: 1 x 3 mg/kg pj (7-35 j, selon l'indication)Fe: 1 x 3 mg/kg pj (5 j)",
-    "packaging": "compr 7, 70",
-    "prescription": "R/",
-    "rcp_link": "https://medicines.health.europa.eu/veterinary/en/documents/download/be754f93-5616-4e18-9cda-f297b136ad10"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc60f21e5c015ab3d0b87c"
   },
   {
     "id": "4539",
@@ -12756,7 +12929,7 @@
     "withdrawal_period": "Viande+abats: 1 j, Lait: 0 h",
     "packaging": "flacon 20 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc570f1e5c015ab3bb2ec7?version=3"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc570f1e5c015ab3bb2ec7"
   },
   {
     "id": "4523",
@@ -12767,10 +12940,10 @@
     "composition": "fipronil: 402,6 mgperméthrine: 3597,0 mg",
     "pharmaceutical_form": "spot-on",
     "administration_route": "à usage cutané",
-    "posology": "Ca (PV de 40-60 kg): 1 pipettepuces, tiques: 4 sem",
+    "posology": "Ca (PV de 40-60 kg): 1 pipetteCa (PV > 60 kg): combinaison de pipettes appropriéepuces, tiques: 4 sem",
     "packaging": "4 pipettes",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc571e1e5c015ab3bb542c?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc571e1e5c015ab3bb542c"
   },
   {
     "id": "4522",
@@ -12784,7 +12957,7 @@
     "posology": "Ca (PV de 20-40 kg): 1 pipettepuces, tiques: 4 sem",
     "packaging": "4 pipettes",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc571e1e5c015ab3bb5437?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc571e1e5c015ab3bb5437"
   },
   {
     "id": "4519",
@@ -12909,11 +13082,11 @@
     "firm": "Veyx-Pharma",
     "registration_number": "BE-V426237",
     "target_species": "bovin prod de lait, porc",
-    "composition": "cloprosténol (sodique): 0,0875 mg/ml",
+    "composition": "cloprosténol (sodique): 0,250 mg/ml",
     "pharmaceutical_form": "solution injectable",
     "administration_route": "im",
-    "posology": "Bo: 0,5 mg/animal, synchronisation des chaleurs: traiter 2 x à 11 j d'intervalleSu: 1 x 0,175 mg/animal",
-    "withdrawal_period": "Viande+abats: Bo, Su: 2 j, Lait Bo: 0 h",
+    "posology": "Bo: 0,5 mg/animalSu: 1 x 0,175 mg/animal",
+    "withdrawal_period": "Viande+abats: Bo, Su: 1 jLait: Bo: 0 h",
     "packaging": "flacon 50 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5e3a1e5c015ab3cb4fb0"
@@ -13059,7 +13232,7 @@
   {
     "id": "4490",
     "name": "BAYTRIL FLAVOUR 25 mg/ml",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V392034",
     "target_species": "chat",
     "composition": "enrofloxacine: 25 mg/ml",
@@ -13317,7 +13490,7 @@
     "withdrawal_period": "Viande: 2 j, Lait: 12 h",
     "packaging": "flacon 20 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc63e01e5c015ab3d729dc?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc63e01e5c015ab3d729dc"
   },
   {
     "id": "4462",
@@ -13447,7 +13620,7 @@
     "withdrawal_period": "Viande+abats: 0 j, Lait: 0 j",
     "packaging": "flacon 20 ml",
     "prescription": "R/psych",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc66771e5c015ab3dcb789?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc66771e5c015ab3dcb789"
   },
   {
     "id": "4448",
@@ -13745,11 +13918,11 @@
   },
   {
     "id": "4419",
-    "name": "BLOCKADE 2,5 mg/g",
+    "name": "BLOCKADE 2,56 mg/ml",
     "firm": "DeLaval",
     "registration_number": "BE-V360175",
     "target_species": "bovin prod de lait",
-    "composition": "iode: 2,5 mg/g",
+    "composition": "iode: 2,56 mg/ml",
     "pharmaceutical_form": "solution",
     "administration_route": "pour trempage des trayons",
     "posology": "Bo: 5 ml/animal/traitement",
@@ -13774,7 +13947,7 @@
   {
     "id": "4417",
     "name": "ENGEMYCIN spray",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V356307",
     "target_species": "bovin prod de lait, ovin prod de lait, porc",
     "composition": "oxytétracycline chlorhydrate: 25 mg/ml",
@@ -13857,7 +14030,7 @@
     "posology": "Ca:analgésie: 0,2-0,4 mg/kgsédation: 0,1-0,2 mg de butorphanol/kg avec 10-30 mcg de médétomidine/kgFe: analgésie: 0,1-0,2 mg/kg",
     "packaging": "flacon 10 ml",
     "prescription": "R/psych",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc64bc1e5c015ab3d90400?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc64bc1e5c015ab3d90400"
   },
   {
     "id": "4410",
@@ -14382,11 +14555,11 @@
     "firm": "Boehringer Ingelheim",
     "registration_number": "BE-V340085",
     "target_species": "porc",
-    "composition": "Mycoplasma hyopneumoniae inact (souche J, isolat B-3745): min 1,0 RP/mladjuv: carbomère",
+    "composition": "Mycoplasma hyopneumoniae inact (souche J): min 1,0 RP/mladjuv: carbomère",
     "pharmaceutical_form": "vaccin injectable",
     "administration_route": "im",
     "posology": "Su (âge > 3 sem): 1 x 1 dose (1 ml)avec INGELVAC CIRCOFLEX: âge > 3 sem",
-    "ooi_doi": "OOI: 2 sem après vacDOI: min 26 sem",
+    "ooi_doi": "OOI: 2 sem après vacDOI: 26 sem",
     "withdrawal_period": "Temps d'attente: 0 j",
     "packaging": "flacon 50 ml, 100 ml, 250 ml",
     "prescription": "R/",
@@ -14539,7 +14712,7 @@
     "withdrawal_period": "Viande et abats: 4 j",
     "packaging": "sac 24 kg",
     "prescription": "R/premix",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc68201e5c015ab3e04601?version=3"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc68201e5c015ab3e04601"
   },
   {
     "id": "4350",
@@ -14553,7 +14726,7 @@
     "posology": "Ca:sédation: 15-80 mcg/kg (iv) ou20-100 mcg/kg (im)préméd: 10-40 mcg/kg (selon les autres anesthésiques utilisés)Fe:sédation: 50-150 mcg/kg (iv, im, sc)",
     "packaging": "flacon 10 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc68b21e5c015ab3e17e94?version=3"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc68b21e5c015ab3e17e94"
   },
   {
     "id": "4349",
@@ -14587,7 +14760,7 @@
   {
     "id": "4347",
     "name": "BYEMITE 500 mg/ml",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V333837",
     "target_species": "poule prod d'œufs",
     "composition": "phoxime: 500 mg/ml",
@@ -14604,15 +14777,15 @@
     "name": "VETMULIN 100 g/kg premix",
     "firm": "Huvepharma",
     "registration_number": "BE-V333453",
-    "target_species": "porc, poule prod d'œufs, lapin prod d'aliments, lapin non prod d'aliments",
+    "target_species": "porc, poule prod d'œufs, dinde, lapin prod d'aliments, lapin non prod d'aliments",
     "composition": "fumarate d’hydrogène de tiamuline : 100 g/kg",
     "pharmaceutical_form": "prémélange médicamenteux",
     "administration_route": "po",
-    "posology": "Su:-dysenterie, colite, pneumonie: 5-10 mg/kg de PV pj (7-10 j)-EPP (iléite): 7,5 mg/kg PV pj (10-14 j)poule: maladie resp chron, aérosacc, synovite: 25 mg/kg de PV pj (3-5 j)dinde: sinusite, aérosacc: 40 mg/kg de PV pj (3-5 j)lapin:-entérocolite épizoot: 3 mg/kg de PV pj (2-3 j après disparition des signes cliniques)-métaphylaxie entérocolite épizoot: 3 mg/kg de PV pj (3-4 sem après 1ère sem de sevrage)",
+    "posology": "Su:-dysenterie, colite, pneumonie: 5-10 mg/kg de PV pj (7-10 j)-EPP (iléite): 7,5 mg/kg PV pj (10-14 j)poule: maladie resp chron, aérosacc: 25 mg/kg de PV pj (3-5 j)dinde: sinusite, aérosacc: 40 mg/kg de PV pj (3-5 j)lapin:-entérocolite épizoot: 3 mg/kg de PV pj (2-3 j après disparition des signes cliniques)-métaphylaxie entérocolite épizoot: 3 mg/kg de PV pj (3-4 sem après 1ère sem de sevrage)",
     "withdrawal_period": "Viande+abats: Su: 6 j, poule: 1 j, dinde: 4 j, lapin: 0 jŒufs: poule: 0 j",
     "packaging": "sac 20 kg",
     "prescription": "R/premix",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc68e71e5c015ab3e1f9ed?version=5"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc68e71e5c015ab3e1f9ed"
   },
   {
     "id": "4345",
@@ -14768,8 +14941,8 @@
     "composition": "flunixine (méglumine): 50 mg/ml",
     "pharmaceutical_form": "solution injectable",
     "administration_route": "iv (Bo, Eq), im (Su)",
-    "posology": "Bo: 2,2 mg/kg pj (1-3j)Eq: 1,1 mg/kg pj (1-5 j)Su (truies): 2,2 mg/kg pj (toutes les 12 h)",
-    "withdrawal_period": "Bo: viande + abats: 4 j ; lait: 24 hEq: viande + abats: 28 jSu: viande + abats: 28 j\nNe pas utiliser chez les chevaux producteurs de lait destiné à la consommation humaine.",
+    "posology": "Eq:-troubles musculo-squ, fièvre: 1,1 mg/kg pj iv (max 5 j)-colique: 1,1 mg/kg iv. Répéter 1-2 x si nécessaire-endotoxémie: 0,25 mg/kg toutes les 6-8 h ou 1 x 1,1 mg/kg pj iv (max 5 j)Bo: 2,2 mg/kg pj iv (max 3 j)veau (âge < 9 sem): 2,2 mg/kg iv, 15-20 min avant écornageSu (truies): 2,2 mg/kg pj im (max 3 j)porcelet allaité: 1 x 2,2 mg/kg im, 15-30 min avant castration ou coupe de queue",
+    "withdrawal_period": "Viande et abats: Eq: 5 j, Bo: 4 j, Su: 28 jLait: Bo: 24 hNe pas utiliser chez les chevaux producteurs de lait destiné à la consommation humaine.",
     "packaging": "flacon 100 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc69f71e5c015ab3e44eb0"
@@ -14924,7 +15097,7 @@
   {
     "id": "4313",
     "name": "IVERMAX 18,7 mg/g pâte orale chevaux",
-    "firm": "Eco AH",
+    "firm": "Acme",
     "registration_number": "BE-V318202",
     "target_species": "cheval prod d'aliments, cheval non prod d'aliments",
     "composition": "ivermectine: 18,7 mg/g",
@@ -14934,7 +15107,7 @@
     "withdrawal_period": "Viande: 34 jLait: ne pas administrer aux juments dont le lait est destiné à la consommation humaine",
     "packaging": "seringue 7,49 g",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc6b4c1e5c015ab3e7126e?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc6b4c1e5c015ab3e7126e"
   },
   {
     "id": "4312",
@@ -15007,7 +15180,7 @@
     "withdrawal_period": "Viande+abats: 2 j, Lait: 12 h",
     "packaging": "flacon 15 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5b381e5c015ab3c4d1ff?version=3"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5b381e5c015ab3c4d1ff"
   },
   {
     "id": "4306",
@@ -15026,7 +15199,7 @@
   {
     "id": "4304",
     "name": "NOBILIS ND C2",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V281057",
     "target_species": "poule",
     "composition": "virus att de la maladie de Newcastle (C2): min 5,7 - max 7,5 log10 EID50/dose",
@@ -15035,7 +15208,7 @@
     "posology": "poule (âge 1 j): 1 dose/animalaprès 2-3 sem vac avec souche Clone 30",
     "ooi_doi": "animaux séronég:OOI: 2 semDOI: 5 semanimaux avec imm mat:OOI: 2 sem",
     "withdrawal_period": "Temps d'attente: 0 j",
-    "packaging": "flacon 12 x 5000 doses",
+    "packaging": "flacon 10 x 1000 doses, 12 x 2500 doses, 12 x 5000 doses, 10 x 10.000 doses, 12 x 10.000 doses",
     "prescription": "R/i",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc4af61e5c015ab3a88b99"
   },
@@ -15164,7 +15337,7 @@
     "posology": "Ca:- sédation:750 mcg/m² de surf corp (iv) ou 1000 mcg/m² de surf corp (im) (20-80 mcg/kg)- préméd:10-40 mcg/kgFe:- sédation moyenne - profonde:50-150 mcg/kg- anesth:80 mcg/kg (avec 2,5-7,5 mg de kétamine/kg)",
     "packaging": "flacon 10 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc6ba91e5c015ab3e7bde8?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc6ba91e5c015ab3e7bde8"
   },
   {
     "id": "4288",
@@ -15358,7 +15531,7 @@
   {
     "id": "4270",
     "name": "NOBIVAC TRICAT TRIO",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V296895",
     "target_species": "chat",
     "composition": "par dose (1 ml):calicivirus félin att (souche F9): min 10exp4,6 pfuherpèsvirus att de la rhinotrachéite féline type 1 (souche G2620A): min 10exp5,2 pfuvirus att de la panleucopénie féline (souche MW-1): min. 10exp4,3 CCID50",
@@ -15728,7 +15901,7 @@
   },
   {
     "id": "4235",
-    "name": "CYCLIX Porcine",
+    "name": "CYCLIX 87,5 mcg/ml",
     "firm": "Virbac",
     "registration_number": "BE-V279212",
     "target_species": "porc",
@@ -15736,14 +15909,14 @@
     "pharmaceutical_form": "solution injectable",
     "administration_route": "im",
     "posology": "Su: 2 ml/animal",
-    "withdrawal_period": "Viande: 2 j",
+    "withdrawal_period": "Viande et abats: 1 j",
     "packaging": "flacon 20 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc70781e5c015ab3f0b24b"
   },
   {
     "id": "4234",
-    "name": "CYCLIX 250 µg/ml",
+    "name": "CYCLIX 250 mcg/ml",
     "firm": "Virbac",
     "registration_number": "BE-V279212",
     "target_species": "bovin prod de lait",
@@ -15876,6 +16049,20 @@
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc69fc1e5c015ab3e45681?version=6"
   },
   {
+    "id": "4222",
+    "name": "ZANTEL compr chiens",
+    "firm": "Chanelle",
+    "registration_number": "BE-V272492, BE-V370797, BE-V370806",
+    "target_species": "chien",
+    "composition": "praziquantel: 50 mgfenbendazole: 500 mg",
+    "pharmaceutical_form": "comprimé",
+    "administration_route": "po",
+    "posology": "Ca (âge > 2 sem): 5 mg de praz/kg + 50 mg de fenb/kg pj (2 j)",
+    "packaging": "compr 2, 3, 4, 6, 8, 10, 12, 20, 24, 30, 48, 50, 60, 100, 120, 200, 400",
+    "prescription": "R/",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc66f31e5c015ab3ddb82e"
+  },
+  {
     "id": "4221",
     "name": "CANIGEN PUPPY 2b",
     "firm": "Virbac",
@@ -15981,7 +16168,7 @@
   {
     "id": "4214",
     "name": "ADVOCATE SPOT-ON sol très grands chiens",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "EU/2/03/039/009",
     "target_species": "chien",
     "composition": "par pipette:moxidectine: 100 mgimidaclopride: 400 mg",
@@ -15995,7 +16182,7 @@
   {
     "id": "4213",
     "name": "ADVOCATE SPOT-ON sol chiens moyens",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "EU/2/03/039/025",
     "target_species": "chien",
     "composition": "par pipette:moxidectine: 25 mgimidaclopride: 100 mg",
@@ -16069,7 +16256,7 @@
   {
     "id": "4208",
     "name": "NOBIVAC DUCAT",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V267653",
     "target_species": "chat",
     "composition": "virus att de la rhinotrachéite féline, souche G2620A: min 10exp4,8 TCID50/dosecalicivirus félin att, souche F9: min 10exp4,6 PFU/dose",
@@ -16145,7 +16332,7 @@
   {
     "id": "4203",
     "name": "NOBILIS RT+ IBmulti + ND + EDS",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V265876",
     "target_species": "poule",
     "composition": "par dose (0,5 ml) antigènes inact du:virus de la bronchite infectieuse, souche M41: min 5,5 log2 VN Uvirus de la bronchite infectieuse, souche 249g: min 4 log2 VN Uvirus de la rhinotrachéite aviaire, souche But1#8544: min 9,5 log2 U Elisavirus Egg Drop Syndrome '76, souche BC14: min 6,5 log2 U HIvirus de la maladie de Newcastle, souche Clone 30: min 50 PD50Adjuv: paraffine liquide",
@@ -16213,7 +16400,7 @@
     "posology": "Bo:5 ml de sol diluée/animal/traitement",
     "withdrawal_period": "Viande: 0 j, Lait: 0 h",
     "packaging": "fût 5 l, 20 l",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc67cc1e5c015ab3df85ea?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc67cc1e5c015ab3df85ea"
   },
   {
     "id": "4195",
@@ -16477,7 +16664,7 @@
     "withdrawal_period": "Viande: Bo, Su: 2 j, Lait: Bo: 0 h",
     "packaging": "flacon 50 ml, 10 x 5 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc6f4e1e5c015ab3ee9ac8?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc6f4e1e5c015ab3ee9ac8"
   },
   {
     "id": "4172",
@@ -16544,7 +16731,7 @@
   {
     "id": "4162",
     "name": "NOBIVAC Pi",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V259016",
     "target_species": "chien",
     "composition": "parainfluenza canin att (Cornell): min 5,5-7,3 log10 TCID50/ml",
@@ -16574,7 +16761,7 @@
   {
     "id": "4160",
     "name": "NOBILIS PARAMYXO P201",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V255744",
     "target_species": "pigeon prod d'aliments, pigeon non prod d'aliments",
     "composition": "paramyxovirus-1 du pigeon, inact (PPMV-1) souche antigène P201: min 6,8 et max 10,2 log2 U HI/dose (0,25 ml)adjuv: paraffine liquide",
@@ -16632,6 +16819,20 @@
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc72141e5c015ab3f356b7"
   },
   {
+    "id": "4156",
+    "name": "PRILIUM 300 mg",
+    "firm": "Vetoquinol",
+    "registration_number": "BE-V254213",
+    "target_species": "chien",
+    "composition": "imidapril chlorhydrate: 300 mg",
+    "pharmaceutical_form": "poudre pour solution",
+    "administration_route": "po",
+    "posology": "Ca (PV > 8 kg): 0,25 mg/kg pj",
+    "packaging": "flacon 30 ml (1,030 g de poudre) et applic (2 ml)",
+    "prescription": "R/",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc72321e5c015ab3f38306"
+  },
+  {
     "id": "4155",
     "name": "PRILIUM 150 mg",
     "firm": "Vetoquinol",
@@ -16643,7 +16844,7 @@
     "posology": "Ca (PV > 4 kg): 0,25 mg/kg pj",
     "packaging": "flacon 30 ml (0,880 g de poudre) et applic (2 ml)",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc72321e5c015ab3f382f9?version=1"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc72321e5c015ab3f382f9"
   },
   {
     "id": "4154",
@@ -16657,7 +16858,7 @@
     "posology": "Ca (PV > 2 kg): 0,25 mg/kg pj",
     "packaging": "flacon 30 ml (0,805 g de poudre) et applic (2 ml)",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc72321e5c015ab3f38308?version=1"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc72321e5c015ab3f38308"
   },
   {
     "id": "4153",
@@ -16778,7 +16979,7 @@
   {
     "id": "4144",
     "name": "ADVOCATE SPOT-ON sol grands chiens",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "EU/2/03/039/009",
     "target_species": "chien",
     "composition": "par pipette:moxidectine: 62,5 mgimidaclopride: 250 mg",
@@ -16792,7 +16993,7 @@
   {
     "id": "4143",
     "name": "ADVOCATE SPOT-ON sol grands chats",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "EU/2/03/039/003",
     "target_species": "chat",
     "composition": "par pipet:moxidectine: 8 mgimidaclopride: 80 mg",
@@ -16895,7 +17096,7 @@
   {
     "id": "4130",
     "name": "PANACUR EQUINE GUARD",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V247922",
     "target_species": "cheval prod d'aliments, cheval non prod d'aliments, âne",
     "composition": "fenbendazole: 100 mg/ml",
@@ -16998,7 +17199,7 @@
   {
     "id": "4121",
     "name": "NOBILIS RISMAVAC + CA 126",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V278406, BE-V233213",
     "target_species": "poule",
     "composition": "par dose:virus viv de la maladie de Marek (souche CVI 988): min 3,0 log10 pfuherpèsvirus viv de la dinde (souche FC 126): min 3,0 log10 pfu,contenus dans des fibroblastes embryonnaires de gallinacés.",
@@ -17014,7 +17215,7 @@
   {
     "id": "4120",
     "name": "BOVILIS IBR MARKER LIVE",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V286894",
     "target_species": "bovin prod de lait",
     "composition": "par dose (2 ml):herpèsvirus bovin type 1 (souche GK/D, gE-négatif): 10exp 5,7 - 10 exp7,3 TCID50",
@@ -17207,7 +17408,7 @@
   {
     "id": "4103",
     "name": "CANINSULIN",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V199035BE-V404503",
     "target_species": "chien, chat",
     "composition": "insuline: 40 UI/ml",
@@ -17445,7 +17646,7 @@
     "pharmaceutical_form": "solution injectable",
     "administration_route": "im (Eq, Bo, Su, Ca, Fe), iv, iartic, intrabursale, locale (Eq)",
     "posology": "inflammation, allergie:Eq, Bo, Su: 0,06 mg/kgCa, Fe: 0,1 mg/kgBo: cétose prim: 0,02-0,04 mg/kgBo: induction mise bas: 0,04 mg/kgEq: arthrite, bursite, ténosynovite:inj iartic, intrabursale ou locale 1-5 ml",
-    "withdrawal_period": "Viande: Eq: 8 j, Bo: 8 j, Su: 2 j, Lait: 72 hNe pas administrer aux Eq dont le lait est destiné à la consommation humaine",
+    "withdrawal_period": "Viande et abats: Eq: 8 j, Bo: 8 j, Su: 2 j, Lait: 72 hNe pas administrer aux Eq dont le lait est destiné à la consommation humaine",
     "packaging": "flacon 100 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc6be31e5c015ab3e849bc"
@@ -17453,7 +17654,7 @@
   {
     "id": "4082",
     "name": "DEXAFORT",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V059437",
     "target_species": "bovin prod de lait, chien",
     "composition": "dexaméthasone (phosphate sodique): 1,32 mg/mldexaméthasone (phénylpropionate): 2,67 mg/ml",
@@ -17584,7 +17785,7 @@
   },
   {
     "id": "4072",
-    "name": "OXYTOCINE  10 UI/ml",
+    "name": "OXYTOCINE  10 Un./ml",
     "firm": "VMD",
     "registration_number": "BE-V104291",
     "target_species": "cheval prod de lait, cheval non prod d'aliments, bovin prod de lait, ovin prod de lait, chèvre prod de lait, porc, chien, chat",
@@ -17595,7 +17796,7 @@
     "withdrawal_period": "Viande: 0 j, Lait: 0 j",
     "packaging": "flacon 100 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc86fa1e5c015ab30d11ff?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc86fa1e5c015ab30d11ff"
   },
   {
     "id": "4071",
@@ -17615,7 +17816,7 @@
   {
     "id": "4070",
     "name": "PG-600",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V011733",
     "target_species": "porc",
     "composition": "gonadotrophine chorionique (hCG): 200 UI/dosegonadotrophine sérique (PMSG): 400 UI/dose",
@@ -17656,20 +17857,6 @@
     "packaging": "flacon 5 x 10 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc829c1e5c015ab30ba92c"
-  },
-  {
-    "id": "4067",
-    "name": "MEGECAT 5 mg",
-    "firm": "Vetoquinol",
-    "registration_number": "BE-V133235",
-    "target_species": "chat",
-    "composition": "mégestrol acétate: 5 mg",
-    "pharmaceutical_form": "comprimé",
-    "administration_route": "po",
-    "posology": "Fe: 5 mg/14 j (max 12 m)",
-    "packaging": "compr 6",
-    "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7ff31e5c015ab309c7d8"
   },
   {
     "id": "4062",
@@ -17877,7 +18064,7 @@
     "pharmaceutical_form": "solution injectable",
     "administration_route": "sc dans l'oreille",
     "posology": "Bo (PV: > 100 kg et < 500 kg): 1 mg/kg",
-    "withdrawal_period": "Viande: 108 jNe pas autorisé pour usage chez les animaux producteurs de lait destiné à la consommation humaine. Ne pas utiliser chez les femelles gestantes destinées à produire du lait pour consommation humaine au cours des 80 jours précédant la mise bas.",
+    "withdrawal_period": "Viande: 108 jNon autorisé pour usage chez les animaux producteurs de lait destiné à la consommation humaine. Ne pas utiliser chez les femelles gestantes destinées à produire du lait pour consommation humaine au cours des 80 jours précédant la mise bas.",
     "packaging": "flacon 50 ml, 200 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc71061e5c015ab3f19d34"
@@ -18004,7 +18191,7 @@
     "pharmaceutical_form": "vaccin lyophilisé",
     "administration_route": "po dans l'eau de boisson",
     "posology": "poussin de chair: 1 dose dès l'âge de 1 jpoule pondeuse et reprod: 1 dose dès l'âge de 1 j, 2e dose à l'âge de 7 sem, 3e dose à l'âge de 16 sem, au moins 3 sem avant la ponte",
-    "ooi_doi": "OOI: dans les 15 j après vacDOI: 50 sem après programme à 3 doses ou min 6 sem après vac unique",
+    "ooi_doi": "OOI: dans les 15 j après vacDOI: poules pondeuses et reproductrices: 46 sem après dernière dose, poulets de chair: min 6 sem après vac",
     "withdrawal_period": "Viande+abats: 21 j, Œuf: 21 j",
     "packaging": "flacon 10 x 500 doses, 1000 doses, 1500 doses, 2000 doses, 2500 doses",
     "prescription": "R/",
@@ -18094,7 +18281,7 @@
     "pharmaceutical_form": "spot-on",
     "administration_route": "à usage transdermique",
     "posology": "Ca (âge > 6 sem, PV ≤ 60 kg): 1 pipette appropriée/animalCa (PV > 60 kg): combinaison de pipettes appropriéesFe (âge > 6 sem, PV ≤ 10 kg): 1 pipette appropriée/animalFe (PV > 10 kg): combinaison de pipettes appropriées",
-    "packaging": "pipette3 ou 15 x 15 mg/0,25 ml (Ca/Fe)3 ou 6 x 30 mg/0,25 ml (Ca/Fe)3 ou 6 x 45 mg/0,75 ml (Fe)3 x 60 mg/1 ml (Fe)3 ou 6 x 30 mg/0,25 ml (Ca)3 ou 6 x 60 mg/0,5 ml (Ca)3 ou 6 x 120 mg/1 ml (Ca)3 x 360 mg/3 ml (Ca)",
+    "packaging": "pipette3 ou 15 x 15 mg/0,25 ml (Ca/Fe)3 ou 6 x 30 mg/0,25 ml (Ca/Fe)3 ou 6 x 45 mg/0,75 ml (Fe)3 ou 6 x 30 mg/0,25 ml (Ca)3 ou 6 x 60 mg/0,5 ml (Ca)3 ou 6 x 120 mg/1 ml (Ca)3 x 360 mg/3 ml (Ca)",
     "prescription": "R/",
     "rcp_link": "https://medicines.health.europa.eu/veterinary/nl/documents/download/4bd91743-31f9-41ee-be3a-98d5bc6ac297"
   },
@@ -18215,7 +18402,7 @@
   {
     "id": "4000",
     "name": "BAYCOX 2,5 % sol orale",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V142694",
     "target_species": "poule, dinde",
     "composition": "toltrazuril: 25 mg/ml",
@@ -18230,7 +18417,7 @@
   {
     "id": "3999",
     "name": "VECOXAN 2,5 mg/ml",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V210612",
     "target_species": "bovin, ovin",
     "composition": "diclazuril: 2,5 mg/ml",
@@ -18327,21 +18514,6 @@
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7b6d1e5c015ab301c0eb?version=1"
   },
   {
-    "id": "3988",
-    "name": "FENDOV 1250",
-    "firm": "Zoetis",
-    "registration_number": "BE-V148407 BE-V301061",
-    "target_species": "bovin",
-    "composition": "oxfendazole: 5 x 1.250 mg",
-    "pharmaceutical_form": "bolus",
-    "administration_route": "po",
-    "posology": "Bo ruminant (PV: 250-500 kg):1 bolus/animal",
-    "withdrawal_period": "Viande: 7 mNe pas administrer aux animaux dont le lait est destiné à la consommation humaine",
-    "packaging": "boli 3 x 4",
-    "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc6c481e5c015ab3e9185d?version=5"
-  },
-  {
     "id": "3986",
     "name": "PANACUR compr 250 mg",
     "firm": "Intervet Int",
@@ -18387,7 +18559,7 @@
   {
     "id": "3983",
     "name": "PANACUR SR bolus",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V172523",
     "target_species": "bovin",
     "composition": "fenbendazole: 12 g",
@@ -18402,7 +18574,7 @@
   {
     "id": "3982",
     "name": "PANACUR PUPPY",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V205703",
     "target_species": "chien",
     "composition": "fenbendazole: 100 mg/ml",
@@ -18415,7 +18587,7 @@
   {
     "id": "3980",
     "name": "PANACUR pâte",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V119174",
     "target_species": "cheval prod d'aliments, cheval non prod d'aliments, âne",
     "composition": "fenbendazole: 187,5 mg/g",
@@ -18459,14 +18631,14 @@
     "id": "3974",
     "name": "FLUBENOL 5% poudre",
     "firm": "Elanco",
-    "registration_number": "BE-V108701",
+    "registration_number": "BE-V108701, BE-V326837",
     "target_species": "porc, poule prod d'œufs, dinde, oie, faisan",
     "composition": "flubendazole: 50 mg/g",
     "pharmaceutical_form": "poudre",
     "administration_route": "po avec l'alimentation",
     "posology": "porcelet, porc de chair: 1 mg/kg pj (5 j, en cas d'infection sévère à T. suis: 10 j)porc reprod: 0,5 mg/kg pj (10 j) ou 1 x 5 mg/kgdindon: 0,95 mg/kg pj (7 j)poule, oie: 1,43 mg/kg pj (7 j)faisan: 2,86 mg/kg pj (7 j)",
-    "withdrawal_period": "Viande: Su: 5 j, poule, dinde, oie: 1 j, faisan: 5 jŒufs: 0 j",
-    "packaging": "poudre 600 g, 2 kg",
+    "withdrawal_period": "Viande et abats: Su: 5 j, poule, dinde, oie: 1 j, faisan: 5 jŒufs: poule, dinde, oie, faisan: 0 j",
+    "packaging": "pot 600 gsac 2 kg",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc69f81e5c015ab3e44fbf"
   },
@@ -18488,7 +18660,7 @@
   {
     "id": "3972",
     "name": "VETALGIN",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V068171",
     "target_species": "cheval prod d'aliments, cheval non prod d'aliments, bovin prod de lait, porc",
     "composition": "métamizole sodique monohydrate: 500 mg/ml",
@@ -18563,7 +18735,7 @@
   {
     "id": "3966",
     "name": "OTOMAX ear drops susp",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V206622 BE-V206631",
     "target_species": "chien",
     "composition": "gentamicine (sulfate): 2640 UI/mlbetaméthasone (valérate): 0,88 mg/mlclotrimazole: 8,80 mg/ml",
@@ -18681,7 +18853,7 @@
   {
     "id": "3954",
     "name": "NAFPENZAL DC",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V023572",
     "target_species": "bovin prod de lait",
     "composition": "procaïne benzylpénicilline: 300 mg/injdihydrostreptomycine (sulfate): 100 mg/injnafcilline (sodique): 100 mg/inj",
@@ -18696,7 +18868,7 @@
   {
     "id": "3951",
     "name": "CEPRAVIN DRY COW",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V133323",
     "target_species": "bovin prod de lait",
     "composition": "céfalonium: 250 mg",
@@ -18706,7 +18878,7 @@
     "withdrawal_period": "Viande+abats: 0 j, Lait: 96 h (4 j) en cas de tarissement de min 54 jSi tarissement plus court: 54 j + 96 h (58 j)",
     "packaging": "applic 20 x 3 g",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7ff41e5c015ab309c911?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7ff41e5c015ab309c911"
   },
   {
     "id": "3950",
@@ -18861,7 +19033,7 @@
   {
     "id": "3938",
     "name": "METRICURE",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V180722",
     "target_species": "bovin prod de lait",
     "composition": "céfapirine (benzathine): 500 mg",
@@ -18977,7 +19149,7 @@
   {
     "id": "3926",
     "name": "BAYTRIL FLAVOUR 150 mg compr",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V180266",
     "target_species": "chien, chat",
     "composition": "enrofloxacine: 150 mg",
@@ -18991,7 +19163,7 @@
   {
     "id": "3925",
     "name": "BAYTRIL FLAVOUR 50 mg compr",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V153133",
     "target_species": "chien, chat",
     "composition": "enrofloxacine: 50 mg",
@@ -19005,7 +19177,7 @@
   {
     "id": "3924",
     "name": "BAYTRIL FLAVOUR 15 mg compr",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V153063",
     "target_species": "chien, chat",
     "composition": "enrofloxacine: 15 mg",
@@ -19019,7 +19191,7 @@
   {
     "id": "3923",
     "name": "BAYTRIL 100 mg/ml sol po poule, dinde, lapin",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V140314",
     "target_species": "poule, dinde, lapin prod d'aliments, lapin non prod d'aliments",
     "composition": "enrofloxacine: 100 mg/ml",
@@ -19242,7 +19414,7 @@
   {
     "id": "3906",
     "name": "NEOPEN",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V336646",
     "target_species": "bovin prod de lait, porc, ovin, chien, chat",
     "composition": "benzylpénicilline procaïne: 200.000 UI/ml (200 mg/ml)néomycine base: 100 mg/ml",
@@ -19327,7 +19499,7 @@
     "withdrawal_period": "Viande: Su: 3 j, veau: 7 j",
     "packaging": "poudre 1 kg",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7a341e5c015ab3ff6f2b?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7a341e5c015ab3ff6f2b"
   },
   {
     "id": "3898",
@@ -19347,7 +19519,7 @@
   {
     "id": "3897",
     "name": "ENGEMYCINE 10% LA",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V322086, BE-V139063",
     "target_species": "bovin, porc, ovin",
     "composition": "oxytétracycline (chlorhydrate): 100 mg/ml",
@@ -19538,7 +19710,7 @@
   {
     "id": "3879",
     "name": "CEPOREX inj",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V404494",
     "target_species": "bovin prod de lait, chien, chat",
     "composition": "céfalexine (sodique): 180 mg/ml",
@@ -19598,7 +19770,7 @@
   {
     "id": "3873",
     "name": "ALBIPEN LA",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V282466, BE-V121186",
     "target_species": "porc",
     "composition": "ampicilline (anhydre): 100 mg/ml",
@@ -19608,7 +19780,7 @@
     "withdrawal_period": "Viande+abats: 24 j",
     "packaging": "flacon 200 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc6fc61e5c015ab3ef4a26"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/67d068e441393c0123abdb6a"
   },
   {
     "id": "3872",
@@ -19628,7 +19800,7 @@
   {
     "id": "3869",
     "name": "NOBIVAC BbPi",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V222817",
     "target_species": "chien",
     "composition": "Bordetella bronchiseptica (B-C2), att: min 10exp8 et max 10exp9,7 CFU/dosevirus parainfluenza canin (Cornell), att: min 10exp3 et max 10exp5,8 DICT50/dose",
@@ -19643,7 +19815,7 @@
   {
     "id": "3867",
     "name": "PORCILIS PRRS",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V221182,BE-V278433",
     "target_species": "porc",
     "composition": "par dose (2 ml im ou 0,2 ml iderm)virus SDRP att (DV): 10exp4-10exp6,3 DICT50adjuv solvant: alpha-tocophéryl acétate",
@@ -19690,7 +19862,7 @@
   {
     "id": "3862",
     "name": "SERUM ANTITETANIQUE",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V067356",
     "target_species": "cheval prod d'aliments, cheval non prod d'aliments, bovin prod de lait, porc, ovin prod de lait, chien",
     "composition": "Ac tétanos: min 1.160 UI/ml",
@@ -19706,7 +19878,7 @@
   {
     "id": "3859",
     "name": "NOBILIS IB MULTI + ND",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V285056, BE-V218671",
     "target_species": "poule",
     "composition": "virus inact de la bronchite infectieuse:M41: min 5,5 log2 VN U/doseD274: min 4 log2 VN U/dosevirus inact de la maladie de Newcastle clone 30: min 50 PD50/doseadjuv: paraffine liquide",
@@ -19881,7 +20053,7 @@
   {
     "id": "3846",
     "name": "ROMPUN sol 2 %",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V041815",
     "target_species": "cheval prod d'aliments, cheval non prod d'aliments, bovin prod de lait, chien, chat",
     "composition": "xylazine (chlorhydrate): 20 mg/ml",
@@ -20007,7 +20179,7 @@
     "withdrawal_period": "Viande+abats: poule: 7 j, lapin: 2 jNe pas administrer aux volailles dont les œufs sont destinés à la consommation humaine, ni pendant les 14 j précédant le début de la ponte",
     "packaging": "conteneur 1 l",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc60c71e5c015ab3d0592b?version=4"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc60c71e5c015ab3d0592b"
   },
   {
     "id": "3833",
@@ -20027,7 +20199,7 @@
   {
     "id": "3832",
     "name": "SERESTO 4,50 g + 2,03 g collier chiens > 8 kg",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V400111",
     "target_species": "chien",
     "composition": "imidaclopride: 4,50 gfluméthrine: 2,03 g",
@@ -20041,7 +20213,7 @@
   {
     "id": "3831",
     "name": "SERESTO 1,25 g + 0,56 g collier chiens jusqu'à 8 kg",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V400093",
     "target_species": "chien",
     "composition": "imidaclopride: 1,250 gfluméthrine: 0,56 g",
@@ -20079,21 +20251,6 @@
     "packaging": "flacon 10 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc66761e5c015ab3dcb559"
-  },
-  {
-    "id": "3827",
-    "name": "BUTOX PROTECT 7,5 mg/ml",
-    "firm": "Intervet Int via MSD AH",
-    "registration_number": "BE-V371061",
-    "target_species": "bovin prod de lait, ovin prod de lait",
-    "composition": "deltaméthrine: 7,5 mg/ml",
-    "pharmaceutical_form": "suspension",
-    "administration_route": "à usage cutané",
-    "posology": "- mouches:Bo: 10 ml (PV < 100 kg), 20 ml (100 kg < PV < 300 kg) ou 30 ml (PV > 300 kg)(répéter éventuellement toutes les 6-10 sem)- poux et mélophages:Bo, Ov: 10 ml/animal (traiter les brebis 4-6 sem avant la mise bas)",
-    "withdrawal_period": "Viande+abats: Bo: 18 j, Ov: 1 jLait: Bo: 0 j, Ov: 12 h",
-    "packaging": "flacon 1 l et 2,5 l",
-    "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc66ea1e5c015ab3ddac45"
   },
   {
     "id": "3823",
@@ -20211,7 +20368,7 @@
   {
     "id": "3814",
     "name": "ADVOCATE SPOT-ON sol petits chiens",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "EU/2/03/039/005",
     "target_species": "chien",
     "composition": "par pipette:moxidectine: 10 mgimidaclopride: 40 mg",
@@ -20225,7 +20382,7 @@
   {
     "id": "3813",
     "name": "ADVOCATE SPOT-ON sol petits chats et furets",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "EU/2/03/039/019",
     "target_species": "chat, furet",
     "composition": "par pipette:moxidectine: 4 mgimidaclopride: 40 mg",
@@ -20269,7 +20426,7 @@
   {
     "id": "3810",
     "name": "REGUMATE EQUINE",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V269726",
     "target_species": "cheval prod d'aliments, cheval non prod d'aliments",
     "composition": "altrénogest: 2,2 mg/ml",
@@ -20372,15 +20529,15 @@
   {
     "id": "3802",
     "name": "NOBIVAC RABIES",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V138686",
     "target_species": "cheval non prod d'aliments, cheval prod de lait, bovin prod de lait, ovin prod de lait, chien, chat",
     "composition": "virus rabique inact (Pasteur RIV): min 2,0 UIadjuv: phosphate d'aluminium",
     "pharmaceutical_form": "vaccin injectable",
-    "administration_route": "im (Eq, Bo, Ov), im, sc (Ca, Fe)",
-    "posology": "Primovac:Eq, Bo, Ov (âge > 6 m): 1 dose (im)Eq, Bo, Ov (âge < 6 m): 2e dose après l'âge de 6 m (im)Ca, Fe (âge > 3 m): 1 dose (im, sc)Ca, Fe (âge < 3 m): 2e dose après l'âge de 3 m (im, sc)Revac:Eq, Bo: 1 dose/2 ansOv: 1 dose/anCa, Fe: 1 dose/3 ansNobivac Rabies peut être utilisé comme solvant pour Nobivac DHPPi, Nobivac DHP, Nobivac Parvo-C, Nobivac Pi et Nobivac Ducat",
+    "administration_route": "im, sc",
+    "posology": "Primovac:Eq, Bo, Ov (âge > 6 m): 1 dose (im)Eq, Bo, Ov (âge < 6 m): 2e dose à l'âge de 6 m (im)Ca, Fe (âge > 12 sem): 1 dose (im, sc)Ca, Fe (âge < 12 sem): 2e dose à l'âge de 12 sem (im, sc)Revac:Eq, Bo: 1 dose/2 ansOv: 1 dose/anCa, Fe: 1 dose/3 ansNobivac Rabies peut être utilisé comme solvant pour Nobivac DHPPi, Nobivac DHP, Nobivac Parvo-C, Nobivac Pi et Nobivac Ducat",
     "ooi_doi": "OOI: 3-4 sem après vacDOI: Ca, Fe: 3 ans, Bo, Eq: 2 ans, Ov: 1 an",
-    "withdrawal_period": "Viande: 0 j, Lait: 0 j",
+    "withdrawal_period": "Temps d'attente: 0 j",
     "packaging": "flacon 10 x 1 dose",
     "prescription": "R/i",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7f4b1e5c015ab3092bfc"
@@ -20429,7 +20586,7 @@
   {
     "id": "3798",
     "name": "FOLLIGON",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V059272",
     "target_species": "cheval non prod d'aliments, cheval prod de lait, bovin prod de lait, porc, ovin prod de lait, chèvre prod de lait, chien, lapin non prod d'aliments, lapin prod d'aliments",
     "composition": "gonadotrophine sérique (PMSG): 1.000 UI",
@@ -20444,7 +20601,7 @@
   {
     "id": "3797",
     "name": "CHORULON",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V059315",
     "target_species": "cheval non prod d'aliments, cheval prod de lait, bovin prod de lait, chien",
     "composition": "gonadotrophine chorionique (hCG): 1.500 UI/5 ml",
@@ -20459,7 +20616,7 @@
   {
     "id": "3796",
     "name": "LAURABOLIN 25 mg/ml",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V011891",
     "target_species": "chien",
     "composition": "nandrolone laurinate: 25 mg/ml",
@@ -20473,7 +20630,7 @@
   {
     "id": "3795",
     "name": "REGUMATE 4 mg/ml sol po porcs",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V346446",
     "target_species": "porc",
     "composition": "altrénogest: 4 mg/ml",
@@ -20532,7 +20689,7 @@
   {
     "id": "3788",
     "name": "NOBILIS REO INAC",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V201101, BE-V333137",
     "target_species": "poule",
     "composition": "réovirus (1733 + 2408) inact: min 7,4 log2 U ELISA/doseadjuv: paraffine liquide",
@@ -20548,7 +20705,7 @@
   {
     "id": "3787",
     "name": "NOBILIS CAV P4",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V180731",
     "target_species": "poule",
     "composition": "chicken anaemia virus (26P4) att: min 10exp 3 DICT50/doseAdjuv: dl-alpha-tocophérol",
@@ -20564,7 +20721,7 @@
   {
     "id": "3785",
     "name": "PARACOX-5",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V211321",
     "target_species": "poule",
     "composition": "E. acervulina HP: 500-650 oocystes/doseE. maxima CP: 200-260 oocystes/doseE. maxima MFP: 100 - 130 oocystes/doseE. mitis HP: 1000-1300 oocystes/doseE. tenella HP: 500-650 oocystes/dose",
@@ -20573,14 +20730,14 @@
     "posology": "poussin (âge 1-3 j): 1 dose (0,004 ml)/animal",
     "ooi_doi": "Pulvérisation sur l’aliment, pulvérisation au couvoir sans solvant ou dans l’eau de boisson:OOI: 14 j, DOI: 40 jPulvérisation au couvoir avec solvant:OOI: 21 j, DOI: 10 sem",
     "withdrawal_period": "Temps d'attente: 0 j",
-    "packaging": "flacon 5 x 1000, 5 x 5000 doses",
+    "packaging": "flacon 1000, 5000 doses",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc51161e5c015ab3ae9a7f"
   },
   {
     "id": "3784",
     "name": "PARACOX-8",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V172541",
     "target_species": "poule",
     "composition": "E. acervulina HP: 500 oocystes/doseE. brunetti HP: 100 oocystes/doseE. maxima CP: 200 oocystes/doseE. maxima MFP: 100 oocystes/doseE. mitis HP: 1000 oocystes/doseE. necatrix HP: 500 oocystes/doseE. praecox HP: 100 oocystes/doseE. tenella HP: 500 oocystes/dose",
@@ -20644,7 +20801,7 @@
   {
     "id": "3778",
     "name": "NOBILIS RISMAVAC",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V274757, BE-V096467",
     "target_species": "poule",
     "composition": "virus att de la maladie de Marek cellulaire (CVI 988): min 3 log10 TCID50/dose",
@@ -20660,7 +20817,7 @@
   {
     "id": "3776",
     "name": "NOBILIS ND CLONE 30",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V112594",
     "target_species": "poule",
     "composition": "virus viv de la maladie de Newcastle (clone 30): min 6log10 ELD50/dose",
@@ -20749,7 +20906,7 @@
     "posology": "Primovac:Bo (âge 2 sem – 3 m): 1 dose (2 ml) inas, 2e dose à l’âge de 3 m (im)Bo avec imm mat: 1 dose supplémentaire (inas ou im) 3 sem après 1e vacBo (âge > 3 m): 1 x 1 dose (im, inas)Bo en gestation: 2 x 1 dose (2 ml) à 3-5 sem d'intervalle (im) ou 1 dose im (Rispoval IBR marker vivum) puis 1 dose 6 m plus tard (Rispoval IBR marker inact). 2e dose au plus tard au début du 2e trimestre de la gestationBo à risque infectieux immédiat: 1 dose inas, 2de dose après 3-5 sem (im)Revac:Bo: 1e Revac 6 m après primovac, ensuite tous les 6 m (Rispoval IBR marker vivum) ou 12 m (Rispoval IBR marker inact)",
     "ooi_doi": "OOI: 7 j après 1e dose inas ou 21 j après 1e dose imDOI (Bo âge 2 sem - < 3m): 3 m (inas)DOI (Bo âge 3 m ou plus): 6 m",
     "withdrawal_period": "Temps d'attente: 0 j",
-    "packaging": "flacon 50 doses (100 ml)",
+    "packaging": "flacon 10 doses + 20 ml, 50 doses + 100 ml",
     "prescription": "R/i",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7a6c1e5c015ab3ffe4ae"
   },
@@ -20772,7 +20929,7 @@
   {
     "id": "3765",
     "name": "BOVILIS BVD",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V206227",
     "target_species": "bovin prod de lait",
     "composition": "virus BVD inact type 1 (souche C86): eq. à 50 U Elisa induisant min 4,6 log2 VN Uadjuv: hydroxyde d'aluminium, phosphate d'aluminum",
@@ -20952,7 +21109,7 @@
   {
     "id": "3737",
     "name": "KARSIVAN",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V144137",
     "target_species": "chien",
     "composition": "propentofylline: 50 mg",
@@ -20981,7 +21138,7 @@
   {
     "id": "3733",
     "name": "SARNACURAN pour-on",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V146115",
     "target_species": "porc",
     "composition": "phoxime: 75 mg/ml",
@@ -20996,7 +21153,7 @@
   {
     "id": "3732",
     "name": "SARNACURAN sol",
-    "firm": "Bayer",
+    "firm": "Elanco",
     "registration_number": "BE-V125474",
     "target_species": "ovin, porc",
     "composition": "phoxime: 500 mg/ml",
@@ -21046,10 +21203,10 @@
     "pharmaceutical_form": "solution injectable",
     "administration_route": "sc",
     "posology": "Bo, veau:0,2 mg d'iver/kg + 2 mg de clor/kg",
-    "withdrawal_period": "Viande: 66 jNe pas administrer pendant la lactation ou 60 j avant le vêlage si le lait est destiné à la consommation humaine",
+    "withdrawal_period": "Viande et abats: 66 jNe pas utiliser chez les animaux producteurs de lait destiné à la consommation humaine. Ne pas administrer pendant la lactation ou 60 j avant le vêlage si le lait est destiné à la consommation humaine",
     "packaging": "flacon 50 ml, 200 ml, 500 ml",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7e751e5c015ab307b925?version=6"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7e751e5c015ab307b925"
   },
   {
     "id": "3728",
@@ -21094,7 +21251,7 @@
     "withdrawal_period": "Viande: 14 j, Lait: 5 j",
     "packaging": "flacon 1 l",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc58531e5c015ab3be3111?version=3"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc58531e5c015ab3be3111"
   },
   {
     "id": "3725",
@@ -21288,21 +21445,6 @@
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc5aff1e5c015ab3c465ce"
   },
   {
-    "id": "3708",
-    "name": "COLISTINE SULFATE 1 MIO UI/ml",
-    "firm": "VMD",
-    "registration_number": "BE-V134391",
-    "target_species": "bovin",
-    "composition": "colistine sulfate: 1.000.000 UI/ml",
-    "pharmaceutical_form": "solution injectable",
-    "administration_route": "im",
-    "posology": "veau: 2 x pj 50.000 UI/kg (3 j)",
-    "withdrawal_period": "Viande+abats: veau: 62 j",
-    "packaging": "flacon 100 ml",
-    "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc6a0d1e5c015ab3e48290?version=3"
-  },
-  {
     "id": "3707",
     "name": "LINCOMYCINE-VMD inj",
     "firm": "VMD",
@@ -21392,17 +21534,17 @@
   },
   {
     "id": "3700",
-    "name": "PROACTIVE PLUS 0,15% w/w",
+    "name": "PROACTIVE PLUS 1,5 mg/g",
     "firm": "DeLaval",
     "registration_number": "BE-V341083",
     "target_species": "bovin prod de lait",
     "composition": "iode: 1,5 mg/g",
     "pharmaceutical_form": "solution",
     "administration_route": "pour le trempage ou la pulvérisation des trayons",
-    "posology": "Bo: 5 ml/animal/traitement",
-    "withdrawal_period": "Viande: 0 j, Lait: 0 h",
+    "posology": "Bo: 5 ml/animal/traitement (max 2 x pj)",
+    "withdrawal_period": "Viande et abats: 0 jLait: 0 j",
     "packaging": "fût 20, 60 et 200 l",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc67521e5c015ab3de53a3?version=3"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc67521e5c015ab3de53a3"
   },
   {
     "id": "3699",
@@ -21413,7 +21555,7 @@
     "composition": "par ml de vaccin:max 2 des sérotypes suivants:virus Bluetongue inact sérotype 8 (BTV-8), souche BTV8/BEL/2006/01: ≥ 245,67 µgvirus Bluetongue inact sérotype 4 (BTV-4), souche BTV-4/SPA-1/2004: ≥ 22,06 µgvirus Bluetongue inact sérotype 1 (BTV-1), souche BTV-1/ALG/2006/01: ≥ 9,06 µgadjuv: hydroxyde d’aluminium et saponine purifiée (Quil A)",
     "pharmaceutical_form": "suspension pour vaccin injectable",
     "administration_route": "sc",
-    "posology": "Primovac:Bo (âge > 2 m): 2 x 4 ml/animal à 3-4 sem d'intervalleOv (âge > 2,5 m):-2 x 2 ml/animal à 3 sem d'intervalle-BTV-1 ou BTV-4 monovalent: 1 x 2 ml/animalRevac Bo, Ov: 1 dose/an",
+    "posology": "Primovac:Bo (âge > 2 m): 2 x 4 ml/animal à 3-4 sem d'intervalleOv (âge > 2,5 m):-2 x 2 ml/animal à 3 sem d'intervalle-BTV-1 ou BTV-4 monovalent: 1 x 2 ml/animal-BTV-1+4 bivalent: 1 x 2 ml/animalRevac Bo, Ov: 1 dose/an",
     "ooi_doi": "OOI (Ov): 21 j après primovacOOI (Bo): 28 j (BTV-1), 21 j (BTV-4), 31 j (BTV-8) après primovacDOI: 1 an après primovac (Bo, Ov)",
     "withdrawal_period": "Temps d'attente: 0 j",
     "packaging": "flacon 100 ml, 252 ml",
@@ -21464,6 +21606,22 @@
     "packaging": "flacon 250 ml",
     "prescription": "R/",
     "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc86da1e5c015ab30d0edd?version=2"
+  },
+  {
+    "id": "3691",
+    "name": "FOOTVAX",
+    "firm": "Intervet Int",
+    "registration_number": "BE-V163161",
+    "target_species": "ovin prod de lait",
+    "composition": "Bacteroïdes nodosus inact (Dichelobacter nodosus):sérotypes: A, B1, B2, C, D, E, F, G, H: 10 mcg pili/dosesérotype I: 5 x 10exp8 cells/minadjuv: paraffine liquide, oleate de mannide",
+    "pharmaceutical_form": "vaccin injectable",
+    "administration_route": "sc",
+    "posology": "Primovac:Ov (âge > 3 m): 2 x 1 dose (1 ml) à 4-6 sem d'intervalleRevac:1 dose/4-6 m",
+    "ooi_doi": "OOI: 2 sem, DOI: 6 m",
+    "withdrawal_period": "Temps d'attente: 0 j",
+    "packaging": "flacon 20 ml",
+    "prescription": "R/i",
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7d571e5c015ab3057a73"
   },
   {
     "id": "3689",
@@ -21630,12 +21788,12 @@
     "ooi_doi": "OOI: CPV: 7 j après vac, CAV, PI, CDV: 3 sem après vacDOI: PI: min 12 m, CPV: min 12 m, CDV, CAV: non établie",
     "packaging": "flacon 25 x 1 dose + 25 x 1 ml de solvant",
     "prescription": "R/",
-    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7db71e5c015ab306362e?version=2"
+    "rcp_link": "https://app.fagg-afmps.be/pharma-status/api/files/62bc7db71e5c015ab306362e"
   },
   {
     "id": "3675",
     "name": "NOBIVAC DHPPi",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V161682",
     "target_species": "chien",
     "composition": "virus att de la maladie de Carré du chien (souche Onderstepoort): min 10exp4,0 DICT50/mladénovirus canin type 2 att (souche Manhattan LPV3): min 10exp4,0 DICT50/mlparvovirus canin att (souche 154): min 10exp7,0 DICT50/mlvirus parainfluenza att (souche Cornell): min 10exp5,5 DICT/ml",
@@ -21650,7 +21808,7 @@
   {
     "id": "3674",
     "name": "NOBIVAC DHP",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V151173",
     "target_species": "chien",
     "composition": "virus att de la maladie de Carré du chien (souche Onderstepoort): min 10exp 4 DICT50/mladénovirus canin type 2 att (souche Manhattan LPV3): min 10exp 4 DICT50/mlparvovirus canin att (souche 154): min 10exp 7 DICTD50/ml",
@@ -21681,7 +21839,7 @@
   {
     "id": "3672",
     "name": "BOVILIS ROTAVEC CORONA",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V215546",
     "target_species": "bovin prod de lait",
     "composition": "par dose de 2 ml:rotavirus bovin inact (souche UK-Compton, sérotype G6 P5): min 874 Ucoronavirus bovin inact (souche Mebus): min 340 Usouche E. coli CN7985, sérotype O101:K99:F41: min 560 Uadjuv: huile minérale, hydroxyde d'aluminium",
@@ -21761,7 +21919,7 @@
   {
     "id": "3665",
     "name": "PORCILIS ERY-PARVO",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V328623, BE-V182804",
     "target_species": "porc",
     "composition": "par dose (2 ml):Erysipelothrix rhusiopathiae inact (M2 sérotype 2): min 1 ppdparvovirus porcin inact (PPV 014): min 552 EUadjuv: alpha-tocophérol acétate",
@@ -21878,7 +22036,7 @@
   {
     "id": "3650",
     "name": "PORCILIS ERY+PARVO+LEPTO",
-    "firm": "Intervet Int via MSD AH",
+    "firm": "Intervet Int",
     "registration_number": "BE-V502097",
     "target_species": "porc",
     "composition": "par dose (2 ml):souches inactivées de:E. rhusiopathiae, sérotype 2 (souche M2): ≥ 1 ppdparvovirus porcin (souche 014): ≥ 130 ULeptospira interrogans,sérogroupe Canicola sérovar Portland-Vere (souche Ca-12-000): ≥ 2816 ULeptospira interrogans,sérogroupe Icterohaemorrhagiae sérovar Copenhageni (souche Ic-02-001): ≥ 210 ULeptospira interrogans,sérogroupe Australis sérovar Bratislava (souche As-05-073): ≥ 1310 ULeptospira kirschneri,sérogroupe Grippotyphosa sérovar Dadas (souche Gr-01-005): ≥ 648 ULeptospira interrogans,sérogroupe Pomona sérovar Pomona (souche Po-01-000): ≥ 166 ULeptospira santarosai,sérogroupe Tarassovi sérovar Gatuni (souche S1148/02): ≥ 276 UAdjuv: acétate de dl-alpha-tocophéryle",
