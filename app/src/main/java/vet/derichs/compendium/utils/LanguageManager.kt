@@ -3,10 +3,9 @@ package vet.derichs.compendium.utils
 import android.content.Context
 import android.content.SharedPreferences
 import android.content.res.Configuration
-import android.os.Build
 import android.os.LocaleList
 import android.util.Log
-import java.util.*
+import java.util.Locale
 
 class LanguageManager(private val context: Context) {
     private val prefs: SharedPreferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
@@ -41,12 +40,7 @@ class LanguageManager(private val context: Context) {
         }
 
         // Detect system language
-        val systemLanguage = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            context.resources.configuration.locales[0].language
-        } else {
-            @Suppress("DEPRECATION")
-            context.resources.configuration.locale.language
-        }
+        val systemLanguage = context.resources.configuration.locales[0].language
 
         val defaultLang = when (systemLanguage) {
             "nl" -> "nl"
@@ -84,27 +78,13 @@ class LanguageManager(private val context: Context) {
         }
     }
 
-    @Suppress("DEPRECATION")
     fun applyLanguageToContext(context: Context, languageCode: String): Context {
         val locale = Locale(languageCode)
         Locale.setDefault(locale)
 
         val configuration = Configuration(context.resources.configuration)
+        configuration.setLocales(LocaleList(locale))
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            configuration.setLocales(LocaleList(locale))
-        } else {
-            @Suppress("DEPRECATION")
-            configuration.locale = locale
-        }
-
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
-            context.createConfigurationContext(configuration)
-        } else {
-            @Suppress("DEPRECATION")
-            context.resources.updateConfiguration(configuration, context.resources.displayMetrics)
-            context
-        }
+        return context.createConfigurationContext(configuration)
     }
-
 }
