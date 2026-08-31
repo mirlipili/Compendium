@@ -7,14 +7,14 @@ plugins {
 
 android {
     namespace = "vet.derichs.compendium"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "vet.derichs.compendium"
         minSdk = 28
-        targetSdk = 35
-        versionCode = 8
-        versionName = "0.8"
+        targetSdk = 36
+        versionCode = 9
+        versionName = "0.9"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
