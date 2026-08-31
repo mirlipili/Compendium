@@ -10,10 +10,11 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import vet.derichs.compendium.data.model.Medication
+import androidx.navigation.navArgument
 import vet.derichs.compendium.ui.MedicationViewModel
 import vet.derichs.compendium.ui.screens.MedicationDetailScreen
 import vet.derichs.compendium.ui.screens.MedicationListScreen
@@ -76,8 +77,6 @@ private fun VetCompendiumApp(
     val currentLanguage by viewModel.currentLanguage.collectAsState()
     val shouldRecreateActivity by viewModel.shouldRecreateActivity.collectAsState()
 
-    var selectedMedication by remember { mutableStateOf<Medication?>(null) }
-
     // Listen for activity recreation requests
     LaunchedEffect(shouldRecreateActivity) {
         if (shouldRecreateActivity) {
@@ -95,8 +94,9 @@ private fun VetCompendiumApp(
                 searchQuery = searchQuery,
                 onSearchQueryChange = viewModel::updateSearchQuery,
                 onMedicationClick = { medication ->
-                    selectedMedication = medication
-                    navController.navigate("medication_detail")
+                    medication.id?.let { id ->
+                        navController.navigate("medication_detail/$id")
+                    }
                 },
                 onRefreshClick = {
                     viewModel.refreshData()
@@ -115,10 +115,11 @@ private fun VetCompendiumApp(
                     viewModel.exportNotes()
                 },
                 navigateToGeneralNotes = {
-                    navController.navigate("generalNotes") // Navigate to our new route
+                    navController.navigate("generalNotes")
                 }
             )
         }
+
         composable(route = "generalNotes") {
             GeneralNotesScreen(
                 viewModel = viewModel,
@@ -126,10 +127,22 @@ private fun VetCompendiumApp(
             )
         }
 
+        composable(
+            route = "medication_detail/{medicationId}",
+            arguments = listOf(navArgument("medicationId") { type = NavType.StringType })
+        ) { backStackEntry ->
+            val medicationId = backStackEntry.arguments?.getString("medicationId")
+            val medication = medications.find { it.id == medicationId }
 
-        composable("medication_detail") {
+            // If activity was restored after process death and medication is not found, safely return to list
+            LaunchedEffect(medication, isLoading) {
+                if (medication == null && !isLoading && medications.isNotEmpty()) {
+                    navController.popBackStack("medication_list", false)
+                }
+            }
+
             MedicationDetailScreen(
-                medication = selectedMedication,
+                medication = medication,
                 onBackClick = {
                     navController.popBackStack()
                 },
