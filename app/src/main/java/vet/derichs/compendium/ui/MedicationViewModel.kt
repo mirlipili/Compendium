@@ -32,6 +32,7 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
     private val _currentLanguage = MutableStateFlow("fr")
     private val _generalNote = MutableStateFlow<GeneralNote?>(null)
     private val _dataStatus = MutableStateFlow<DataStatus?>(null)
+    private val _shouldRecreateActivity = MutableStateFlow(false)
 
     val isInitializing: StateFlow<Boolean> = _isInitializing.asStateFlow()
     val isRefreshing: StateFlow<Boolean> = _isRefreshing.asStateFlow()
@@ -40,6 +41,7 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
     val currentLanguage: StateFlow<String> = _currentLanguage.asStateFlow()
     val generalNote: StateFlow<GeneralNote?> = _generalNote.asStateFlow()
     val dataStatus: StateFlow<DataStatus?> = _dataStatus.asStateFlow()
+    val shouldRecreateActivity: StateFlow<Boolean> = _shouldRecreateActivity.asStateFlow()
 
     // Combines search query and active language so any change to either
     // re-queries the database automatically — no activity recreate needed.
@@ -137,14 +139,13 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
                 // Offline-first: load from DB or assets, no network call.
                 val result = repository.ensureLanguageLoaded(language)
                 result.fold(
-                    onSuccess = { message ->
+                    onSuccess = { _ ->
                         languageManager.setLanguage(language)
-                        // Updating _currentLanguage causes medications to re-query automatically.
                         _currentLanguage.value = language
                         _dataStatus.value = repository.getDataStatus(language)
-                        _refreshMessage.value = message
-                        kotlinx.coroutines.delay(2000)
-                        _refreshMessage.value = null
+                        // Recreate the activity so attachBaseContext() picks up the new
+                        // locale and reloads all string resources in the correct language.
+                        _shouldRecreateActivity.value = true
                     },
                     onFailure = { exception ->
                         _refreshMessage.value = "Changement de langue échoué : ${exception.message}"
@@ -162,6 +163,10 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
                 _isRefreshing.value = false
             }
         }
+    }
+
+    fun onActivityRecreated() {
+        _shouldRecreateActivity.value = false
     }
 
     fun exportNotes() {

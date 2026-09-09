@@ -33,7 +33,13 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    VetCompendiumApp(viewModel = medicationViewModel)
+                    VetCompendiumApp(
+                        viewModel = medicationViewModel,
+                        onRecreate = {
+                            medicationViewModel.onActivityRecreated()
+                            recreate()
+                        }
+                    )
                 }
             }
         }
@@ -52,7 +58,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-private fun VetCompendiumApp(viewModel: MedicationViewModel) {
+private fun VetCompendiumApp(viewModel: MedicationViewModel, onRecreate: () -> Unit) {
     val navController = rememberNavController()
 
     val medications by viewModel.medications.collectAsState()
@@ -62,6 +68,11 @@ private fun VetCompendiumApp(viewModel: MedicationViewModel) {
     val refreshMessage by viewModel.refreshMessage.collectAsState()
     val currentLanguage by viewModel.currentLanguage.collectAsState()
     val dataStatus by viewModel.dataStatus.collectAsState()
+    val shouldRecreateActivity by viewModel.shouldRecreateActivity.collectAsState()
+
+    LaunchedEffect(shouldRecreateActivity) {
+        if (shouldRecreateActivity) onRecreate()
+    }
 
     NavHost(navController = navController, startDestination = "medication_list") {
         composable("medication_list") {
