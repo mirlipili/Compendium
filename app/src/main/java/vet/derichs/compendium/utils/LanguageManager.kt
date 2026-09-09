@@ -33,21 +33,13 @@ class LanguageManager(private val context: Context) {
     }
 
     fun detectAndSetDefaultLanguage() {
-        val savedLanguage = getCurrentLanguage()
-        if (savedLanguage.isNotEmpty()) {
-            Log.d(TAG, "Using saved language: $savedLanguage")
+        if (prefs.contains(KEY_LANGUAGE)) {
+            Log.d(TAG, "Using saved language: ${getCurrentLanguage()}")
             return
         }
 
-        // Detect system language
         val systemLanguage = context.resources.configuration.locales[0].language
-
-        val defaultLang = when (systemLanguage) {
-            "nl" -> "nl"
-            "fr" -> "fr"
-            else -> DEFAULT_LANGUAGE // Default to French for any other language
-        }
-
+        val defaultLang = if (systemLanguage in SUPPORTED_LANGUAGES) systemLanguage else DEFAULT_LANGUAGE
         setLanguage(defaultLang)
         Log.d(TAG, "Auto-detected language: $systemLanguage, set to: $defaultLang")
     }
