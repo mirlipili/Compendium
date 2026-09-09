@@ -29,7 +29,6 @@ fun MedicationListScreen(
     onSearchQueryChange: (String) -> Unit,
     onMedicationClick: (Medication) -> Unit,
     onRefreshClick: () -> Unit = {},
-    isLoading: Boolean = false,
     refreshMessage: String? = null,
     currentLanguage: String = "fr",
     supportedLanguages: List<String> = emptyList(),
@@ -38,8 +37,12 @@ fun MedicationListScreen(
     getOtherLanguageShortName: () -> String = { "NL" },
     navigateToGeneralNotes: () -> Unit,
     onExportNotes: () -> Unit = {},
-    dataStatus: DataStatus? = null
+    dataStatus: DataStatus? = null,
+    isInitializing: Boolean = false,
+    isRefreshing: Boolean = false
 ) {
+    val busy = isInitializing || isRefreshing
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -68,7 +71,7 @@ fun MedicationListScreen(
                 modifier = Modifier.weight(1f),
                 keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
                 keyboardActions = KeyboardActions(onSearch = {}),
-                enabled = !isLoading,
+                enabled = !busy,
                 singleLine = true
             )
 
@@ -78,12 +81,19 @@ fun MedicationListScreen(
                 onRefreshClick = onRefreshClick,
                 onLanguageClick = onLanguageClick,
                 onExportNotes = onExportNotes,
-                isLoading = isLoading,
+                isLoading = busy,
                 otherLanguageShortName = getOtherLanguageShortName()
             )
         }
 
-        Spacer(modifier = Modifier.height(8.dp))
+        // Thin progress bar visible during any background operation.
+        if (isRefreshing && !isInitializing) {
+            LinearProgressIndicator(modifier = Modifier.fillMaxWidth().padding(top = 4.dp))
+        } else {
+            Spacer(modifier = Modifier.height(4.dp))
+        }
+
+        Spacer(modifier = Modifier.height(4.dp))
 
         refreshMessage?.let { message ->
             Card(
@@ -102,7 +112,7 @@ fun MedicationListScreen(
         }
 
         when {
-            isLoading -> {
+            isInitializing -> {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         CircularProgressIndicator()

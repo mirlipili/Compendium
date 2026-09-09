@@ -72,7 +72,8 @@ private fun VetCompendiumApp(
     // Collect states
     val medications by viewModel.medications.collectAsState()
     val searchQuery by viewModel.searchQuery.collectAsState()
-    val isLoading by viewModel.isLoading.collectAsState()
+    val isInitializing by viewModel.isInitializing.collectAsState()
+    val isRefreshing by viewModel.isRefreshing.collectAsState()
     val refreshMessage by viewModel.refreshMessage.collectAsState()
     val currentLanguage by viewModel.currentLanguage.collectAsState()
     val shouldRecreateActivity by viewModel.shouldRecreateActivity.collectAsState()
@@ -102,7 +103,8 @@ private fun VetCompendiumApp(
                 onRefreshClick = {
                     viewModel.refreshData()
                 },
-                isLoading = isLoading,
+                isInitializing = isInitializing,
+                isRefreshing = isRefreshing,
                 refreshMessage = refreshMessage,
                 currentLanguage = currentLanguage,
                 supportedLanguages = viewModel.getSupportedLanguages(),
@@ -137,8 +139,8 @@ private fun VetCompendiumApp(
             val medication = medications.find { it.id == medicationId }
 
             // If activity was restored after process death and medication is not found, safely return to list
-            LaunchedEffect(medication, isLoading) {
-                if (medication == null && !isLoading && medications.isNotEmpty()) {
+            LaunchedEffect(medication, isInitializing) {
+                if (medication == null && !isInitializing && medications.isNotEmpty()) {
                     navController.popBackStack("medication_list", false)
                 }
             }

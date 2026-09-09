@@ -25,7 +25,11 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
         private const val TAG = "MedicationViewModel"
     }
 
-    private val _isLoading = MutableStateFlow(false)
+    // Full-screen spinner — only true during first-time database init when the list is empty.
+    private val _isInitializing = MutableStateFlow(false)
+    // Subtle progress bar — true during network refresh and language switch.
+    private val _isRefreshing = MutableStateFlow(false)
+
     private val _searchQuery = MutableStateFlow("")
     private val _refreshMessage = MutableStateFlow<String?>(null)
     private val _currentLanguage = MutableStateFlow("fr")
@@ -33,7 +37,8 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
     private val _generalNote = MutableStateFlow<GeneralNote?>(null)
     private val _dataStatus = MutableStateFlow<DataStatus?>(null)
 
-    val isLoading: StateFlow<Boolean> = _isLoading.asStateFlow()
+    val isInitializing: StateFlow<Boolean> = _isInitializing.asStateFlow()
+    val isRefreshing: StateFlow<Boolean> = _isRefreshing.asStateFlow()
     val searchQuery: StateFlow<String> = _searchQuery.asStateFlow()
     val refreshMessage: StateFlow<String?> = _refreshMessage.asStateFlow()
     val currentLanguage: StateFlow<String> = _currentLanguage.asStateFlow()
@@ -74,7 +79,7 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
 
         viewModelScope.launch {
             try {
-                _isLoading.value = true
+                _isInitializing.value = true
                 repository.initializeData()
             } catch (e: Exception) {
                 Log.e(TAG, "Failed to initialize data", e)
@@ -82,7 +87,7 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
                 kotlinx.coroutines.delay(5000)
                 _refreshMessage.value = null
             } finally {
-                _isLoading.value = false
+                _isInitializing.value = false
             }
         }
     }
@@ -94,7 +99,7 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
     fun refreshData() {
         viewModelScope.launch {
             try {
-                _isLoading.value = true
+                _isRefreshing.value = true
                 _refreshMessage.value = null
                 val result = repository.refreshCurrentLanguage()
                 _dataStatus.value = repository.getDataStatus(_currentLanguage.value)
@@ -111,7 +116,7 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
                 _refreshMessage.value = "Actualisation échouée : ${e.message}"
                 Log.e(TAG, "Error during refresh", e)
             } finally {
-                _isLoading.value = false
+                _isRefreshing.value = false
             }
         }
     }
@@ -124,7 +129,7 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
         if (language == _currentLanguage.value) return
         viewModelScope.launch {
             try {
-                _isLoading.value = true
+                _isRefreshing.value = true
                 _refreshMessage.value = null
                 val result = repository.refreshFromServerWithLanguage(language)
                 result.fold(
@@ -150,7 +155,7 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
                 kotlinx.coroutines.delay(3000)
                 _refreshMessage.value = null
             } finally {
-                _isLoading.value = false
+                _isRefreshing.value = false
             }
         }
     }
@@ -162,7 +167,7 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
     fun exportNotes() {
         viewModelScope.launch {
             try {
-                _isLoading.value = true
+                _isRefreshing.value = true
                 val result = notesManager.exportNotes(medications.value)
                 result.fold(
                     onSuccess = { _refreshMessage.value = it },
@@ -173,7 +178,7 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
             } catch (e: Exception) {
                 _refreshMessage.value = "Export échoué : ${e.message}"
             } finally {
-                _isLoading.value = false
+                _isRefreshing.value = false
             }
         }
     }
