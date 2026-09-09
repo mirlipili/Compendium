@@ -75,10 +75,11 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
             repository.generalNote.collect { note -> _generalNote.value = note }
         }
 
+        val currentLang = _currentLanguage.value
         viewModelScope.launch {
             try {
                 _isInitializing.value = true
-                repository.initializeData()
+                repository.initializePrimaryLanguage(currentLang)
             } catch (e: Exception) {
                 Log.e(TAG, "Failed to initialize data", e)
                 _refreshMessage.value = "Erreur de chargement : ${e.message}"
@@ -87,6 +88,10 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
             } finally {
                 _isInitializing.value = false
             }
+        }
+        // Load the other language in the background — no spinner, non-blocking.
+        viewModelScope.launch {
+            repository.initializeSecondaryLanguages(currentLang)
         }
     }
 

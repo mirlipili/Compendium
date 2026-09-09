@@ -38,23 +38,40 @@ class MedicationRepository(
         generalNoteDao.upsert(GeneralNote(content = content))
     }
 
-    // On first launch (or after a schema migration that wiped the table), populate
-    // all supported languages from bundled assets so offline use is immediately available.
-    suspend fun initializeData() {
+    // Loads the primary language and returns so the UI can become interactive.
+    // Call initializeSecondaryLanguages() afterwards in a separate coroutine.
+    suspend fun initializePrimaryLanguage(language: String) {
         withContext(Dispatchers.IO) {
             try {
-                for (language in LanguageManager.SUPPORTED_LANGUAGES) {
-                    val count = medicationDao.getCountForLanguage(language)
-                    if (count == 0) {
-                        Log.d(TAG, "No data for $language — loading from assets")
-                        prePopulateFromAssets(language)
-                    } else {
-                        Log.d(TAG, "$count medications already loaded for $language")
-                    }
+                val count = medicationDao.getCountForLanguage(language)
+                if (count == 0) {
+                    Log.d(TAG, "No data for $language — loading from assets")
+                    prePopulateFromAssets(language)
+                } else {
+                    Log.d(TAG, "$count medications already loaded for $language")
                 }
             } catch (e: Exception) {
-                Log.e(TAG, "Error initializing data", e)
+                Log.e(TAG, "Error initializing primary language $language", e)
                 throw e
+            }
+        }
+    }
+
+    // Loads any language not yet in the DB, without blocking the UI.
+    suspend fun initializeSecondaryLanguages(primaryLanguage: String) {
+        withContext(Dispatchers.IO) {
+            for (language in LanguageManager.SUPPORTED_LANGUAGES) {
+                if (language == primaryLanguage) continue
+                try {
+                    val count = medicationDao.getCountForLanguage(language)
+                    if (count == 0) {
+                        Log.d(TAG, "Background-loading $language from assets")
+                        prePopulateFromAssets(language)
+                    }
+                } catch (e: Exception) {
+                    Log.e(TAG, "Error background-loading $language", e)
+                    // Non-fatal: primary language is already available
+                }
             }
         }
     }
