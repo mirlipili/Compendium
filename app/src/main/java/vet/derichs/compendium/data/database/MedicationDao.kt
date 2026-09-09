@@ -7,14 +7,14 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 abstract class MedicationDao {
 
-    @Query("SELECT * FROM medications ORDER BY name ASC")
-    abstract fun getAllMedications(): Flow<List<Medication>>
+    @Query("SELECT * FROM medications WHERE language = :language ORDER BY name ASC")
+    abstract fun getAllMedications(language: String): Flow<List<Medication>>
 
-    @Query("SELECT * FROM medications WHERE name LIKE :searchQuery OR firm LIKE :searchQuery OR target_species LIKE :searchQuery OR composition LIKE :searchQuery ORDER BY name ASC")
-    abstract fun searchMedications(searchQuery: String): Flow<List<Medication>>
+    @Query("SELECT * FROM medications WHERE language = :language AND (name LIKE :searchQuery OR firm LIKE :searchQuery OR target_species LIKE :searchQuery OR composition LIKE :searchQuery) ORDER BY name ASC")
+    abstract fun searchMedications(searchQuery: String, language: String): Flow<List<Medication>>
 
-    @Query("SELECT * FROM medications WHERE id = :id")
-    abstract suspend fun getMedicationById(id: String): Medication?
+    @Query("SELECT * FROM medications WHERE id = :id AND language = :language")
+    abstract suspend fun getMedicationById(id: String, language: String): Medication?
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     abstract suspend fun insertAll(medications: List<Medication>)
@@ -28,18 +28,15 @@ abstract class MedicationDao {
     @Delete
     abstract suspend fun delete(medication: Medication)
 
-    @Query("DELETE FROM medications")
-    abstract suspend fun deleteAll()
+    @Query("DELETE FROM medications WHERE language = :language")
+    abstract suspend fun deleteByLanguage(language: String)
 
-    @Query("SELECT COUNT(*) FROM medications")
-    abstract suspend fun getCount(): Int
-
-    @Query("SELECT * FROM medications LIMIT :limit")
-    abstract suspend fun getFirstFew(limit: Int): List<Medication>
+    @Query("SELECT COUNT(*) FROM medications WHERE language = :language")
+    abstract suspend fun getCountForLanguage(language: String): Int
 
     @Transaction
-    open suspend fun replaceAll(medications: List<Medication>) {
-        deleteAll()
+    open suspend fun replaceAllForLanguage(language: String, medications: List<Medication>) {
+        deleteByLanguage(language)
         insertAll(medications)
     }
 }
