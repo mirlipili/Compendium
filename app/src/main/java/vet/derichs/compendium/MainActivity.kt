@@ -24,27 +24,16 @@ import vet.derichs.compendium.utils.LanguageManager
 
 class MainActivity : ComponentActivity() {
     private val medicationViewModel: MedicationViewModel by viewModels()
-    private lateinit var languageManager: LanguageManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // Initialize the language manager
-        languageManager = LanguageManager(this)
-
         setContent {
             VetCompendiumTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    VetCompendiumApp(
-                        viewModel = medicationViewModel,
-                        onRecreateActivity = {
-                            recreate() // Recreate the activity to apply language changes
-                            medicationViewModel.onActivityRecreated()
-                        }
-                    )
+                    VetCompendiumApp(viewModel = medicationViewModel)
                 }
             }
         }
@@ -63,68 +52,42 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-private fun VetCompendiumApp(
-    viewModel: MedicationViewModel,
-    onRecreateActivity: () -> Unit
-) {
+private fun VetCompendiumApp(viewModel: MedicationViewModel) {
     val navController = rememberNavController()
 
-    // Collect states
     val medications by viewModel.medications.collectAsState()
     val searchQuery by viewModel.searchQuery.collectAsState()
     val isInitializing by viewModel.isInitializing.collectAsState()
     val isRefreshing by viewModel.isRefreshing.collectAsState()
     val refreshMessage by viewModel.refreshMessage.collectAsState()
     val currentLanguage by viewModel.currentLanguage.collectAsState()
-    val shouldRecreateActivity by viewModel.shouldRecreateActivity.collectAsState()
     val dataStatus by viewModel.dataStatus.collectAsState()
 
-    // Listen for activity recreation requests
-    LaunchedEffect(shouldRecreateActivity) {
-        if (shouldRecreateActivity) {
-            onRecreateActivity()
-        }
-    }
-
-    NavHost(
-        navController = navController,
-        startDestination = "medication_list"
-    ) {
+    NavHost(navController = navController, startDestination = "medication_list") {
         composable("medication_list") {
             MedicationListScreen(
                 medications = medications,
                 searchQuery = searchQuery,
                 onSearchQueryChange = viewModel::updateSearchQuery,
                 onMedicationClick = { medication ->
-                    medication.id?.let { id ->
-                        navController.navigate("medication_detail/$id")
-                    }
+                    navController.navigate("medication_detail/${medication.id}")
                 },
-                onRefreshClick = {
-                    viewModel.refreshData()
-                },
+                onRefreshClick = viewModel::refreshData,
                 isInitializing = isInitializing,
                 isRefreshing = isRefreshing,
                 refreshMessage = refreshMessage,
                 currentLanguage = currentLanguage,
                 supportedLanguages = viewModel.getSupportedLanguages(),
-                onLanguageClick = { _ ->
-                    // Switch to the other language
-                    viewModel.switchToOtherLanguage()
-                },
+                onLanguageClick = { _ -> viewModel.switchToOtherLanguage() },
                 getLanguageDisplayName = viewModel::getLanguageDisplayName,
                 getOtherLanguageShortName = viewModel::getOtherLanguageShortName,
-                onExportNotes = {
-                    viewModel.exportNotes()
-                },
-                navigateToGeneralNotes = {
-                    navController.navigate("generalNotes")
-                },
+                onExportNotes = viewModel::exportNotes,
+                navigateToGeneralNotes = { navController.navigate("generalNotes") },
                 dataStatus = dataStatus
             )
         }
 
-        composable(route = "generalNotes") {
+        composable("generalNotes") {
             GeneralNotesScreen(
                 viewModel = viewModel,
                 onNavigateBack = { navController.popBackStack() }
@@ -138,7 +101,6 @@ private fun VetCompendiumApp(
             val medicationId = backStackEntry.arguments?.getString("medicationId")
             val medication = medications.find { it.id == medicationId }
 
-            // If activity was restored after process death and medication is not found, safely return to list
             LaunchedEffect(medication, isInitializing) {
                 if (medication == null && !isInitializing && medications.isNotEmpty()) {
                     navController.popBackStack("medication_list", false)
@@ -147,9 +109,7 @@ private fun VetCompendiumApp(
 
             MedicationDetailScreen(
                 medication = medication,
-                onBackClick = {
-                    navController.popBackStack()
-                },
+                onBackClick = { navController.popBackStack() },
                 viewModel = viewModel
             )
         }

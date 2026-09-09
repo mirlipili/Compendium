@@ -25,15 +25,11 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
         private const val TAG = "MedicationViewModel"
     }
 
-    // Full-screen spinner — only true during first-time database init when the list is empty.
     private val _isInitializing = MutableStateFlow(false)
-    // Subtle progress bar — true during network refresh and language switch.
     private val _isRefreshing = MutableStateFlow(false)
-
     private val _searchQuery = MutableStateFlow("")
     private val _refreshMessage = MutableStateFlow<String?>(null)
     private val _currentLanguage = MutableStateFlow("fr")
-    private val _shouldRecreateActivity = MutableStateFlow(false)
     private val _generalNote = MutableStateFlow<GeneralNote?>(null)
     private val _dataStatus = MutableStateFlow<DataStatus?>(null)
 
@@ -42,20 +38,22 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
     val searchQuery: StateFlow<String> = _searchQuery.asStateFlow()
     val refreshMessage: StateFlow<String?> = _refreshMessage.asStateFlow()
     val currentLanguage: StateFlow<String> = _currentLanguage.asStateFlow()
-    val shouldRecreateActivity: StateFlow<Boolean> = _shouldRecreateActivity.asStateFlow()
     val generalNote: StateFlow<GeneralNote?> = _generalNote.asStateFlow()
     val dataStatus: StateFlow<DataStatus?> = _dataStatus.asStateFlow()
 
-    val medications: StateFlow<List<Medication>> = _searchQuery
-        .flatMapLatest { query ->
-            if (query.isBlank()) repository.getAllMedications()
-            else repository.searchMedications(query)
-        }
-        .stateIn(
-            scope = viewModelScope,
-            started = SharingStarted.WhileSubscribed(5000),
-            initialValue = emptyList()
-        )
+    // Combines search query and active language so any change to either
+    // re-queries the database automatically — no activity recreate needed.
+    val medications: StateFlow<List<Medication>> =
+        combine(_searchQuery, _currentLanguage) { query, lang -> query to lang }
+            .flatMapLatest { (query, lang) ->
+                if (query.isBlank()) repository.getAllMedications(lang)
+                else repository.searchMedications(query, lang)
+            }
+            .stateIn(
+                scope = viewModelScope,
+                started = SharingStarted.WhileSubscribed(5000),
+                initialValue = emptyList()
+            )
 
     init {
         val database = MedicationDatabase.getDatabase(application)
@@ -131,16 +129,17 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
             try {
                 _isRefreshing.value = true
                 _refreshMessage.value = null
-                val result = repository.refreshFromServerWithLanguage(language)
+                // Offline-first: load from DB or assets, no network call.
+                val result = repository.ensureLanguageLoaded(language)
                 result.fold(
                     onSuccess = { message ->
                         languageManager.setLanguage(language)
+                        // Updating _currentLanguage causes medications to re-query automatically.
                         _currentLanguage.value = language
                         _dataStatus.value = repository.getDataStatus(language)
                         _refreshMessage.value = message
-                        kotlinx.coroutines.delay(1000)
+                        kotlinx.coroutines.delay(2000)
                         _refreshMessage.value = null
-                        _shouldRecreateActivity.value = true
                     },
                     onFailure = { exception ->
                         _refreshMessage.value = "Changement de langue échoué : ${exception.message}"
@@ -158,10 +157,6 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
                 _isRefreshing.value = false
             }
         }
-    }
-
-    fun onActivityRecreated() {
-        _shouldRecreateActivity.value = false
     }
 
     fun exportNotes() {
