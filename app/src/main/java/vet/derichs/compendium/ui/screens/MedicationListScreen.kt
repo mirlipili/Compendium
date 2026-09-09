@@ -18,6 +18,8 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import vet.derichs.compendium.R
 import vet.derichs.compendium.data.model.Medication
+import vet.derichs.compendium.ui.DataStatus
+import java.util.concurrent.TimeUnit
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -35,31 +37,26 @@ fun MedicationListScreen(
     getLanguageDisplayName: (String) -> String = { it },
     getOtherLanguageShortName: () -> String = { "NL" },
     navigateToGeneralNotes: () -> Unit,
-    onExportNotes: () -> Unit = {}
+    onExportNotes: () -> Unit = {},
+    dataStatus: DataStatus? = null
 ) {
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp)
     ) {
-        // Search bar with clear button and menu
         Row(
             modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Search field with clear button
             OutlinedTextField(
                 value = searchQuery,
                 onValueChange = onSearchQueryChange,
                 label = { Text(stringResource(R.string.search_medications)) },
-                leadingIcon = {
-                    Icon(Icons.Default.Search, contentDescription = "Search")
-                },
+                leadingIcon = { Icon(Icons.Default.Search, contentDescription = "Search") },
                 trailingIcon = {
                     if (searchQuery.isNotEmpty()) {
-                        IconButton(
-                            onClick = { onSearchQueryChange("") }
-                        ) {
+                        IconButton(onClick = { onSearchQueryChange("") }) {
                             Icon(
                                 Icons.Default.Clear,
                                 contentDescription = "Clear search",
@@ -70,18 +67,13 @@ fun MedicationListScreen(
                 },
                 modifier = Modifier.weight(1f),
                 keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
-                keyboardActions = KeyboardActions(
-                    onSearch = {
-                        // Search happens automatically through state
-                    }
-                ),
+                keyboardActions = KeyboardActions(onSearch = {}),
                 enabled = !isLoading,
                 singleLine = true
             )
 
             Spacer(modifier = Modifier.width(8.dp))
 
-            // Menu button
             MedicationMenu(
                 onRefreshClick = onRefreshClick,
                 onLanguageClick = onLanguageClick,
@@ -91,9 +83,8 @@ fun MedicationListScreen(
             )
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(8.dp))
 
-        // Show refresh message if available
         refreshMessage?.let { message ->
             Card(
                 modifier = Modifier.fillMaxWidth(),
@@ -112,14 +103,8 @@ fun MedicationListScreen(
 
         when {
             isLoading -> {
-                // Loading state
-                Box(
-                    modifier = Modifier.fillMaxSize(),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Column(
-                        horizontalAlignment = Alignment.CenterHorizontally
-                    ) {
+                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         CircularProgressIndicator()
                         Spacer(modifier = Modifier.height(16.dp))
                         Text(stringResource(R.string.loading_medications))
@@ -128,14 +113,8 @@ fun MedicationListScreen(
             }
 
             medications.isEmpty() && searchQuery.isBlank() -> {
-                // Empty state when no search query
-                Box(
-                    modifier = Modifier.fillMaxSize(),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Column(
-                        horizontalAlignment = Alignment.CenterHorizontally
-                    ) {
+                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         Text(
                             text = stringResource(R.string.no_medications_found),
                             style = MaterialTheme.typography.bodyLarge
@@ -151,11 +130,7 @@ fun MedicationListScreen(
             }
 
             medications.isEmpty() && searchQuery.isNotBlank() -> {
-                // Empty search results
-                Box(
-                    modifier = Modifier.fillMaxSize(),
-                    contentAlignment = Alignment.Center
-                ) {
+                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                     Text(
                         text = stringResource(R.string.no_results_for, searchQuery),
                         style = MaterialTheme.typography.bodyLarge
@@ -164,23 +139,17 @@ fun MedicationListScreen(
             }
 
             else -> {
-                // Medication list
-                LazyColumn(
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    // --- START: ADDED FOR GENERAL NOTES ---
+                LazyColumn(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    item { DataStatusRow(dataStatus) }
+
                     item {
-                        // This item uses the exact same Card style as MedicationItem
-                        // but with hardcoded text and its own click handler.
                         Card(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .clickable { navigateToGeneralNotes() }, // Use the specific callback
+                                .clickable { navigateToGeneralNotes() },
                             elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
                         ) {
-                            Column(
-                                modifier = Modifier.padding(16.dp)
-                            ) {
+                            Column(modifier = Modifier.padding(16.dp)) {
                                 Text(
                                     text = stringResource(R.string.general_notes),
                                     style = MaterialTheme.typography.titleMedium,
@@ -195,13 +164,9 @@ fun MedicationListScreen(
                             }
                         }
                     }
-                    // --- END: ADDED FOR GENERAL NOTES ---
 
                     items(medications) { medication ->
-                        MedicationItem(
-                            medication = medication,
-                            onClick = { onMedicationClick(medication) }
-                        )
+                        MedicationItem(medication = medication, onClick = { onMedicationClick(medication) })
                     }
                 }
             }
@@ -209,7 +174,63 @@ fun MedicationListScreen(
     }
 }
 
-// ... (MedicationMenu and MedicationItem composables remain unchanged) ...
+@Composable
+private fun DataStatusRow(dataStatus: DataStatus?) {
+    val now = System.currentTimeMillis()
+    val thirtyDaysMs = TimeUnit.DAYS.toMillis(30)
+
+    val isNeverChecked = dataStatus == null || dataStatus.lastCheckedAt == 0L
+    val isStale = !isNeverChecked && (now - dataStatus!!.lastCheckedAt) > thirtyDaysMs
+
+    when {
+        isNeverChecked -> {
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.errorContainer
+                )
+            ) {
+                Text(
+                    text = stringResource(R.string.data_status_never),
+                    modifier = Modifier.padding(12.dp),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onErrorContainer
+                )
+            }
+        }
+
+        isStale -> {
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.tertiaryContainer
+                )
+            ) {
+                Text(
+                    text = stringResource(R.string.data_status_stale),
+                    modifier = Modifier.padding(12.dp),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onTertiaryContainer
+                )
+            }
+        }
+
+        else -> {
+            val daysSinceCheck = TimeUnit.MILLISECONDS.toDays(now - dataStatus!!.lastCheckedAt)
+            val checkedLabel = when (daysSinceCheck) {
+                0L -> stringResource(R.string.data_status_today)
+                1L -> stringResource(R.string.data_status_yesterday)
+                else -> stringResource(R.string.data_status_days_ago, daysSinceCheck)
+            }
+            Text(
+                text = stringResource(R.string.data_status, dataStatus.dataPublishedAt, checkedLabel),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(horizontal = 4.dp, vertical = 2.dp)
+            )
+        }
+    }
+}
 
 @Composable
 private fun MedicationMenu(
@@ -222,103 +243,61 @@ private fun MedicationMenu(
     var expanded by remember { mutableStateOf(false) }
 
     Box {
-        IconButton(
-            onClick = { expanded = true },
-            enabled = !isLoading
-        ) {
-            Icon(
-                Icons.Default.MoreVert,
-                contentDescription = stringResource(R.string.menu)
-            )
+        IconButton(onClick = { expanded = true }, enabled = !isLoading) {
+            Icon(Icons.Default.MoreVert, contentDescription = stringResource(R.string.menu))
         }
 
-        DropdownMenu(
-            expanded = expanded,
-            onDismissRequest = { expanded = false }
-        ) {
-            // Refresh option
+        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
             DropdownMenuItem(
                 text = {
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(
-                            Icons.Default.Refresh,
-                            contentDescription = null,
-                            modifier = Modifier.size(18.dp)
-                        )
+                        Icon(Icons.Default.Refresh, contentDescription = null, modifier = Modifier.size(18.dp))
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(stringResource(R.string.refresh_data))
                     }
                 },
-                onClick = {
-                    expanded = false
-                    onRefreshClick()
-                }
+                onClick = { expanded = false; onRefreshClick() }
             )
 
-            // Language switch - show only other language
             DropdownMenuItem(
                 text = {
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(
-                            Icons.Default.Settings, // Use Settings icon instead of Language
-                            contentDescription = null,
-                            modifier = Modifier.size(18.dp)
-                        )
+                        Icon(Icons.Default.Settings, contentDescription = null, modifier = Modifier.size(18.dp))
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(otherLanguageShortName)
                     }
                 },
-                onClick = {
-                    expanded = false
-                    onLanguageClick("")
-                }
+                onClick = { expanded = false; onLanguageClick("") }
             )
 
             HorizontalDivider()
 
-            // Export notes
             DropdownMenuItem(
                 text = {
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(
-                            Icons.Default.Share,
-                            contentDescription = null,
-                            modifier = Modifier.size(18.dp)
-                        )
+                        Icon(Icons.Default.Share, contentDescription = null, modifier = Modifier.size(18.dp))
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(stringResource(R.string.export_notes))
                     }
                 },
-                onClick = {
-                    expanded = false
-                    onExportNotes()
-                }
+                onClick = { expanded = false; onExportNotes() }
             )
         }
     }
 }
 
-
 @Composable
-private fun MedicationItem(
-    medication: Medication,
-    onClick: () -> Unit
-) {
+private fun MedicationItem(medication: Medication, onClick: () -> Unit) {
     Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable { onClick() },
+        modifier = Modifier.fillMaxWidth().clickable { onClick() },
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
-        Column(
-            modifier = Modifier.padding(16.dp)
-        ) {
+        Column(modifier = Modifier.padding(16.dp)) {
             Text(
                 text = medication.name ?: "Unknown Medication",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Medium
             )
-
             medication.composition?.let { composition ->
                 Text(
                     text = composition,
@@ -327,7 +306,6 @@ private fun MedicationItem(
                     modifier = Modifier.padding(top = 4.dp)
                 )
             }
-
             medication.firm?.let { firm ->
                 Text(
                     text = firm,

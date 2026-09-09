@@ -76,6 +76,7 @@ private fun VetCompendiumApp(
     val refreshMessage by viewModel.refreshMessage.collectAsState()
     val currentLanguage by viewModel.currentLanguage.collectAsState()
     val shouldRecreateActivity by viewModel.shouldRecreateActivity.collectAsState()
+    val dataStatus by viewModel.dataStatus.collectAsState()
 
     // Listen for activity recreation requests
     LaunchedEffect(shouldRecreateActivity) {
@@ -116,7 +117,8 @@ private fun VetCompendiumApp(
                 },
                 navigateToGeneralNotes = {
                     navController.navigate("generalNotes")
-                }
+                },
+                dataStatus = dataStatus
             )
         }
 

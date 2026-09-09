@@ -33,4 +33,13 @@
     <string name="import_failed">Échec de l\'importation des notes</string>
     <string name="general_notes">Notes</string>
     <string name="view_or_edit_notes">Cliquez pour voir ou éditer vos notes</string>
+
+    <!-- Data status -->
+    <string name="data_status">Données du %1$s · vérifié %2$s</string>
+    <string name="data_status_today">aujourd\'hui</string>
+    <string name="data_status_yesterday">hier</string>
+    <string name="data_status_days_ago">il y a %1$d jours</string>
+    <string name="data_status_never">Données jamais vérifiées — connectez-vous et actualisez.</string>
+    <string name="data_status_stale">Données non vérifiées depuis plus de 30 jours.</string>
+    <string name="data_up_to_date">Données à jour</string>
 </resources>
