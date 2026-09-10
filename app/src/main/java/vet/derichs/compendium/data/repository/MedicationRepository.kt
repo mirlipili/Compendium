@@ -9,8 +9,10 @@ import vet.derichs.compendium.data.model.GeneralNote
 import vet.derichs.compendium.data.model.Medication
 import vet.derichs.compendium.data.network.MedicationApiService
 import vet.derichs.compendium.ui.DataStatus
+import vet.derichs.compendium.ui.SearchResult
 import vet.derichs.compendium.utils.JsonLoader
 import vet.derichs.compendium.utils.LanguageManager
+import vet.derichs.compendium.utils.SearchNormalizer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.withContext
@@ -198,6 +200,69 @@ class MedicationRepository(
     fun getAllMedications(language: String): Flow<List<Medication>> =
         medicationDao.getAllMedications(language)
 
-    fun searchMedications(query: String, language: String): Flow<List<Medication>> =
-        medicationDao.searchMedications("%$query%", language)
+    /**
+     * Rank [medications] against [rawQuery] using a five-tier system:
+     *   1. exact normalized name            (100)
+     *   2. name starts-with query           (90)
+     *   3. name contains query              (75)
+     *   4. all query tokens match name tokens (65)
+     *   5. composition contains query       (35)
+     * Jaro-Winkler ≥ 0.85 on the name is returned separately as [SearchResult.fuzzy].
+     * All comparisons use [SearchNormalizer.normalize] on both sides.
+     */
+    fun rankSearch(rawQuery: String, medications: List<Medication>): SearchResult {
+        val nq = SearchNormalizer.normalize(rawQuery)
+        if (nq.isBlank()) return SearchResult(medications, emptyList())
+
+        val queryTokens = nq.split(" ").filter { it.isNotEmpty() }
+
+        data class Scored(val med: Medication, val score: Int)
+
+        val direct = mutableListOf<Scored>()
+        val directKeys = mutableSetOf<Pair<String, String>>()
+
+        for (med in medications) {
+            val nn = SearchNormalizer.normalize(med.name ?: "")
+            val nc = SearchNormalizer.normalize(med.composition ?: "")
+            val nameTokens = nn.split(" ").filter { it.isNotEmpty() }
+            val compTokens = nc.split(" ").filter { it.isNotEmpty() }
+
+            val score = when {
+                nn == nq -> 100
+                nn.startsWith(nq) -> 90
+                nn.contains(nq) -> 75
+                queryTokens.isNotEmpty() &&
+                    queryTokens.all { qt -> nameTokens.any { it.startsWith(qt) } } -> 65
+                nc.contains(nq) ||
+                    (queryTokens.isNotEmpty() &&
+                        queryTokens.all { qt -> compTokens.any { it.startsWith(qt) } }) -> 35
+                else -> 0
+            }
+
+            if (score > 0) {
+                direct.add(Scored(med, score))
+                directKeys.add(med.id to med.language)
+            }
+        }
+
+        val fuzzy = mutableListOf<Scored>()
+        for (med in medications) {
+            if ((med.id to med.language) in directKeys) continue
+            val nn = SearchNormalizer.normalize(med.name ?: "")
+            val jw = SearchNormalizer.jaroWinkler(nq, nn)
+            if (jw >= 0.85) {
+                val score = (40 + (jw - 0.85) / 0.15 * 20).toInt().coerceIn(40, 60)
+                fuzzy.add(Scored(med, score))
+            }
+        }
+
+        return SearchResult(
+            direct = direct
+                .sortedWith(compareByDescending<Scored> { it.score }.thenBy { it.med.name?.lowercase() ?: "" })
+                .map { it.med },
+            fuzzy = fuzzy
+                .sortedByDescending { it.score }
+                .map { it.med }
+        )
+    }
 }
