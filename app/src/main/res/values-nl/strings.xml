@@ -42,4 +42,5 @@
     <string name="data_status_never">Gegevens nooit gecontroleerd — maak verbinding en ververs.</string>
     <string name="data_status_stale">Gegevens al meer dan 30 dagen niet gecontroleerd.</string>
     <string name="data_up_to_date">Gegevens zijn actueel</string>
+    <string name="similar_results">Gelijkaardige resultaten</string>
 </resources>

@@ -68,6 +68,7 @@ private fun VetCompendiumApp(viewModel: MedicationViewModel, onRecreate: () -> U
     val refreshMessage by viewModel.refreshMessage.collectAsState()
     val currentLanguage by viewModel.currentLanguage.collectAsState()
     val dataStatus by viewModel.dataStatus.collectAsState()
+    val fuzzyMedications by viewModel.fuzzyMedications.collectAsState()
     val shouldRecreateActivity by viewModel.shouldRecreateActivity.collectAsState()
 
     LaunchedEffect(shouldRecreateActivity) {
@@ -94,7 +95,8 @@ private fun VetCompendiumApp(viewModel: MedicationViewModel, onRecreate: () -> U
                 getOtherLanguageShortName = viewModel::getOtherLanguageShortName,
                 onExportNotes = viewModel::exportNotes,
                 navigateToGeneralNotes = { navController.navigate("generalNotes") },
-                dataStatus = dataStatus
+                dataStatus = dataStatus,
+                fuzzyMedications = fuzzyMedications
             )
         }
 

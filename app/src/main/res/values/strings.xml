@@ -42,4 +42,5 @@
     <string name="data_status_never">Données jamais vérifiées — connectez-vous et actualisez.</string>
     <string name="data_status_stale">Données non vérifiées depuis plus de 30 jours.</string>
     <string name="data_up_to_date">Données à jour</string>
+    <string name="similar_results">Résultats similaires</string>
 </resources>
