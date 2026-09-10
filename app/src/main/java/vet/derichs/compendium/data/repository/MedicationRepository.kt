@@ -249,7 +249,10 @@ class MedicationRepository(
         for (med in medications) {
             if ((med.id to med.language) in directKeys) continue
             val nn = SearchNormalizer.normalize(med.name ?: "")
-            val jw = SearchNormalizer.jaroWinkler(nq, nn)
+            // Compare against each token so a long name ("metacam 5 mg ml solution...")
+            // doesn't penalise a typo match on the brand-name word via the |s2| term.
+            val nameTokens = nn.split(" ").filter { it.isNotEmpty() }
+            val jw = nameTokens.maxOfOrNull { SearchNormalizer.jaroWinkler(nq, it) } ?: 0.0
             if (jw >= 0.85) {
                 val score = (40 + (jw - 0.85) / 0.15 * 20).toInt().coerceIn(40, 60)
                 fuzzy.add(Scored(med, score))
