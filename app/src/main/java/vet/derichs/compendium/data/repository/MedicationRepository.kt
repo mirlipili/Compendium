@@ -38,19 +38,40 @@ class MedicationRepository(
         generalNoteDao.upsert(GeneralNote(content = content))
     }
 
-    suspend fun initializeData() {
+    // Loads the primary language and returns so the UI can become interactive.
+    // Call initializeSecondaryLanguages() afterwards in a separate coroutine.
+    suspend fun initializePrimaryLanguage(language: String) {
         withContext(Dispatchers.IO) {
             try {
-                val count = medicationDao.getCount()
-                val currentLanguage = languageManager.getCurrentLanguage()
-                Log.d(TAG, "Current medication count: $count, language: $currentLanguage")
+                val count = medicationDao.getCountForLanguage(language)
                 if (count == 0) {
-                    Log.d(TAG, "No medications found, pre-populating from assets...")
-                    prePopulateFromAssets(currentLanguage)
+                    Log.d(TAG, "No data for $language — loading from assets")
+                    prePopulateFromAssets(language)
+                } else {
+                    Log.d(TAG, "$count medications already loaded for $language")
                 }
             } catch (e: Exception) {
-                Log.e(TAG, "Error initializing data", e)
+                Log.e(TAG, "Error initializing primary language $language", e)
                 throw e
+            }
+        }
+    }
+
+    // Loads any language not yet in the DB, without blocking the UI.
+    suspend fun initializeSecondaryLanguages(primaryLanguage: String) {
+        withContext(Dispatchers.IO) {
+            for (language in LanguageManager.SUPPORTED_LANGUAGES) {
+                if (language == primaryLanguage) continue
+                try {
+                    val count = medicationDao.getCountForLanguage(language)
+                    if (count == 0) {
+                        Log.d(TAG, "Background-loading $language from assets")
+                        prePopulateFromAssets(language)
+                    }
+                } catch (e: Exception) {
+                    Log.e(TAG, "Error background-loading $language", e)
+                    // Non-fatal: primary language is already available
+                }
             }
         }
     }
@@ -59,34 +80,57 @@ class MedicationRepository(
         try {
             val medications = JsonLoader.loadMedicationsFromAssets(context, language)
             if (!medications.isNullOrEmpty()) {
-                medicationDao.insertAll(medications)
-                Log.d(TAG, "Stored ${medications.size} medications from assets.")
+                val tagged = medications.map { it.copy(language = language) }
+                medicationDao.insertAll(tagged)
+                // Clear stored version so the next online refresh re-downloads from the server
+                // rather than skipping because a stale version number appears to match.
+                prefs.edit()
+                    .remove("data_version_$language")
+                    .remove("data_published_at_$language")
+                    .apply()
+                Log.d(TAG, "Stored ${tagged.size} medications from assets for $language")
             } else {
-                Log.w(TAG, "Could not load medications from assets.")
+                Log.w(TAG, "No medications found in assets for $language")
             }
         } catch (e: Exception) {
-            Log.e(TAG, "Error pre-populating from assets", e)
+            Log.e(TAG, "Error loading assets for $language", e)
         }
     }
+
+    // Ensures the target language is present in the database without touching the network.
+    // Called by the ViewModel when the user switches language.
+    suspend fun ensureLanguageLoaded(language: String): Result<String> =
+        withContext(Dispatchers.IO) {
+            try {
+                val count = medicationDao.getCountForLanguage(language)
+                if (count > 0) {
+                    Result.success("$count médicaments disponibles")
+                } else {
+                    Log.d(TAG, "Language $language not in DB — loading from assets")
+                    prePopulateFromAssets(language)
+                    val newCount = medicationDao.getCountForLanguage(language)
+                    if (newCount > 0) {
+                        Result.success("$newCount médicaments chargés")
+                    } else {
+                        Result.failure(Exception("Données introuvables pour $language"))
+                    }
+                }
+            } catch (e: Exception) {
+                Log.e(TAG, "Error ensuring language $language", e)
+                Result.failure(e)
+            }
+        }
 
     suspend fun refreshCurrentLanguage(): Result<String> =
         withContext(Dispatchers.IO) {
             refreshForLanguage(languageManager.getCurrentLanguage())
         }
 
-    suspend fun refreshFromServerWithLanguage(language: String): Result<String> =
-        withContext(Dispatchers.IO) {
-            refreshForLanguage(language)
-        }
-
     private suspend fun refreshForLanguage(language: String): Result<String> {
         return try {
-            // Step 1: fetch and validate version.json
             val versionResponse = apiService.getVersionInfo()
             if (!versionResponse.isSuccessful) {
-                return Result.failure(
-                    Exception("Erreur serveur : ${versionResponse.code()}")
-                )
+                return Result.failure(Exception("Erreur serveur : ${versionResponse.code()}"))
             }
             val versionInfo = versionResponse.body()
             if (versionInfo == null || !versionInfo.isValid()) {
@@ -96,29 +140,25 @@ class MedicationRepository(
             val now = System.currentTimeMillis()
             val storedVersion = prefs.getLong("data_version_$language", 0L)
 
-            // Step 2: compare versions
             if (versionInfo.version == storedVersion) {
                 prefs.edit().putLong("last_checked_at", now).apply()
-                Log.d(TAG, "Data for $language is already up to date (v${versionInfo.version})")
+                Log.d(TAG, "Data for $language is up to date (v${versionInfo.version})")
                 return Result.success("Données à jour")
             }
 
-            // Step 3: version is newer — download and validate
-            Log.d(TAG, "New version available for $language: ${versionInfo.version}")
+            Log.d(TAG, "New version for $language: ${versionInfo.version}")
             val medResponse = when (language.lowercase()) {
                 "nl" -> apiService.getMedicationsNl()
                 else -> apiService.getMedicationsFr()
             }
             if (!medResponse.isSuccessful) {
-                return Result.failure(
-                    Exception("Erreur téléchargement : ${medResponse.code()}")
-                )
+                return Result.failure(Exception("Erreur téléchargement : ${medResponse.code()}"))
             }
             val newList: List<Medication> = medResponse.body() ?: emptyList()
             if (newList.isEmpty()) {
                 return Result.failure(Exception("Le serveur a renvoyé une liste vide"))
             }
-            val currentCount = medicationDao.getCount()
+            val currentCount = medicationDao.getCountForLanguage(language)
             if (currentCount > 0 && newList.size < currentCount * MIN_VALID_FRACTION) {
                 return Result.failure(
                     Exception(
@@ -128,16 +168,16 @@ class MedicationRepository(
                 )
             }
 
-            // Step 4: atomic replace then persist metadata
-            medicationDao.replaceAll(newList)
+            val taggedList = newList.map { it.copy(language = language) }
+            medicationDao.replaceAllForLanguage(language, taggedList)
             prefs.edit()
                 .putLong("data_version_$language", versionInfo.version)
                 .putString("data_published_at_$language", versionInfo.human_readable_date)
                 .putLong("last_checked_at", now)
                 .apply()
 
-            Log.d(TAG, "Stored ${newList.size} medications for $language (v${versionInfo.version})")
-            Result.success("${newList.size} médicaments mis à jour")
+            Log.d(TAG, "Stored ${taggedList.size} medications for $language (v${versionInfo.version})")
+            Result.success("${taggedList.size} médicaments mis à jour")
 
         } catch (e: Exception) {
             Log.e(TAG, "Error refreshing $language", e)
@@ -155,8 +195,9 @@ class MedicationRepository(
         )
     }
 
-    fun getAllMedications(): Flow<List<Medication>> = medicationDao.getAllMedications()
+    fun getAllMedications(language: String): Flow<List<Medication>> =
+        medicationDao.getAllMedications(language)
 
-    fun searchMedications(query: String): Flow<List<Medication>> =
-        medicationDao.searchMedications("%$query%")
+    fun searchMedications(query: String, language: String): Flow<List<Medication>> =
+        medicationDao.searchMedications("%$query%", language)
 }

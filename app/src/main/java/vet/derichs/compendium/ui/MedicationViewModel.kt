@@ -25,37 +25,37 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
         private const val TAG = "MedicationViewModel"
     }
 
-    // Full-screen spinner — only true during first-time database init when the list is empty.
     private val _isInitializing = MutableStateFlow(false)
-    // Subtle progress bar — true during network refresh and language switch.
     private val _isRefreshing = MutableStateFlow(false)
-
     private val _searchQuery = MutableStateFlow("")
     private val _refreshMessage = MutableStateFlow<String?>(null)
     private val _currentLanguage = MutableStateFlow("fr")
-    private val _shouldRecreateActivity = MutableStateFlow(false)
     private val _generalNote = MutableStateFlow<GeneralNote?>(null)
     private val _dataStatus = MutableStateFlow<DataStatus?>(null)
+    private val _shouldRecreateActivity = MutableStateFlow(false)
 
     val isInitializing: StateFlow<Boolean> = _isInitializing.asStateFlow()
     val isRefreshing: StateFlow<Boolean> = _isRefreshing.asStateFlow()
     val searchQuery: StateFlow<String> = _searchQuery.asStateFlow()
     val refreshMessage: StateFlow<String?> = _refreshMessage.asStateFlow()
     val currentLanguage: StateFlow<String> = _currentLanguage.asStateFlow()
-    val shouldRecreateActivity: StateFlow<Boolean> = _shouldRecreateActivity.asStateFlow()
     val generalNote: StateFlow<GeneralNote?> = _generalNote.asStateFlow()
     val dataStatus: StateFlow<DataStatus?> = _dataStatus.asStateFlow()
+    val shouldRecreateActivity: StateFlow<Boolean> = _shouldRecreateActivity.asStateFlow()
 
-    val medications: StateFlow<List<Medication>> = _searchQuery
-        .flatMapLatest { query ->
-            if (query.isBlank()) repository.getAllMedications()
-            else repository.searchMedications(query)
-        }
-        .stateIn(
-            scope = viewModelScope,
-            started = SharingStarted.WhileSubscribed(5000),
-            initialValue = emptyList()
-        )
+    // Combines search query and active language so any change to either
+    // re-queries the database automatically — no activity recreate needed.
+    val medications: StateFlow<List<Medication>> =
+        combine(_searchQuery, _currentLanguage) { query, lang -> query to lang }
+            .flatMapLatest { (query, lang) ->
+                if (query.isBlank()) repository.getAllMedications(lang)
+                else repository.searchMedications(query, lang)
+            }
+            .stateIn(
+                scope = viewModelScope,
+                started = SharingStarted.WhileSubscribed(5000),
+                initialValue = emptyList()
+            )
 
     init {
         val database = MedicationDatabase.getDatabase(application)
@@ -77,10 +77,11 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
             repository.generalNote.collect { note -> _generalNote.value = note }
         }
 
+        val currentLang = _currentLanguage.value
         viewModelScope.launch {
             try {
                 _isInitializing.value = true
-                repository.initializeData()
+                repository.initializePrimaryLanguage(currentLang)
             } catch (e: Exception) {
                 Log.e(TAG, "Failed to initialize data", e)
                 _refreshMessage.value = "Erreur de chargement : ${e.message}"
@@ -89,6 +90,10 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
             } finally {
                 _isInitializing.value = false
             }
+        }
+        // Load the other language in the background — no spinner, non-blocking.
+        viewModelScope.launch {
+            repository.initializeSecondaryLanguages(currentLang)
         }
     }
 
@@ -131,15 +136,15 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
             try {
                 _isRefreshing.value = true
                 _refreshMessage.value = null
-                val result = repository.refreshFromServerWithLanguage(language)
+                // Offline-first: load from DB or assets, no network call.
+                val result = repository.ensureLanguageLoaded(language)
                 result.fold(
-                    onSuccess = { message ->
+                    onSuccess = { _ ->
                         languageManager.setLanguage(language)
                         _currentLanguage.value = language
                         _dataStatus.value = repository.getDataStatus(language)
-                        _refreshMessage.value = message
-                        kotlinx.coroutines.delay(1000)
-                        _refreshMessage.value = null
+                        // Recreate the activity so attachBaseContext() picks up the new
+                        // locale and reloads all string resources in the correct language.
                         _shouldRecreateActivity.value = true
                     },
                     onFailure = { exception ->

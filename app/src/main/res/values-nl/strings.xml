@@ -31,6 +31,15 @@
     <string name="notes_imported">Notities succesvol geïmporteerd</string>
     <string name="export_failed">Exporteren van notities mislukt</string>
     <string name="import_failed">Importeren van notities mislukt</string>
-    <string name="general_notes">Notes</string>
-    <string name="view_or_edit_notes">Klik om je notities te bekijken of te bewerken</string>
+    <string name="general_notes">Notities</string>
+    <string name="view_or_edit_notes">Klik om uw notities te bekijken of te bewerken</string>
+
+    <!-- Data status -->
+    <string name="data_status">Gegevens van %1$s · gecontroleerd %2$s</string>
+    <string name="data_status_today">vandaag</string>
+    <string name="data_status_yesterday">gisteren</string>
+    <string name="data_status_days_ago">%1$d dagen geleden</string>
+    <string name="data_status_never">Gegevens nooit gecontroleerd — maak verbinding en ververs.</string>
+    <string name="data_status_stale">Gegevens al meer dan 30 dagen niet gecontroleerd.</string>
+    <string name="data_up_to_date">Gegevens zijn actueel</string>
 </resources>
