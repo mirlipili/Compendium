@@ -1,9 +1,14 @@
 package vet.derichs.compendium.data.model
 
 import androidx.room.Entity
+import androidx.room.Index
 import com.google.gson.annotations.SerializedName
 
-@Entity(tableName = "medications", primaryKeys = ["id", "language"])
+@Entity(
+    tableName = "medications",
+    primaryKeys = ["id", "language"],
+    indices = [Index(value = ["language", "name"])]
+)
 data class Medication(
     val id: String,
     val language: String = "",  // set via .copy(language = lang) before insert; never from JSON

@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-@OptIn(kotlinx.coroutines.ExperimentalCoroutinesApi::class)
+@OptIn(kotlinx.coroutines.ExperimentalCoroutinesApi::class, kotlinx.coroutines.FlowPreview::class)
 class MedicationViewModel(application: Application) : AndroidViewModel(application) {
     private val repository: MedicationRepository
     private val notesRepository: NotesRepository
@@ -46,8 +46,11 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
     val shouldRecreateActivity: StateFlow<Boolean> = _shouldRecreateActivity.asStateFlow()
 
     // Single source of truth for search: debounced query + language → ranked SearchResult.
+    // Debounce is 0 for a blank query (initial load is immediate) and 200ms for typed queries.
     private val _searchResult: StateFlow<SearchResult> =
-        combine(_searchQuery.debounce(200), _currentLanguage) { query, lang -> query to lang }
+        combine(_searchQuery, _currentLanguage) { query, lang -> query to lang }
+            .distinctUntilChanged()
+            .debounce { (query, _) -> if (query.isBlank()) 0L else 200L }
             .flatMapLatest { (query, lang) ->
                 repository.getAllMedications(lang).map { allMeds ->
                     if (query.isBlank()) {
