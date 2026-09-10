@@ -140,7 +140,7 @@ fun MedicationListScreen(
                 }
             }
 
-            medications.isEmpty() && searchQuery.isNotBlank() -> {
+            medications.isEmpty() && fuzzyMedications.isEmpty() && searchQuery.isNotBlank() -> {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                     Text(
                         text = stringResource(R.string.no_results_for, searchQuery),
