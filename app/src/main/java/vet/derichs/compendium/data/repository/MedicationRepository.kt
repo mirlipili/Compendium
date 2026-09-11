@@ -24,7 +24,7 @@ class MedicationRepository(
     private val generalNoteDao: GeneralNoteDao,
     cacheDir: File
 ) {
-    private val apiService: MedicationApiService = MedicationApiService.create(cacheDir)
+    private val apiService: MedicationApiService = MedicationApiService.getInstance(cacheDir)
     private val languageManager = LanguageManager(context)
     private val prefs: SharedPreferences =
         context.getSharedPreferences("vet_data_status", Context.MODE_PRIVATE)
