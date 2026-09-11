@@ -145,7 +145,7 @@ class MedicationRepository(
             if (versionInfo.version == storedVersion) {
                 prefs.edit().putLong("last_checked_at", now).apply()
                 Log.d(TAG, "Data for $language is up to date (v${versionInfo.version})")
-                return Result.success("Données à jour")
+                return Result.success(if (language == "nl") "Gegevens actueel" else "Données à jour")
             }
 
             Log.d(TAG, "New version for $language: ${versionInfo.version}")
@@ -179,7 +179,10 @@ class MedicationRepository(
                 .apply()
 
             Log.d(TAG, "Stored ${taggedList.size} medications for $language (v${versionInfo.version})")
-            Result.success("${taggedList.size} médicaments mis à jour")
+            Result.success(
+                if (language == "nl") "${taggedList.size} geneesmiddelen bijgewerkt"
+                else "${taggedList.size} médicaments mis à jour"
+            )
 
         } catch (e: Exception) {
             Log.e(TAG, "Error refreshing $language", e)
