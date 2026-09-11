@@ -15,18 +15,26 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import androidx.work.Constraints
+import androidx.work.ExistingPeriodicWorkPolicy
+import androidx.work.NetworkType
+import androidx.work.PeriodicWorkRequestBuilder
+import androidx.work.WorkManager
 import vet.derichs.compendium.ui.MedicationViewModel
 import vet.derichs.compendium.ui.screens.MedicationDetailScreen
 import vet.derichs.compendium.ui.screens.MedicationListScreen
 import vet.derichs.compendium.ui.theme.VetCompendiumTheme
 import vet.derichs.compendium.ui.notes.GeneralNotesScreen
 import vet.derichs.compendium.utils.LanguageManager
+import vet.derichs.compendium.worker.UpdateWorker
+import java.util.concurrent.TimeUnit
 
 class MainActivity : ComponentActivity() {
     private val medicationViewModel: MedicationViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        scheduleBackgroundUpdates()
         setContent {
             VetCompendiumTheme {
                 Surface(
@@ -43,6 +51,25 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    private fun scheduleBackgroundUpdates() {
+        val constraints = Constraints.Builder()
+            .setRequiredNetworkType(NetworkType.CONNECTED)
+            .setRequiresBatteryNotLow(true)
+            .build()
+
+        val request = PeriodicWorkRequestBuilder<UpdateWorker>(1, TimeUnit.DAYS, 3, TimeUnit.HOURS)
+            .setConstraints(constraints)
+            .build()
+
+        // KEEP: if the work is already scheduled from a previous launch, leave it as-is
+        // so we don't reset the 24-hour timer every time the app opens.
+        WorkManager.getInstance(this).enqueueUniquePeriodicWork(
+            UpdateWorker.WORK_NAME,
+            ExistingPeriodicWorkPolicy.KEEP,
+            request
+        )
     }
 
     override fun attachBaseContext(newBase: Context?) {
