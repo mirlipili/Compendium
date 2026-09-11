@@ -3,7 +3,7 @@
     <string name="app_name">Compendium</string>
 
     <!-- Search -->
-    <string name="search_medications">Zoek geneesmiddelen…</string>
+    <string name="search_medications">Zoeken…</string>
     <string name="no_medications_found">Geen geneesmiddelen gevonden</string>
     <string name="try_refresh">Probeer de ververs optie in het menu</string>
     <string name="no_results_for">Geen geneesmiddelen gevonden voor "%1$s"</string>
@@ -39,7 +39,7 @@
     <string name="data_status_today">vandaag</string>
     <string name="data_status_yesterday">gisteren</string>
     <string name="data_status_days_ago">%1$d dagen geleden</string>
-    <string name="data_status_never">Gegevens nooit gecontroleerd — maak verbinding en ververs.</string>
+    <string name="data_status_never">Gegevens niet gecontroleerd — ververs om bij te werken.</string>
     <string name="data_status_stale">Gegevens al meer dan 30 dagen niet gecontroleerd.</string>
     <string name="data_up_to_date">Gegevens zijn actueel</string>
     <string name="similar_results">Gelijkaardige resultaten</string>

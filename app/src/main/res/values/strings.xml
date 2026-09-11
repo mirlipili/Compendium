@@ -3,7 +3,7 @@
     <string name="app_name">Compendium</string>
 
     <!-- Search -->
-    <string name="search_medications">Rechercher des médicaments…</string>
+    <string name="search_medications">Rechercher…</string>
     <string name="no_medications_found">Aucun médicament trouvé</string>
     <string name="try_refresh">Essayez l\'option actualiser dans le menu</string>
     <string name="no_results_for">Aucun médicament trouvé pour "%1$s"</string>
@@ -39,7 +39,7 @@
     <string name="data_status_today">aujourd\'hui</string>
     <string name="data_status_yesterday">hier</string>
     <string name="data_status_days_ago">il y a %1$d jours</string>
-    <string name="data_status_never">Données jamais vérifiées — connectez-vous et actualisez.</string>
+    <string name="data_status_never">Données non vérifiées — veuillez actualiser.</string>
     <string name="data_status_stale">Données non vérifiées depuis plus de 30 jours.</string>
     <string name="data_up_to_date">Données à jour</string>
     <string name="similar_results">Résultats similaires</string>
