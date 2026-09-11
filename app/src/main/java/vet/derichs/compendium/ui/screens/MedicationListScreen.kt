@@ -39,7 +39,8 @@ fun MedicationListScreen(
     onExportNotes: () -> Unit = {},
     dataStatus: DataStatus? = null,
     isInitializing: Boolean = false,
-    isRefreshing: Boolean = false
+    isRefreshing: Boolean = false,
+    fuzzyMedications: List<Medication> = emptyList()
 ) {
     val busy = isInitializing || isRefreshing
 
@@ -139,7 +140,7 @@ fun MedicationListScreen(
                 }
             }
 
-            medications.isEmpty() && searchQuery.isNotBlank() -> {
+            medications.isEmpty() && fuzzyMedications.isEmpty() && searchQuery.isNotBlank() -> {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                     Text(
                         text = stringResource(R.string.no_results_for, searchQuery),
@@ -177,6 +178,29 @@ fun MedicationListScreen(
 
                     items(medications) { medication ->
                         MedicationItem(medication = medication, onClick = { onMedicationClick(medication) })
+                    }
+
+                    if (fuzzyMedications.isNotEmpty()) {
+                        item {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(vertical = 8.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                HorizontalDivider(modifier = Modifier.weight(1f))
+                                Text(
+                                    text = stringResource(R.string.similar_results),
+                                    style = MaterialTheme.typography.labelMedium,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    modifier = Modifier.padding(horizontal = 8.dp)
+                                )
+                                HorizontalDivider(modifier = Modifier.weight(1f))
+                            }
+                        }
+                        items(fuzzyMedications) { medication ->
+                            MedicationItem(medication = medication, onClick = { onMedicationClick(medication) })
+                        }
                     }
                 }
             }

@@ -10,9 +10,6 @@ abstract class MedicationDao {
     @Query("SELECT * FROM medications WHERE language = :language ORDER BY name ASC")
     abstract fun getAllMedications(language: String): Flow<List<Medication>>
 
-    @Query("SELECT * FROM medications WHERE language = :language AND (name LIKE :searchQuery OR firm LIKE :searchQuery OR target_species LIKE :searchQuery OR composition LIKE :searchQuery) ORDER BY name ASC")
-    abstract fun searchMedications(searchQuery: String, language: String): Flow<List<Medication>>
-
     @Query("SELECT * FROM medications WHERE id = :id AND language = :language")
     abstract suspend fun getMedicationById(id: String, language: String): Medication?
 

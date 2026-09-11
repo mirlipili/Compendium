@@ -10,7 +10,7 @@ import vet.derichs.compendium.data.model.MedicationNote
 
 @Database(
     entities = [Medication::class, MedicationNote::class, GeneralNote::class],
-    version = 4,
+    version = 5,
     exportSchema = false
 )
 abstract class MedicationDatabase : RoomDatabase() {
@@ -29,7 +29,7 @@ abstract class MedicationDatabase : RoomDatabase() {
                     MedicationDatabase::class.java,
                     "medication_database"
                 )
-                    .addMigrations(MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4)
+                    .addMigrations(MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4, MIGRATION_4_5)
                     .build()
                 INSTANCE = instance
                 instance
@@ -55,6 +55,17 @@ abstract class MedicationDatabase : RoomDatabase() {
                         "id INTEGER NOT NULL, " +
                         "content TEXT NOT NULL, " +
                         "PRIMARY KEY(id))"
+                )
+            }
+        }
+
+        private val MIGRATION_4_5 = object : Migration(4, 5) {
+            override fun migrate(database: SupportSQLiteDatabase) {
+                // Speeds up getAllMedications(language) + ORDER BY name: avoids a full table scan
+                // across both FR and NL rows and lets SQLite skip the sort step.
+                database.execSQL(
+                    "CREATE INDEX IF NOT EXISTS `index_medications_language_name` " +
+                        "ON `medications` (`language`, `name`)"
                 )
             }
         }

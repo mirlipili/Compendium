@@ -13,8 +13,10 @@ import vet.derichs.compendium.utils.LanguageManager
 import vet.derichs.compendium.utils.NotesManager
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
-@OptIn(kotlinx.coroutines.ExperimentalCoroutinesApi::class)
+@OptIn(kotlinx.coroutines.ExperimentalCoroutinesApi::class, kotlinx.coroutines.FlowPreview::class)
 class MedicationViewModel(application: Application) : AndroidViewModel(application) {
     private val repository: MedicationRepository
     private val notesRepository: NotesRepository
@@ -43,19 +45,36 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
     val dataStatus: StateFlow<DataStatus?> = _dataStatus.asStateFlow()
     val shouldRecreateActivity: StateFlow<Boolean> = _shouldRecreateActivity.asStateFlow()
 
-    // Combines search query and active language so any change to either
-    // re-queries the database automatically — no activity recreate needed.
-    val medications: StateFlow<List<Medication>> =
+    // Single source of truth for search: debounced query + language → ranked SearchResult.
+    // Debounce is 0 for a blank query (initial load is immediate) and 200ms for typed queries.
+    private val _searchResult: StateFlow<SearchResult> =
         combine(_searchQuery, _currentLanguage) { query, lang -> query to lang }
+            .distinctUntilChanged()
+            .debounce { (query, _) -> if (query.isBlank()) 0L else 200L }
             .flatMapLatest { (query, lang) ->
-                if (query.isBlank()) repository.getAllMedications(lang)
-                else repository.searchMedications(query, lang)
+                repository.getAllMedications(lang).map { allMeds ->
+                    if (query.isBlank()) {
+                        SearchResult(allMeds, emptyList())
+                    } else {
+                        withContext(Dispatchers.Default) {
+                            repository.rankSearch(query, allMeds)
+                        }
+                    }
+                }
             }
             .stateIn(
                 scope = viewModelScope,
                 started = SharingStarted.WhileSubscribed(5000),
-                initialValue = emptyList()
+                initialValue = SearchResult.EMPTY
             )
+
+    val medications: StateFlow<List<Medication>> = _searchResult
+        .map { it.direct }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+
+    val fuzzyMedications: StateFlow<List<Medication>> = _searchResult
+        .map { it.fuzzy }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
     init {
         val database = MedicationDatabase.getDatabase(application)
@@ -173,7 +192,8 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
         viewModelScope.launch {
             try {
                 _isRefreshing.value = true
-                val result = notesManager.exportNotes(medications.value)
+                val allVisible = _searchResult.value.direct + _searchResult.value.fuzzy
+                val result = notesManager.exportNotes(allVisible)
                 result.fold(
                     onSuccess = { _refreshMessage.value = it },
                     onFailure = { _refreshMessage.value = "Export échoué : ${it.message}" }
