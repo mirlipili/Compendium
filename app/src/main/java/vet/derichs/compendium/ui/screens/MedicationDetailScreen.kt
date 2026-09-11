@@ -16,6 +16,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import vet.derichs.compendium.R
@@ -313,9 +314,11 @@ private fun ClickableLinkItem(
             contentPadding = PaddingValues(0.dp)
         ) {
             Text(
-                text = "Open RCP Document",
-                style = MaterialTheme.typography.bodyMedium,
-                textAlign = TextAlign.Start
+                text = stringResource(R.string.open_rcp_document),
+                style = MaterialTheme.typography.bodyMedium.copy(
+                    textDecoration = TextDecoration.Underline
+                ),
+                color = MaterialTheme.colorScheme.tertiary
             )
         }
     }

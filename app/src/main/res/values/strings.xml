@@ -21,6 +21,7 @@
     <string name="packaging">Packaging</string>
     <string name="prescription">Prescription</string>
     <string name="rcp_link">Lien RCP</string>
+    <string name="open_rcp_document">Ouvrir le document RCP</string>
     <string name="notes">Notes</string>
     <string name="add_notes_hint">Ajoutez vos notes personnelles sur ce médicament…</string>
 
@@ -43,4 +44,13 @@
     <string name="data_status_stale">Données non vérifiées depuis plus de 30 jours.</string>
     <string name="data_up_to_date">Données à jour</string>
     <string name="similar_results">Résultats similaires</string>
+
+    <!-- About screen — fill in your details below -->
+    <string name="about">À propos</string>
+    <string name="back">Retour</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="about_author">Dr. Derichs</string>
+    <string name="about_email">compendium@944116.xyz</string>
+    <string name="about_disclaimer_title">Avertissement</string>
+    <string name="about_disclaimer">Ce compendium est fourni à titre informatif uniquement et ne remplace pas le jugement clinique du vétérinaire. Toujours vérifier les informations auprès des sources officielles.</string>
 </resources>

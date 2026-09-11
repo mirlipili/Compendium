@@ -1,6 +1,7 @@
 package vet.derichs.compendium.ui
 
 import android.app.Application
+import android.net.Uri
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
@@ -186,6 +187,33 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
 
     fun onActivityRecreated() {
         _shouldRecreateActivity.value = false
+    }
+
+    fun importNotes(uri: Uri) {
+        viewModelScope.launch {
+            try {
+                _isRefreshing.value = true
+                val result = notesManager.importNotes(uri)
+                result.fold(
+                    onSuccess = { count ->
+                        _refreshMessage.value =
+                            if (_currentLanguage.value == "nl") "$count notities geïmporteerd"
+                            else "$count notes importées"
+                    },
+                    onFailure = { e ->
+                        _refreshMessage.value =
+                            if (_currentLanguage.value == "nl") "Import mislukt: ${e.message}"
+                            else "Import échoué : ${e.message}"
+                    }
+                )
+                kotlinx.coroutines.delay(3000)
+                _refreshMessage.value = null
+            } catch (e: Exception) {
+                _refreshMessage.value = "Import échoué : ${e.message}"
+            } finally {
+                _isRefreshing.value = false
+            }
+        }
     }
 
     fun exportNotes() {
