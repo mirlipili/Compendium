@@ -43,4 +43,13 @@
     <string name="data_status_stale">Gegevens al meer dan 30 dagen niet gecontroleerd.</string>
     <string name="data_up_to_date">Gegevens zijn actueel</string>
     <string name="similar_results">Gelijkaardige resultaten</string>
+
+    <!-- About screen -->
+    <string name="about">Over</string>
+    <string name="back">Terug</string>
+    <string name="about_version">Versie %1$s</string>
+    <string name="about_author">Dr. Derichs</string>
+    <string name="about_email">compendium@944116.xyz</string>
+    <string name="about_disclaimer_title">Waarschuwing</string>
+    <string name="about_disclaimer">Dit compendium is uitsluitend bedoeld als informatieve referentie en vervangt het klinisch oordeel van de dierenarts niet. Controleer altijd de officiële bronnen.</string>
 </resources>

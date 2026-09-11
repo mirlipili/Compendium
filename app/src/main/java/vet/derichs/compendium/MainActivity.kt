@@ -21,6 +21,7 @@ import androidx.work.NetworkType
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import vet.derichs.compendium.ui.MedicationViewModel
+import vet.derichs.compendium.ui.screens.AboutScreen
 import vet.derichs.compendium.ui.screens.MedicationDetailScreen
 import vet.derichs.compendium.ui.screens.MedicationListScreen
 import vet.derichs.compendium.ui.theme.VetCompendiumTheme
@@ -121,7 +122,9 @@ private fun VetCompendiumApp(viewModel: MedicationViewModel, onRecreate: () -> U
                 getLanguageDisplayName = viewModel::getLanguageDisplayName,
                 getOtherLanguageShortName = viewModel::getOtherLanguageShortName,
                 onExportNotes = viewModel::exportNotes,
+                onImportNotes = viewModel::importNotes,
                 navigateToGeneralNotes = { navController.navigate("generalNotes") },
+                navigateToAbout = { navController.navigate("about") },
                 dataStatus = dataStatus,
                 fuzzyMedications = fuzzyMedications
             )
@@ -132,6 +135,10 @@ private fun VetCompendiumApp(viewModel: MedicationViewModel, onRecreate: () -> U
                 viewModel = viewModel,
                 onNavigateBack = { navController.popBackStack() }
             )
+        }
+
+        composable("about") {
+            AboutScreen(onBackClick = { navController.popBackStack() })
         }
 
         composable(

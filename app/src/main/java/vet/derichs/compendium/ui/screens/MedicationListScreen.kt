@@ -1,5 +1,8 @@
 package vet.derichs.compendium.ui.screens
 
+import android.net.Uri
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -37,11 +40,16 @@ fun MedicationListScreen(
     getOtherLanguageShortName: () -> String = { "NL" },
     navigateToGeneralNotes: () -> Unit,
     onExportNotes: () -> Unit = {},
+    onImportNotes: (Uri) -> Unit = {},
+    navigateToAbout: () -> Unit = {},
     dataStatus: DataStatus? = null,
     isInitializing: Boolean = false,
     isRefreshing: Boolean = false,
     fuzzyMedications: List<Medication> = emptyList()
 ) {
+    val importLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.OpenDocument()
+    ) { uri -> uri?.let { onImportNotes(it) } }
     val busy = isInitializing || isRefreshing
 
     Column(
@@ -82,6 +90,8 @@ fun MedicationListScreen(
                 onRefreshClick = onRefreshClick,
                 onLanguageClick = onLanguageClick,
                 onExportNotes = onExportNotes,
+                onImportNotes = { importLauncher.launch(arrayOf("text/plain", "*/*")) },
+                onAboutClick = navigateToAbout,
                 isLoading = busy,
                 otherLanguageShortName = getOtherLanguageShortName()
             )
@@ -271,6 +281,8 @@ private fun MedicationMenu(
     onRefreshClick: () -> Unit,
     onLanguageClick: (String) -> Unit,
     onExportNotes: () -> Unit,
+    onImportNotes: () -> Unit,
+    onAboutClick: () -> Unit,
     isLoading: Boolean,
     otherLanguageShortName: String
 ) {
@@ -315,6 +327,30 @@ private fun MedicationMenu(
                     }
                 },
                 onClick = { expanded = false; onExportNotes() }
+            )
+
+            DropdownMenuItem(
+                text = {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(18.dp))
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(stringResource(R.string.import_notes))
+                    }
+                },
+                onClick = { expanded = false; onImportNotes() }
+            )
+
+            HorizontalDivider()
+
+            DropdownMenuItem(
+                text = {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Icon(Icons.Default.Info, contentDescription = null, modifier = Modifier.size(18.dp))
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(stringResource(R.string.about))
+                    }
+                },
+                onClick = { expanded = false; onAboutClick() }
             )
         }
     }
