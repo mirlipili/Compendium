@@ -21,6 +21,7 @@
     <string name="packaging">Verpakking</string>
     <string name="prescription">Voorschrift</string>
     <string name="rcp_link">RCP Link</string>
+    <string name="open_rcp_document">RCP-document openen</string>
     <string name="notes">Notities</string>
     <string name="add_notes_hint">Voeg uw persoonlijke notities over dit geneesmiddel toe…</string>
 

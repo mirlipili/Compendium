@@ -21,6 +21,7 @@
     <string name="packaging">Packaging</string>
     <string name="prescription">Prescription</string>
     <string name="rcp_link">Lien RCP</string>
+    <string name="open_rcp_document">Ouvrir le document RCP</string>
     <string name="notes">Notes</string>
     <string name="add_notes_hint">Ajoutez vos notes personnelles sur ce médicament…</string>
 
