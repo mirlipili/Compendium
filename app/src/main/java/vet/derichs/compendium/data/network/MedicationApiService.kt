@@ -36,7 +36,14 @@ interface MedicationApiService {
     companion object {
         private const val BASE_URL = "https://medicament.derichs.vet/"
 
-        fun create(cacheDir: File): MedicationApiService {
+        @Volatile private var INSTANCE: MedicationApiService? = null
+
+        fun getInstance(cacheDir: File): MedicationApiService =
+            INSTANCE ?: synchronized(this) {
+                INSTANCE ?: create(cacheDir).also { INSTANCE = it }
+            }
+
+        private fun create(cacheDir: File): MedicationApiService {
             val cache = Cache(File(cacheDir, "http_cache"), 5L * 1024 * 1024)
             val client = OkHttpClient.Builder()
                 .cache(cache)
