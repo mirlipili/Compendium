@@ -38,3 +38,9 @@ captures/
 /gen/
 
 .directory
+
+# Scratch / planning files — keep out of repo
+logcat.txt
+CLAUDE_orig.md
+RELEASE_NOTES.txt
+refactor-*.md
