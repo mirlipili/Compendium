@@ -4,17 +4,16 @@ import java.text.Normalizer
 
 object SearchNormalizer {
 
-    /**
-     * Lowercase, NFD-decompose, strip combining marks (diacritics), collapse
-     * punctuation and special chars (®, /, -, parentheses …) to spaces, then
-     * normalise whitespace. "Métacam®" and "metacam" both become "metacam".
-     */
+    private val reDiacritics = Regex("\\p{M}")
+    private val rePunct = Regex("[®™°%·/\\-–—,.()'\"\\[\\]+]")
+    private val reSpaces = Regex("\\s+")
+
     fun normalize(text: String): String {
         val nfd = Normalizer.normalize(text.lowercase(), Normalizer.Form.NFD)
         return nfd
-            .replace(Regex("\\p{M}"), "")               // strip combining marks
-            .replace(Regex("[®™°%·/\\-–—,.()'\"\\[\\]+]"), " ")  // punctuation → space
-            .replace(Regex("\\s+"), " ")
+            .replace(reDiacritics, "")
+            .replace(rePunct, " ")
+            .replace(reSpaces, " ")
             .trim()
     }
 

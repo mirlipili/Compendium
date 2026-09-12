@@ -46,23 +46,27 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
     val dataStatus: StateFlow<DataStatus?> = _dataStatus.asStateFlow()
     val shouldRecreateActivity: StateFlow<Boolean> = _shouldRecreateActivity.asStateFlow()
 
-    // Single source of truth for search: debounced query + language → ranked SearchResult.
-    // Debounce is 0 for a blank query (initial load is immediate) and 200ms for typed queries.
+    // Subscribe to Room once per language switch; ranking runs in-memory from the cached list.
+    private val allMedications: StateFlow<List<Medication>> =
+        _currentLanguage
+            .flatMapLatest { lang -> repository.getAllMedications(lang) }
+            .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+
     private val _searchResult: StateFlow<SearchResult> =
-        combine(_searchQuery, _currentLanguage) { query, lang -> query to lang }
-            .distinctUntilChanged()
-            .debounce { (query, _) -> if (query.isBlank()) 0L else 200L }
-            .flatMapLatest { (query, lang) ->
-                repository.getAllMedications(lang).map { allMeds ->
-                    if (query.isBlank()) {
-                        SearchResult(allMeds, emptyList())
-                    } else {
-                        withContext(Dispatchers.Default) {
-                            repository.rankSearch(query, allMeds)
-                        }
-                    }
+        combine(
+            allMedications,
+            _searchQuery
+                .debounce { if (it.isBlank()) 0L else 200L }
+                .distinctUntilChanged()
+        ) { meds, query ->
+            if (query.isBlank()) {
+                SearchResult(meds, emptyList())
+            } else {
+                withContext(Dispatchers.Default) {
+                    repository.rankSearch(query, meds)
                 }
             }
+        }
             .stateIn(
                 scope = viewModelScope,
                 started = SharingStarted.WhileSubscribed(5000),

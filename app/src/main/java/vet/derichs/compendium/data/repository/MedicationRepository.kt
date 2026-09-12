@@ -128,6 +128,13 @@ class MedicationRepository(
             refreshForLanguage(languageManager.getCurrentLanguage())
         }
 
+    suspend fun refreshAllLanguages(): List<Pair<String, Result<String>>> =
+        withContext(Dispatchers.IO) {
+            LanguageManager.SUPPORTED_LANGUAGES.map { lang ->
+                lang to refreshForLanguage(lang)
+            }
+        }
+
     private suspend fun refreshForLanguage(language: String): Result<String> {
         return try {
             val versionResponse = apiService.getVersionInfo()
@@ -143,7 +150,7 @@ class MedicationRepository(
             val storedVersion = prefs.getLong("data_version_$language", 0L)
 
             if (versionInfo.version == storedVersion) {
-                prefs.edit().putLong("last_checked_at", now).apply()
+                prefs.edit().putLong("last_checked_at_$language", now).apply()
                 Log.d(TAG, "Data for $language is up to date (v${versionInfo.version})")
                 return Result.success(if (language == "nl") "Gegevens actueel" else "Données à jour")
             }
@@ -175,7 +182,7 @@ class MedicationRepository(
             prefs.edit()
                 .putLong("data_version_$language", versionInfo.version)
                 .putString("data_published_at_$language", versionInfo.human_readable_date)
-                .putLong("last_checked_at", now)
+                .putLong("last_checked_at_$language", now)
                 .apply()
 
             Log.d(TAG, "Stored ${taggedList.size} medications for $language (v${versionInfo.version})")
@@ -196,7 +203,7 @@ class MedicationRepository(
         return DataStatus(
             dataVersion = version,
             dataPublishedAt = prefs.getString("data_published_at_$language", "") ?: "",
-            lastCheckedAt = prefs.getLong("last_checked_at", 0L)
+            lastCheckedAt = prefs.getLong("last_checked_at_$language", 0L)
         )
     }
 
