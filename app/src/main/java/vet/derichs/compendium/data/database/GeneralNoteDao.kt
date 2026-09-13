@@ -15,5 +15,8 @@ interface GeneralNoteDao {
     // Gets the one note as a Flow, so the UI updates automatically.
     // We use LIMIT 1 just to be safe.
     @Query("SELECT * FROM general_notes WHERE id = 1 LIMIT 1")
-    fun getGeneralNote(): Flow<GeneralNote?> // Nullable in case the note doesn't exist yet
+    fun getGeneralNote(): Flow<GeneralNote?>
+
+    @Query("SELECT * FROM general_notes WHERE id = 1 LIMIT 1")
+    suspend fun getGeneralNoteOnce(): GeneralNote?
 }
