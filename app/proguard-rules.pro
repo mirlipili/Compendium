@@ -1,21 +1,15 @@
-# Add project specific ProGuard rules here.
-# You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+# Required for Gson TypeToken generic type resolution
+-keepattributes Signature
+-keepattributes *Annotation*
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+# Gson model classes — field names must match JSON keys, so they cannot be renamed
+-keep class vet.derichs.compendium.data.model.Medication { *; }
+-keep class vet.derichs.compendium.data.network.VersionInfo { *; }
+-keep class vet.derichs.compendium.data.network.LanguageData { *; }
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+# WorkManager — worker class name is looked up by string at runtime
+-keep class vet.derichs.compendium.worker.UpdateWorker { *; }
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+# Keep stack traces readable in crash reports
+-keepattributes SourceFile,LineNumberTable
+-renamesourcefileattribute SourceFile
