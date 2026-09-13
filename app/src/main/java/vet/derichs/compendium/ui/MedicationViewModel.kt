@@ -91,7 +91,7 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
         )
         notesRepository = NotesRepository(database.medicationNoteDao())
         languageManager = LanguageManager(application)
-        notesManager = NotesManager(application, database.medicationNoteDao())
+        notesManager = NotesManager(application, database.medicationNoteDao(), database.generalNoteDao())
 
         languageManager.detectAndSetDefaultLanguage()
         _currentLanguage.value = languageManager.getCurrentLanguage()
@@ -108,7 +108,7 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
                 repository.initializePrimaryLanguage(currentLang)
             } catch (e: Exception) {
                 Log.e(TAG, "Failed to initialize data", e)
-                _refreshMessage.value = "Erreur de chargement : ${e.message}"
+                _refreshMessage.value = ifNl("Laden mislukt: ${e.message}", "Erreur de chargement : ${e.message}")
                 kotlinx.coroutines.delay(5000)
                 _refreshMessage.value = null
             } finally {
@@ -120,6 +120,8 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
             repository.initializeSecondaryLanguages(currentLang)
         }
     }
+
+    private fun ifNl(nl: String, fr: String) = if (_currentLanguage.value == "nl") nl else fr
 
     fun updateSearchQuery(query: String) {
         _searchQuery.value = query
@@ -135,14 +137,14 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
                 result.fold(
                     onSuccess = { message -> _refreshMessage.value = message },
                     onFailure = { exception ->
-                        _refreshMessage.value = "Actualisation échouée : ${exception.message}"
+                        _refreshMessage.value = ifNl("Vernieuwen mislukt: ${exception.message}", "Actualisation échouée : ${exception.message}")
                         Log.e(TAG, "Refresh failed", exception)
                     }
                 )
                 kotlinx.coroutines.delay(3000)
                 _refreshMessage.value = null
             } catch (e: Exception) {
-                _refreshMessage.value = "Actualisation échouée : ${e.message}"
+                _refreshMessage.value = ifNl("Vernieuwen mislukt: ${e.message}", "Actualisation échouée : ${e.message}")
                 Log.e(TAG, "Error during refresh", e)
             } finally {
                 _isRefreshing.value = false
@@ -172,14 +174,14 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
                         _shouldRecreateActivity.value = true
                     },
                     onFailure = { exception ->
-                        _refreshMessage.value = "Changement de langue échoué : ${exception.message}"
+                        _refreshMessage.value = ifNl("Taalwissel mislukt: ${exception.message}", "Changement de langue échoué : ${exception.message}")
                         Log.e(TAG, "Language switch failed", exception)
                         kotlinx.coroutines.delay(3000)
                         _refreshMessage.value = null
                     }
                 )
             } catch (e: Exception) {
-                _refreshMessage.value = "Changement de langue échoué : ${e.message}"
+                _refreshMessage.value = ifNl("Taalwissel mislukt: ${e.message}", "Changement de langue échoué : ${e.message}")
                 Log.e(TAG, "Error during language switch", e)
                 kotlinx.coroutines.delay(3000)
                 _refreshMessage.value = null
@@ -213,7 +215,7 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
                 kotlinx.coroutines.delay(3000)
                 _refreshMessage.value = null
             } catch (e: Exception) {
-                _refreshMessage.value = "Import échoué : ${e.message}"
+                _refreshMessage.value = ifNl("Import mislukt: ${e.message}", "Import échoué : ${e.message}")
             } finally {
                 _isRefreshing.value = false
             }
@@ -228,12 +230,12 @@ class MedicationViewModel(application: Application) : AndroidViewModel(applicati
                 val result = notesManager.exportNotes(allVisible)
                 result.fold(
                     onSuccess = { _refreshMessage.value = it },
-                    onFailure = { _refreshMessage.value = "Export échoué : ${it.message}" }
+                    onFailure = { _refreshMessage.value = ifNl("Export mislukt: ${it.message}", "Export échoué : ${it.message}") }
                 )
                 kotlinx.coroutines.delay(3000)
                 _refreshMessage.value = null
             } catch (e: Exception) {
-                _refreshMessage.value = "Export échoué : ${e.message}"
+                _refreshMessage.value = ifNl("Export mislukt: ${e.message}", "Export échoué : ${e.message}")
             } finally {
                 _isRefreshing.value = false
             }

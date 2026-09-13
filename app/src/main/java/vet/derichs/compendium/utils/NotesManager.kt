@@ -5,7 +5,9 @@ import android.content.Intent
 import android.net.Uri
 import android.util.Log
 import androidx.core.content.FileProvider
+import vet.derichs.compendium.data.database.GeneralNoteDao
 import vet.derichs.compendium.data.database.MedicationNoteDao
+import vet.derichs.compendium.data.model.GeneralNote
 import vet.derichs.compendium.data.model.Medication
 import vet.derichs.compendium.data.model.MedicationNote
 import kotlinx.coroutines.Dispatchers
@@ -16,19 +18,24 @@ import java.util.*
 
 class NotesManager(
     private val context: Context,
-    private val noteDao: MedicationNoteDao
+    private val noteDao: MedicationNoteDao,
+    private val generalNoteDao: GeneralNoteDao
 ) {
     companion object {
         private const val TAG = "NotesManager"
         private const val SEPARATOR = "=================================================="  // 50 =
         private const val FORMAT_VERSION = "2"
+        private const val GENERAL_NOTE_START = "=== GENERAL NOTE ==="
+        private const val GENERAL_NOTE_END = "=== END GENERAL NOTE ==="
     }
 
     suspend fun exportNotes(medications: List<Medication>): Result<String> {
         return withContext(Dispatchers.IO) {
             try {
-                val notes = noteDao.getAllNotes()
-                if (notes.isEmpty()) {
+                val medNotes = noteDao.getAllNotes()
+                val generalNote = generalNoteDao.getGeneralNoteOnce()
+
+                if (medNotes.isEmpty() && generalNote?.content.isNullOrBlank()) {
                     return@withContext Result.failure(Exception("No notes to export"))
                 }
 
@@ -39,10 +46,17 @@ class NotesManager(
                     appendLine("=== VET COMPENDIUM NOTES ===")
                     appendLine("Format: $FORMAT_VERSION")
                     appendLine("Export Date: ${dateFormat.format(Date())}")
-                    appendLine("Total Notes: ${notes.size}")
+                    appendLine("Total Notes: ${medNotes.size}")
                     appendLine()
 
-                    notes.forEach { note ->
+                    if (!generalNote?.content.isNullOrBlank()) {
+                        appendLine(GENERAL_NOTE_START)
+                        appendLine(generalNote!!.content)
+                        appendLine(GENERAL_NOTE_END)
+                        appendLine()
+                    }
+
+                    medNotes.forEach { note ->
                         val medication = medicationMap[note.medicationId]
                         val medicationName = medication?.name ?: "Unknown (${note.medicationId})"
 
@@ -72,7 +86,7 @@ class NotesManager(
         }
     }
 
-    // Returns the number of notes successfully imported.
+    // Returns the number of notes successfully imported (medication notes + 1 if general note saved).
     // Requires Format 2 files (exported by this version of the app).
     suspend fun importNotes(uri: Uri): Result<Int> {
         return withContext(Dispatchers.IO) {
@@ -87,9 +101,10 @@ class NotesManager(
                     )
                 }
 
-                // Parse line by line using a simple state machine.
-                // Each note block: ===== name ===== / Medication ID: xxx / Last Modified: yyy /
-                //                  <blank> / content lines / <blank> / SEPARATOR
+                var inGeneralNote = false
+                val generalNoteBuf = StringBuilder()
+                var generalNoteSaved = false
+
                 var currentId: String? = null
                 val contentBuf = StringBuilder()
                 var inContent = false
@@ -115,35 +130,47 @@ class NotesManager(
 
                 for (line in content.lines()) {
                     when {
+                        line.trimEnd() == GENERAL_NOTE_START -> {
+                            inGeneralNote = true
+                        }
+
+                        line.trimEnd() == GENERAL_NOTE_END -> {
+                            inGeneralNote = false
+                            val generalNoteText = generalNoteBuf.toString().trim()
+                            if (generalNoteText.isNotBlank()) {
+                                generalNoteDao.upsert(GeneralNote(content = generalNoteText))
+                                generalNoteSaved = true
+                            }
+                        }
+
+                        inGeneralNote -> generalNoteBuf.appendLine(line)
+
                         line.trimEnd() == SEPARATOR -> flush()
 
                         line.startsWith("Medication ID:") ->
                             currentId = line.removePrefix("Medication ID:").trim()
 
                         line.startsWith("Last Modified:") ->
-                            inContent = false  // next blank line marks start of content
+                            inContent = false
 
-                        // Note name header — flush any in-progress note (shouldn't normally happen)
-                        line.startsWith("=====") && line.endsWith("=====") && !line.all { it == '=' } -> {
+                        line.startsWith("=====") && line.endsWith("=====") && !line.all { it == '=' } ->
                             flush()
-                        }
 
-                        // First blank line after metadata → content starts on the next non-blank line
                         line.isBlank() && !inContent && currentId != null ->
                             inContent = true
 
-                        inContent ->
-                            contentBuf.appendLine(line)
+                        inContent -> contentBuf.appendLine(line)
 
                         else -> { /* header / metadata lines — skip */ }
                     }
                 }
-                flush()  // handle file without trailing separator
+                flush()
 
-                if (imported == 0) {
+                val total = imported + if (generalNoteSaved) 1 else 0
+                if (total == 0) {
                     Result.failure(Exception("No notes found in file"))
                 } else {
-                    Result.success(imported)
+                    Result.success(total)
                 }
 
             } catch (e: Exception) {
