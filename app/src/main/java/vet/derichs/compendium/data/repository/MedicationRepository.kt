@@ -203,12 +203,15 @@ class MedicationRepository(
         }
     }
 
+    private fun normalizeDate(raw: String): String =
+        raw.substringBefore('T').replace('-', '/')
+
     fun getDataStatus(language: String): DataStatus? {
         val onlineVersion = prefs.getLong("data_version_$language", 0L)
         if (onlineVersion > 0L) {
             return DataStatus(
                 dataVersion = onlineVersion,
-                dataPublishedAt = prefs.getString("data_published_at_$language", "") ?: "",
+                dataPublishedAt = normalizeDate(prefs.getString("data_published_at_$language", "") ?: ""),
                 lastCheckedAt = prefs.getLong("last_checked_at_$language", 0L),
                 isFromAssets = false
             )
