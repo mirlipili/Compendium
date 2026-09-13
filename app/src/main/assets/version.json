@@ -1,0 +1,14 @@
+{
+  "version": 20260904030419,
+  "human_readable_date": "2026-09-04T03:04:19.455336",
+  "languages": {
+    "fr": {
+      "data_path": "vet_medications_fr.json",
+      "display_name": "Français"
+    },
+    "nl": {
+      "data_path": "vet_medications_nl.json",
+      "display_name": "Nederlands"
+    }
+  }
+}

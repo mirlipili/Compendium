@@ -3,6 +3,7 @@ package vet.derichs.compendium.utils
 import android.content.Context
 import android.util.Log
 import vet.derichs.compendium.data.model.Medication
+import vet.derichs.compendium.data.network.VersionInfo
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
@@ -23,6 +24,19 @@ object JsonLoader {
 
         } catch (e: Exception) {
             Log.e(TAG, "Error loading medications from assets for language $language", e)
+            null
+        }
+    }
+
+    fun loadVersionFromAssets(context: Context): VersionInfo? {
+        return try {
+            val jsonString = context.assets.open("version.json").bufferedReader().use { it.readText() }
+            val info = Gson().fromJson(jsonString, VersionInfo::class.java)
+            // Trim ISO datetime to date-only: "2026-09-04T03:04:19…" → "2026-09-04"
+            val dateOnly = info?.human_readable_date?.substringBefore('T')?.replace('-', '/') ?: return null
+            info.copy(human_readable_date = dateOnly)
+        } catch (e: Exception) {
+            Log.e(TAG, "Error loading version.json from assets", e)
             null
         }
     }

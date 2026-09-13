@@ -3,5 +3,6 @@ package vet.derichs.compendium.ui
 data class DataStatus(
     val dataVersion: Long,
     val dataPublishedAt: String,
-    val lastCheckedAt: Long  // epoch ms; 0 = never successfully checked
+    val lastCheckedAt: Long,        // epoch ms; 0 = never successfully checked online
+    val isFromAssets: Boolean = false
 )

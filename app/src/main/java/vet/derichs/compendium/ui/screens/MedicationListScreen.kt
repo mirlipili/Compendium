@@ -223,11 +223,11 @@ private fun DataStatusRow(dataStatus: DataStatus?) {
     val now = System.currentTimeMillis()
     val thirtyDaysMs = TimeUnit.DAYS.toMillis(30)
 
-    val isNeverChecked = dataStatus == null || dataStatus.lastCheckedAt == 0L
-    val isStale = !isNeverChecked && (now - dataStatus!!.lastCheckedAt) > thirtyDaysMs
+    val isStale = dataStatus != null && !dataStatus.isFromAssets &&
+            dataStatus.lastCheckedAt > 0L && (now - dataStatus.lastCheckedAt) > thirtyDaysMs
 
     when {
-        isNeverChecked -> {
+        dataStatus == null -> {
             Card(
                 modifier = Modifier.fillMaxWidth(),
                 colors = CardDefaults.cardColors(
@@ -239,6 +239,22 @@ private fun DataStatusRow(dataStatus: DataStatus?) {
                     modifier = Modifier.padding(12.dp),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onErrorContainer
+                )
+            }
+        }
+
+        dataStatus.isFromAssets -> {
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.tertiaryContainer
+                )
+            ) {
+                Text(
+                    text = stringResource(R.string.data_status_assets, dataStatus.dataPublishedAt),
+                    modifier = Modifier.padding(12.dp),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onTertiaryContainer
                 )
             }
         }
@@ -260,7 +276,7 @@ private fun DataStatusRow(dataStatus: DataStatus?) {
         }
 
         else -> {
-            val daysSinceCheck = TimeUnit.MILLISECONDS.toDays(now - dataStatus!!.lastCheckedAt)
+            val daysSinceCheck = TimeUnit.MILLISECONDS.toDays(now - dataStatus.lastCheckedAt)
             val checkedLabel = when (daysSinceCheck) {
                 0L -> stringResource(R.string.data_status_today)
                 1L -> stringResource(R.string.data_status_yesterday)
