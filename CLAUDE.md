@@ -36,36 +36,71 @@ MVVM with Jetpack Compose and Kotlin Coroutines/Flows. Single-activity, no fragm
 ### Key layers
 
 - **`data/model/`** — Room entities: `Medication`, `MedicationNote` (per-medication), `GeneralNote` (single global, id=1)
-- **`data/database/`** — Room database (v3) with DAOs returning `Flow<>` for reactivity
+- **`data/database/`** — Room database **v5** with DAOs returning `Flow<>` for reactivity
 - **`data/repository/`** — `MedicationRepository` (offline-first: assets → Room, optional remote refresh) and `NotesRepository`
-- **`data/network/`** — Retrofit service hitting `https://medicament.derichs.vet/` for versioned JSON endpoints
-- **`ui/MedicationViewModel.kt`** — Single ViewModel for the whole app; exposes `StateFlow` for search, loading, language, notes; no DI framework, repositories are manually instantiated in `init`
-- **`ui/screens/`** — Three screens: `MedicationListScreen`, `MedicationDetailScreen`, `GeneralNotesScreen`
-- **`utils/`** — `LanguageManager` (SharedPreferences, FR/NL), `JsonLoader` (Gson, assets), `NotesManager` (export via FileProvider)
+- **`data/network/`** — Retrofit + OkHttp singleton (`MedicationApiService.getInstance(cacheDir)`) hitting `https://medicament.derichs.vet/`; 5 MB HTTP cache for ETag support
+- **`ui/MedicationViewModel.kt`** — Single ViewModel for the whole app; exposes `StateFlow` for search, loading, language, notes, data status; no DI framework
+- **`ui/screens/`** — Four screens: `MedicationListScreen`, `MedicationDetailScreen`, `GeneralNotesScreen`, `AboutScreen`
+- **`utils/`** — `LanguageManager` (SharedPreferences, FR/NL), `JsonLoader` (Gson, assets + version.json), `NotesManager` (export/import via FileProvider), `SearchNormalizer` (normalise + Jaro-Winkler)
 
 ### Navigation
 
-Compose Navigation with three routes defined in `MainActivity.kt`:
-- `medication_list` — searchable list, language switch, refresh, export
+Compose Navigation with four routes defined in `MainActivity.kt`:
+- `medication_list` — searchable list, language switch, refresh, export/import notes
 - `medication_detail/{medicationId}` — detail + per-medication notes
 - `generalNotes` — single global note
+- `about` — version info, author, disclaimer
 
 ### Language switching
 
 Does **not** use Android's locale system. Language choice (FR default, NL) is stored via
-`LanguageManager` in SharedPreferences. Switching currently reloads the localized dataset
-from the API and triggers `activity.recreate()` via `_shouldRecreateActivity` StateFlow.
-(See Known Issues — this network dependency is a bug, not a design goal.)
+`LanguageManager` in SharedPreferences. Switching is **offline-first**: `ensureLanguageLoaded()`
+checks Room then assets — no network call. After switching, `activity.recreate()` is triggered
+via `_shouldRecreateActivity` StateFlow so string resources reload in the new locale.
 
 ### Offline-first data loading
 
-On first launch, `MedicationRepository` populates Room from bundled assets
-(`vet_medications_fr.json` / `vet_medications_nl.json`). Refreshes hit
-`https://medicament.derichs.vet/vet_medications_{lang}.json`.
+On first launch, `MedicationRepository.initializePrimaryLanguage()` populates Room from
+bundled assets (`vet_medications_fr.json` / `vet_medications_nl.json`). The secondary language
+is loaded in the background via `initializeSecondaryLanguages()`. Refreshes hit the server
+only when `version.json` reports a newer version than what is stored in SharedPreferences.
 
-**IMPORTANT:** despite the presence of `NetworkRepository.checkForUpdates()` and a
-`/version.json` endpoint, **no version check happens on the live code path**. Every
-refresh downloads ~1.1 MB unconditionally. See Known Issues #1.
+Asset provenance is stored separately (`asset_version_<lang>`, `asset_published_at_<lang>`)
+so it never interferes with the online version comparison. The data status row in the UI
+shows whether data came from assets (never synced) or a real online refresh.
+
+### Search
+
+Five-tier in-memory ranking in `MedicationRepository.rankSearch()`: exact name (100),
+starts-with (90), contains (75), token match (65), composition contains (35).
+Fuzzy track: Jaro-Winkler ≥ 0.85 on name tokens shown below a divider.
+`SearchNormalizer` regex objects are hoisted to object-level `val`s (compiled once).
+Room is subscribed once per language switch; ranking runs in-memory from the cached list.
+
+### Data status (SharedPreferences keys per language)
+
+```
+data_version_<lang>          Long    — online version; 0 = never synced
+data_published_at_<lang>     String  — YYYY/MM/DD from server
+last_checked_at_<lang>       Long    — epoch ms of last version.json check
+asset_version_<lang>         Long    — version bundled in assets
+asset_published_at_<lang>    String  — YYYY/MM/DD from assets/version.json
+```
+
+`getDataStatus()` prefers online keys; falls back to asset keys; returns null only if neither exists.
+
+### Notes export/import
+
+`NotesManager` writes a versioned text file (Format: 2) and shares it via `FileProvider`.
+Export includes the general note (`=== GENERAL NOTE ===` block) followed by per-medication
+notes. Import is a state-machine line parser that round-trips both. Format version guards
+against importing incompatible old files. File provider authority: `vet.derichs.compendium.fileprovider`.
+
+### Background updates
+
+`UpdateWorker` (WorkManager, daily, requires network + battery not low) refreshes all
+supported languages via `refreshAllLanguages()`. Network/IO failures use `Result.retry()`
+for WorkManager exponential backoff; invalid-payload failures use `Result.failure()`.
 
 ### Dependencies (version catalog)
 
@@ -75,14 +110,17 @@ KSP for Room annotation processing.
 
 ### Database migrations
 
-`MedicationDatabase.kt` contains explicit migrations (v1→v2: added `medication_notes` table).
-Add a new `Migration` object when changing schema; **do not use `fallbackToDestructiveMigration`** —
+Current version: **5**. History: v1→v2 added `medication_notes`; v2→v3 added `general_note`;
+v3→v4 added `language` column + composite PK (id, language); v4→v5 added composite index.
+Add a new `Migration` object when changing schema; **never use `fallbackToDestructiveMigration`** —
 user notes live in this database and must survive upgrades.
 
-### Notes export
+### R8 / obfuscation
 
-`NotesManager` writes a formatted text file to `files/notes/` and shares it via `FileProvider`
-(configured in `AndroidManifest.xml`). The file provider authority is `vet.derichs.compendium.fileprovider`.
+`isMinifyEnabled = true` and `isShrinkResources = true` are set for release builds.
+`proguard-rules.pro` keeps Gson model classes (`Medication`, `VersionInfo`, `LanguageData`)
+and `UpdateWorker` (class name resolved by string). All other libraries ship their own
+consumer ProGuard rules.
 
 ---
 
@@ -94,85 +132,51 @@ vetcompendium.be, commits changed JSON, and pushes a tarball over SSH to an LXC
 serving `https://medicament.derichs.vet/`.
 
 Endpoints the app consumes:
-
-- `GET /version.json` — small metadata file, changes only when data actually changes
+- `GET /version.json` — metadata; changes only when data changes
 - `GET /vet_medications_fr.json` — ~1.1 MB, array of medication objects
 - `GET /vet_medications_nl.json` — ~1.1 MB, array of medication objects
 
-Served by nginx as static files, so `ETag` / `Last-Modified` are available and
-`If-None-Match` conditional requests will return 304.
-
-`version.json` is only republished when new medications appear, which can be days or
-weeks apart. Do not treat an unchanged version as an error condition.
+`app/src/main/assets/version.json` must be kept in sync with the bundled medication JSONs.
+When the pipeline updates the assets, copy the new `version.json` into assets and commit it.
 
 ---
 
-## Known issues (verified by code audit — do not "rediscover", fix)
+## Open PRs (as of 2026-09-13)
 
-1. **`NetworkRepository` is dead code.** It contains a complete, working version-check
-   implementation (`checkForUpdates()`, `getLastKnownVersion()`, `saveLastKnownVersion()`),
-   but has zero references outside its own file. The live path
-   (`ViewModel.refreshData()` → `MedicationRepository.refreshCurrentLanguage()` →
-   `fetchFromServer()`) never reads `version.json` and never saves a version.
-   This is why the app re-downloads everything on every refresh.
+- **feature/asset-data-status** — surfaces asset data provenance in UI; date normalization to YYYY/MM/DD
+- **feature/enable-r8-obfuscation** — enables R8 minification for Google Play ≥25% requirement
+- **feature/fix-translations-and-general-note-export** — Dutch error messages; general note in export/import
 
-2. **Destructive refresh with no floor.** `MedicationRepository.fetchFromServer()` calls
-   `medicationDao.deleteAll()` then `insertAll()`, not wrapped in `@Transaction`. It guards
-   only on `isNotEmpty()`. A truncated-but-valid server response of 3 items would wipe
-   ~1570 records and install 3. A mid-insert exception leaves the DB partial with no rollback.
+---
 
-3. **Language switching requires network.** `switchLanguage()` → `refreshFromServerWithLanguage()`
-   → `fetchFromServer()`. Offline users cannot switch FR↔NL, even though both datasets ship
-   in `assets/`. The `medications` table holds one language at a time and is wiped on switch.
+## Pending work
 
-4. **`LanguageManager.detectAndSetDefaultLanguage()` never detects.**
-   `getCurrentLanguage()` returns `DEFAULT_LANGUAGE` ("fr") when the pref is unset, so the
-   `if (savedLanguage.isNotEmpty()) return` guard always fires and the system-locale branch
-   is unreachable. Dutch-speaking users always get French on first launch.
-   Fix by checking `prefs.contains(KEY_LANGUAGE)`.
-
-5. **Three conflicting version models.** `data/model/Version.kt`,
-   `data/model/VersionInfo.kt`, and a third `VersionInfo` declared inside
-   `MedicationApiService.kt`. Only the third is used. Delete the dead two.
-
-6. **Gson vs Kotlin null-safety.** Gson uses reflection and ignores Kotlin non-null types.
-   `VersionInfo.languages: Map<String, LanguageData>` and `Medication.id: String` are
-   declared non-null; a missing field yields a null in a non-null type and an NPE at first
-   access, swallowed by a generic catch. Validate parsed payloads explicitly.
-
-7. **`UpdateWorker` is a stub.** `// TODO: Implement update checking logic here`, returns
-   `Result.success()`, and no `WorkManager` enqueue call exists anywhere in the codebase.
-
-8. **Search has no ranking, folding, or fuzziness.** `MedicationDao.searchMedications()` is
-   `LIKE '%q%'` across `name`, `firm`, `target_species`, `composition`, ordered `name ASC`.
-   An exact name match sorts alphabetically among composition-substring hits. `Métacam`
-   and `metacam` are different searches. Room FTS is available but unused.
-
-9. **Minor.** Two separate Retrofit instances (one in `MedicationRepository`, one in
-   `NetworkRepository`); no OkHttp cache, so no ETag/conditional-request support;
-   `hasLocalData()` is dead and would always return false.
+- **refactor-2 item 4b** — precompute `nameNormalized` / `compositionNormalized` columns in
+  the `Medication` entity to eliminate per-keystroke normalization of 1,570+ rows.
+  Requires DB migration 5→6 and updating `replaceAllForLanguage()` to populate the columns.
+  `rankSearch()` should fall back to runtime normalization when columns are null (migration
+  leaves existing rows null; populated on first data refresh).
 
 ---
 
 ## Invariants — do not violate
 
 - **Never leave the medication table empty or partial.** Any replace must be transactional
-  and must refuse payloads below a sanity floor (reject if new count < 80% of current count,
-  unless current count is 0).
-- **Persist the data version only after a verified successful insert**, never before parsing
-  or during download. Recording a version for data that failed to land makes the app
-  permanently believe it is current.
+  (`replaceAllForLanguage` is `@Transaction`) and must refuse payloads below 80% of current count.
+- **Persist the data version only after a verified successful insert.** Never before.
 - **The app must be fully usable with no network**, including switching FR↔NL.
 - **Never wipe user notes.** `medication_notes` and `general_note` are user data; schema
   changes need explicit `Migration` objects.
-- **Surface data age in the UI.** Store and display `dataVersion`, `dataPublishedAt`, and
-  `lastCheckedAt`. Silent staleness is the failure mode this project is actively recovering
-  from — the server pipeline was broken for nine months and the app never indicated anything.
+- **Surface data age in the UI.** Silent staleness is the failure mode this project is
+  recovering from — the server pipeline was broken for nine months undetected.
+- **Asset version must never be used in the update comparison.** `asset_version_<lang>` is
+  informational only; `data_version_<lang>` drives the refresh decision.
 - Keep it dependency-light: no DI framework, no analytics, no telemetry. GPLv3, offline, private.
 
 ## Working conventions
 
-- Work on one feature branch at a time; see `REFACTOR-PLAN.md` for the ordered task list.
+- Work on one feature branch at a time.
 - Run `./gradlew assembleDebug` before considering a task done.
 - Prefer complete file rewrites over fragmentary edits when a file changes substantially.
 - Ask before adding a new third-party dependency.
+- Do not add `logcat.txt`, `refactor-*.md`, `CLAUDE_orig.md`, or `RELEASE_NOTES.txt` to git — they are in `.gitignore`.
