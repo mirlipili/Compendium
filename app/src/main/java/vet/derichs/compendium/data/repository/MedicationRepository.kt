@@ -84,12 +84,18 @@ class MedicationRepository(
             if (!medications.isNullOrEmpty()) {
                 val tagged = medications.map { it.copy(language = language) }
                 medicationDao.insertAll(tagged)
-                // Clear stored version so the next online refresh re-downloads from the server
-                // rather than skipping because a stale version number appears to match.
-                prefs.edit()
+                // Clear online version so the next refresh always re-downloads — asset version
+                // must never be mistaken for a completed online sync.
+                val edit = prefs.edit()
                     .remove("data_version_$language")
                     .remove("data_published_at_$language")
-                    .apply()
+                // Store asset provenance separately for UI display only.
+                val assetVersion = JsonLoader.loadVersionFromAssets(context)
+                if (assetVersion != null) {
+                    edit.putLong("asset_version_$language", assetVersion.version)
+                        .putString("asset_published_at_$language", assetVersion.human_readable_date)
+                }
+                edit.apply()
                 Log.d(TAG, "Stored ${tagged.size} medications from assets for $language")
             } else {
                 Log.w(TAG, "No medications found in assets for $language")
@@ -198,13 +204,25 @@ class MedicationRepository(
     }
 
     fun getDataStatus(language: String): DataStatus? {
-        val version = prefs.getLong("data_version_$language", 0L)
-        if (version == 0L) return null
-        return DataStatus(
-            dataVersion = version,
-            dataPublishedAt = prefs.getString("data_published_at_$language", "") ?: "",
-            lastCheckedAt = prefs.getLong("last_checked_at_$language", 0L)
-        )
+        val onlineVersion = prefs.getLong("data_version_$language", 0L)
+        if (onlineVersion > 0L) {
+            return DataStatus(
+                dataVersion = onlineVersion,
+                dataPublishedAt = prefs.getString("data_published_at_$language", "") ?: "",
+                lastCheckedAt = prefs.getLong("last_checked_at_$language", 0L),
+                isFromAssets = false
+            )
+        }
+        val assetVersion = prefs.getLong("asset_version_$language", 0L)
+        if (assetVersion > 0L) {
+            return DataStatus(
+                dataVersion = assetVersion,
+                dataPublishedAt = prefs.getString("asset_published_at_$language", "") ?: "",
+                lastCheckedAt = 0L,
+                isFromAssets = true
+            )
+        }
+        return null
     }
 
     fun getAllMedications(language: String): Flow<List<Medication>> =

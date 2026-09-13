@@ -42,6 +42,7 @@
     <string name="data_status_days_ago">il y a %1$d jours</string>
     <string name="data_status_never">Données non vérifiées — veuillez actualiser.</string>
     <string name="data_status_stale">Données non vérifiées depuis plus de 30 jours.</string>
+    <string name="data_status_assets">Données intégrées à l\'application (%1$s) — jamais actualisées en ligne.</string>
     <string name="data_up_to_date">Données à jour</string>
     <string name="similar_results">Résultats similaires</string>
 
