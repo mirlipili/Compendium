@@ -33,7 +33,7 @@ object JsonLoader {
             val jsonString = context.assets.open("version.json").bufferedReader().use { it.readText() }
             val info = Gson().fromJson(jsonString, VersionInfo::class.java)
             // Trim ISO datetime to date-only: "2026-09-04T03:04:19…" → "2026-09-04"
-            val dateOnly = info?.human_readable_date?.substringBefore('T') ?: return null
+            val dateOnly = info?.human_readable_date?.substringBefore('T')?.replace('-', '/') ?: return null
             info.copy(human_readable_date = dateOnly)
         } catch (e: Exception) {
             Log.e(TAG, "Error loading version.json from assets", e)

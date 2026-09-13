@@ -187,7 +187,7 @@ class MedicationRepository(
             medicationDao.replaceAllForLanguage(language, taggedList)
             prefs.edit()
                 .putLong("data_version_$language", versionInfo.version)
-                .putString("data_published_at_$language", versionInfo.human_readable_date)
+                .putString("data_published_at_$language", versionInfo.human_readable_date.substringBefore('T').replace('-', '/'))
                 .putLong("last_checked_at_$language", now)
                 .apply()
 
